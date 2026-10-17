@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "v2_manifests_checked": 42,
+  "q2_candidates": 22,
+  "q3_simulated_configs": 18,
+  "full_scenarios": [
+    "outputs/question2/q2_star",
+    "outputs/question3/v2/v2_ah",
+    "outputs/question3/v2/v2_ah_d7",
+    "outputs/question3/v2/v2_ahs",
+    "outputs/question3/v2/v2_ahs_d7_r10"
+  ],
+  "unit_tests": 120,
+  "local_links_checked": 121,
+  "new_figure_files": 8,
+  "primary_and_conditional_full_schedule_allocation_exactly_equal": true,
+  "minimum_simulation_seconds": 6.419968300004257,
+  "maximum_simulation_seconds": 22.096481000015046,
+  "core_sha256": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966"
+}

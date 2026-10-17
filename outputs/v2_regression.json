@@ -1,0 +1,5214 @@
+{
+  "passed": true,
+  "completed": true,
+  "all_requested": true,
+  "expected_scenarios": 41,
+  "expected_saved_csv_comparisons": 19,
+  "expected_previous_core_comparisons": 27,
+  "source_sha256_before": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "scheduler_sha256_before": {
+    "current": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966",
+    "previous": "81058052fcf18c2f6a15e2251fef7892fcdffcda3ebbc615e03e2a607167d36b"
+  },
+  "verifier_sha256": "64eb3ac1bb8e45296deefa1955f3ed60ce8eaa99c64923e25ba6d0c44d3b0266",
+  "failure_count": 0,
+  "method": "Exact comparison of every schedule field and sorted per-node worker allocation. The 19 full historical cases use unchanged CSVs; all 12 prior aging and 15 prior Q3 configurations also compare current and saved pre-v2 cores in memory.",
+  "csv_reading": "Identifiers are strings; stored floats use pandas float_precision='round_trip'.",
+  "results": [
+    {
+      "scenario": "question2/fcfs",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "1eccca0aca7e79a73a25b7cf596ae33dae03f2a6ad4cdb398478240961a9059b",
+        "independent_validation.json": "87602d227094a0f936cf978ee16c7843b8b1d4caa6651e0fd3d94a6b144927bd",
+        "metrics.json": "450478ac6e80f30dd90cc04d62ffff8a522c80e530e7ca38481bb0f79a0298bb",
+        "metrics_by_assigned_model.csv": "101f1de2429da9d73d027502cb11443aa1740d4e21e3089d04a04cb6d0f6a686",
+        "metrics_by_job_group.csv": "d354b7f1df05a0fa6e1fbc6ac2910ca249e734f3bbe20c87cab93f167ed90cac",
+        "metrics_by_requested_model.csv": "a068348ccdc2549278aac9bb06b9f42a47b6a65a6671399ef507be366237c8dc",
+        "scenario.json": "1668f9601b8cb446c3d0f9621969bc1a37ee83228a4a96178808fbcd78dc342f",
+        "schedule.csv": "dd23d73f52ebe68faaad84d7765daa04a0bd01c3fd375b1b03a536d647af5f32"
+      },
+      "configuration": {
+        "policy": "fcfs",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 13.79112520001945,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316774,
+        "event_count": 395091,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 21018049.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316774,
+        "current_rows": 316774,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 950322,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "1eccca0aca7e79a73a25b7cf596ae33dae03f2a6ad4cdb398478240961a9059b",
+        "independent_validation.json": "87602d227094a0f936cf978ee16c7843b8b1d4caa6651e0fd3d94a6b144927bd",
+        "metrics.json": "450478ac6e80f30dd90cc04d62ffff8a522c80e530e7ca38481bb0f79a0298bb",
+        "metrics_by_assigned_model.csv": "101f1de2429da9d73d027502cb11443aa1740d4e21e3089d04a04cb6d0f6a686",
+        "metrics_by_job_group.csv": "d354b7f1df05a0fa6e1fbc6ac2910ca249e734f3bbe20c87cab93f167ed90cac",
+        "metrics_by_requested_model.csv": "a068348ccdc2549278aac9bb06b9f42a47b6a65a6671399ef507be366237c8dc",
+        "scenario.json": "1668f9601b8cb446c3d0f9621969bc1a37ee83228a4a96178808fbcd78dc342f",
+        "schedule.csv": "dd23d73f52ebe68faaad84d7765daa04a0bd01c3fd375b1b03a536d647af5f32"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 16.18146229998092
+    },
+    {
+      "scenario": "question2/sjf",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "456328264d76f0aea702d21fe614d1c55be8621f09bc673c24d2a2af40a33cf5",
+        "independent_validation.json": "ec1bf081f7ec80ac1223499db531e58f18815c3ed9cc2cd6f7847e35409c0a43",
+        "metrics.json": "ee3e90a36a62e4f4535b0561e6cb12022f377485491cb475e6924797f08d0897",
+        "metrics_by_assigned_model.csv": "8361e863a53e44362b460ad6a157bf5fdae14fb4d95c1833a42f8301d25a1420",
+        "metrics_by_job_group.csv": "fe609d87ee1ac2f3799e04e00e0029af60ac57171a8950ab10af8a18f331adef",
+        "metrics_by_requested_model.csv": "da09fd7397b292036edeb53ef672853c62c4262eab4fa5d786808fbea7524a9b",
+        "scenario.json": "f8213a6eba4f523124d2a1a06cb03de2db5316ef69564ecb941619dd71226e35",
+        "schedule.csv": "d706a9febd27157fbe8ac7d41e2d55eb6d37768dde228a4e9214ee46f6d5e607"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 16.207352700002957,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316203,
+        "event_count": 391937,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26759836.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316203,
+        "current_rows": 316203,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948609,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "456328264d76f0aea702d21fe614d1c55be8621f09bc673c24d2a2af40a33cf5",
+        "independent_validation.json": "ec1bf081f7ec80ac1223499db531e58f18815c3ed9cc2cd6f7847e35409c0a43",
+        "metrics.json": "ee3e90a36a62e4f4535b0561e6cb12022f377485491cb475e6924797f08d0897",
+        "metrics_by_assigned_model.csv": "8361e863a53e44362b460ad6a157bf5fdae14fb4d95c1833a42f8301d25a1420",
+        "metrics_by_job_group.csv": "fe609d87ee1ac2f3799e04e00e0029af60ac57171a8950ab10af8a18f331adef",
+        "metrics_by_requested_model.csv": "da09fd7397b292036edeb53ef672853c62c4262eab4fa5d786808fbea7524a9b",
+        "scenario.json": "f8213a6eba4f523124d2a1a06cb03de2db5316ef69564ecb941619dd71226e35",
+        "schedule.csv": "d706a9febd27157fbe8ac7d41e2d55eb6d37768dde228a4e9214ee46f6d5e607"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 18.63705350001692
+    },
+    {
+      "scenario": "question2/backfill",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "48bc0b1b1682f0766824d8c9455ed14077d682d7f1d836e070b4fd6ba5de4fe4",
+        "independent_validation.json": "71d61aee12c7d55918a7c9232ef7c4860b972aed81117e3add7573bfe6d9c014",
+        "metrics.json": "a183cee37d2bdcab1a2ca40d22c9c86a79debb168c60122da4036760f83a2997",
+        "metrics_by_assigned_model.csv": "071f1d2f5a46906bbc34de3ce67dbb0a4b94eaf8bcdd4130015b8f808974afb9",
+        "metrics_by_job_group.csv": "9d8f1a3c8ad08241197210df51dba869bcfc416619820284f8b31bcccb9773d9",
+        "metrics_by_requested_model.csv": "f00d24a7d950fa4649479214c344ac892956c5aaeb626636efc4804918d2a914",
+        "scenario.json": "97e03bd524d8d8a0ec26c8960f060ac60ce1f0a7ba63e9c93fe1234b762e4797",
+        "schedule.csv": "9dfe4dd3ac6d7bfd18091e520927ce84ac1487f505a73c480fc4edcff0fb0b61"
+      },
+      "configuration": {
+        "policy": "backfill",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 18.22701220001909,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316763,
+        "event_count": 394873,
+        "backfilled_jobs": 14251,
+        "migrated_jobs": 0,
+        "simulated_until": 21014952.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316763,
+        "current_rows": 316763,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 950289,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "48bc0b1b1682f0766824d8c9455ed14077d682d7f1d836e070b4fd6ba5de4fe4",
+        "independent_validation.json": "71d61aee12c7d55918a7c9232ef7c4860b972aed81117e3add7573bfe6d9c014",
+        "metrics.json": "a183cee37d2bdcab1a2ca40d22c9c86a79debb168c60122da4036760f83a2997",
+        "metrics_by_assigned_model.csv": "071f1d2f5a46906bbc34de3ce67dbb0a4b94eaf8bcdd4130015b8f808974afb9",
+        "metrics_by_job_group.csv": "9d8f1a3c8ad08241197210df51dba869bcfc416619820284f8b31bcccb9773d9",
+        "metrics_by_requested_model.csv": "f00d24a7d950fa4649479214c344ac892956c5aaeb626636efc4804918d2a914",
+        "scenario.json": "97e03bd524d8d8a0ec26c8960f060ac60ce1f0a7ba63e9c93fe1234b762e4797",
+        "schedule.csv": "9dfe4dd3ac6d7bfd18091e520927ce84ac1487f505a73c480fc4edcff0fb0b61"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 20.695429200015496
+    },
+    {
+      "scenario": "question2/backfill_l512",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "27ab0ec2c8930aede575c1f22f40e978b757949f6dac4d6ff0749901e37d198d",
+        "independent_validation.json": "7a37190e26c36d6d4f98d094c9f95b3622689b0a207cefef8ece4c6223c79e8d",
+        "metrics.json": "0ad8eb3ca4af8daf86242ff500bb88e485bb9cf12cc96d63be7b282ffb438cad",
+        "metrics_by_assigned_model.csv": "70c84315a4bd7dd67a98f6fe50a269215b29c5f71f58e497ac1fa5f74cb1e4f9",
+        "metrics_by_job_group.csv": "9a4953dc5ccbad58310934a1f5df118ea87dae3f12addf847db8948bcb4ce71d",
+        "metrics_by_requested_model.csv": "32108cfadda7ecdc3d15ca27875c858ce815078e3986503817974b3136452c0b",
+        "scenario.json": "21dde45ac457e7d760900777565339b483df3e4d5d408b960f44a885f5cec059",
+        "schedule.csv": "bf7a16bcb94dcfb8120429798da0becfdccb89c288ac7916a1883eeaf5dc6f8a"
+      },
+      "configuration": {
+        "policy": "backfill",
+        "aging_alpha": null,
+        "max_backfill_scan": 512,
+        "routing": null,
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 22.403526699985377,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316755,
+        "event_count": 394553,
+        "backfilled_jobs": 24189,
+        "migrated_jobs": 0,
+        "simulated_until": 21014184.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316755,
+        "current_rows": 316755,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 950265,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "27ab0ec2c8930aede575c1f22f40e978b757949f6dac4d6ff0749901e37d198d",
+        "independent_validation.json": "7a37190e26c36d6d4f98d094c9f95b3622689b0a207cefef8ece4c6223c79e8d",
+        "metrics.json": "0ad8eb3ca4af8daf86242ff500bb88e485bb9cf12cc96d63be7b282ffb438cad",
+        "metrics_by_assigned_model.csv": "70c84315a4bd7dd67a98f6fe50a269215b29c5f71f58e497ac1fa5f74cb1e4f9",
+        "metrics_by_job_group.csv": "9a4953dc5ccbad58310934a1f5df118ea87dae3f12addf847db8948bcb4ce71d",
+        "metrics_by_requested_model.csv": "32108cfadda7ecdc3d15ca27875c858ce815078e3986503817974b3136452c0b",
+        "scenario.json": "21dde45ac457e7d760900777565339b483df3e4d5d408b960f44a885f5cec059",
+        "schedule.csv": "bf7a16bcb94dcfb8120429798da0becfdccb89c288ac7916a1883eeaf5dc6f8a"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 24.711766100022942
+    },
+    {
+      "scenario": "question3/flex25",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "d66db34cbc0b5ccfb5b07239b745f7bdaf38072cc58d24704fc71641fffdb01d",
+        "independent_validation.json": "52dc4298e7e9577eba52a5a5367e52f07c5c065427ab474d9a8dee9c365b4993",
+        "metrics.json": "dea52cd04aa39b911d2c402024697d2f66ccd8d52b66bf3a1650e42c1c211172",
+        "metrics_by_assigned_model.csv": "4b9f06e007cb74b733b390faf8b35d88ece52c1af25e6194cdd4dcbbc5077645",
+        "metrics_by_job_group.csv": "88026afc217fb58ddfa3bae641b765fd8432ceb0544bae8728e2291d080c6f40",
+        "metrics_by_requested_model.csv": "cf64d13e809f0ee89e861b85fc40882fb705354513a1969dd608ed6100478ff3",
+        "paired_wait_changes.csv": "689b49d4f7152b69e6283d76a71037f98aa334b9073cb71e2b1800101d726ab8",
+        "scenario.json": "6bc2c485b3d79691bcadd2379431650c9e4cfb41705fb7554d39f45379edf2df",
+        "schedule.csv": "b9029157c6e51ad1a311d59dbd1bfcf37536bdf0a00b444b400fa0fd7e5fc340"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.25,
+          "speedup": 1,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 17.247886600001948,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317266,
+        "event_count": 391316,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 24477,
+        "simulated_until": 24106475.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317266,
+        "current_rows": 317266,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 951798,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "d66db34cbc0b5ccfb5b07239b745f7bdaf38072cc58d24704fc71641fffdb01d",
+        "independent_validation.json": "52dc4298e7e9577eba52a5a5367e52f07c5c065427ab474d9a8dee9c365b4993",
+        "metrics.json": "dea52cd04aa39b911d2c402024697d2f66ccd8d52b66bf3a1650e42c1c211172",
+        "metrics_by_assigned_model.csv": "4b9f06e007cb74b733b390faf8b35d88ece52c1af25e6194cdd4dcbbc5077645",
+        "metrics_by_job_group.csv": "88026afc217fb58ddfa3bae641b765fd8432ceb0544bae8728e2291d080c6f40",
+        "metrics_by_requested_model.csv": "cf64d13e809f0ee89e861b85fc40882fb705354513a1969dd608ed6100478ff3",
+        "paired_wait_changes.csv": "689b49d4f7152b69e6283d76a71037f98aa334b9073cb71e2b1800101d726ab8",
+        "scenario.json": "6bc2c485b3d79691bcadd2379431650c9e4cfb41705fb7554d39f45379edf2df",
+        "schedule.csv": "b9029157c6e51ad1a311d59dbd1bfcf37536bdf0a00b444b400fa0fd7e5fc340"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 19.588352799997665
+    },
+    {
+      "scenario": "question3/flex50",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "ad896b776008af0ba86c97b2fa59301ecdb23c624b2164c223bf6706c662305b",
+        "independent_validation.json": "04c9474cf1d5c448c5a1ff8452c1d2dff8f4362d5bd00782fa3408b1c5d4da24",
+        "metrics.json": "2706198a56f624234b8751104b340c17467983f229cabed336edca4c3de5571a",
+        "metrics_by_assigned_model.csv": "6753cd2faa575b033dac7a55072197b5d29ffab5d871a91ee6eb087b519032f0",
+        "metrics_by_job_group.csv": "542ac6382a9eeb896e260f13dfa42a60a7840ee62d6be591957591a37c3c02b9",
+        "metrics_by_requested_model.csv": "a6baea9a6f5645f14846a31e6fd437e01f0909e3e86faec5a12c0c01aa7e377f",
+        "paired_wait_changes.csv": "0505e5c39c5ca34a0ea55a917ab4840f93faf0c788d0175df0d124f21ed47ae6",
+        "scenario.json": "062ade3c87d85399bafcf1341aa0af468fd5f953c4247d62b65e8a256496ae1f",
+        "schedule.csv": "3d96dd94eb4bdfbf75a7d80e2ab687a50af41aeb10fe4f46421be778d4cbee6c"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 17.467927499994403,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317863,
+        "event_count": 392967,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 35367,
+        "simulated_until": 22193127.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317863,
+        "current_rows": 317863,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 953589,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "ad896b776008af0ba86c97b2fa59301ecdb23c624b2164c223bf6706c662305b",
+        "independent_validation.json": "04c9474cf1d5c448c5a1ff8452c1d2dff8f4362d5bd00782fa3408b1c5d4da24",
+        "metrics.json": "2706198a56f624234b8751104b340c17467983f229cabed336edca4c3de5571a",
+        "metrics_by_assigned_model.csv": "6753cd2faa575b033dac7a55072197b5d29ffab5d871a91ee6eb087b519032f0",
+        "metrics_by_job_group.csv": "542ac6382a9eeb896e260f13dfa42a60a7840ee62d6be591957591a37c3c02b9",
+        "metrics_by_requested_model.csv": "a6baea9a6f5645f14846a31e6fd437e01f0909e3e86faec5a12c0c01aa7e377f",
+        "paired_wait_changes.csv": "0505e5c39c5ca34a0ea55a917ab4840f93faf0c788d0175df0d124f21ed47ae6",
+        "scenario.json": "062ade3c87d85399bafcf1341aa0af468fd5f953c4247d62b65e8a256496ae1f",
+        "schedule.csv": "3d96dd94eb4bdfbf75a7d80e2ab687a50af41aeb10fe4f46421be778d4cbee6c"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 20.01125840001623
+    },
+    {
+      "scenario": "question3/flex100",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "8ec0dfbb0cc53c72cd0d35136e9f2710ac1df1597868f6241d593e09cde7d79e",
+        "independent_validation.json": "f30b24689ca93d858dcf27d39bcc96561f8d39a8539664752de38f2c3c45a8bb",
+        "metrics.json": "eb3629fb56bd2f0454acc9aaadcb6c27c392fc6b0ed2c8a1f921b69a59ebfb84",
+        "metrics_by_assigned_model.csv": "cd0e7a9070f1e157d1b1103687c778dff5f822d17465af45149e85bbde34f87d",
+        "metrics_by_job_group.csv": "907685f26bc9fb917380fdee8b190c64261ffb42d848891f5668fd1544e7f8ae",
+        "metrics_by_requested_model.csv": "7e7fdd433fef5b0d2fd1a477f187ba6784be21eb73c49be11e2dae32dc594d81",
+        "paired_wait_changes.csv": "4b4e26eb6a4a33f8c69f92e3ce431e512f62ddf08fa3275ad5f64ecfbcace76e",
+        "scenario.json": "37a371ba7d24976874a89b4e07fc07cdbe784d57bb0339ed8b4f9f3b6deb779b",
+        "schedule.csv": "f2b25a02adcd5334844970f22f1ec380a1b4aa4fbe68177f7f4ee01b73fa3fb9"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 1,
+          "speedup": 1,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 16.86939269999857,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317460,
+        "event_count": 393443,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 40728,
+        "simulated_until": 22141215.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317460,
+        "current_rows": 317460,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952380,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "8ec0dfbb0cc53c72cd0d35136e9f2710ac1df1597868f6241d593e09cde7d79e",
+        "independent_validation.json": "f30b24689ca93d858dcf27d39bcc96561f8d39a8539664752de38f2c3c45a8bb",
+        "metrics.json": "eb3629fb56bd2f0454acc9aaadcb6c27c392fc6b0ed2c8a1f921b69a59ebfb84",
+        "metrics_by_assigned_model.csv": "cd0e7a9070f1e157d1b1103687c778dff5f822d17465af45149e85bbde34f87d",
+        "metrics_by_job_group.csv": "907685f26bc9fb917380fdee8b190c64261ffb42d848891f5668fd1544e7f8ae",
+        "metrics_by_requested_model.csv": "7e7fdd433fef5b0d2fd1a477f187ba6784be21eb73c49be11e2dae32dc594d81",
+        "paired_wait_changes.csv": "4b4e26eb6a4a33f8c69f92e3ce431e512f62ddf08fa3275ad5f64ecfbcace76e",
+        "scenario.json": "37a371ba7d24976874a89b4e07fc07cdbe784d57bb0339ed8b4f9f3b6deb779b",
+        "schedule.csv": "f2b25a02adcd5334844970f22f1ec380a1b4aa4fbe68177f7f4ee01b73fa3fb9"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 19.294562199997017
+    },
+    {
+      "scenario": "question3/speed2",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "e4a45ba4067c7b8165a1741ab65ef5393cf154def2c3c390ac63943eefdaa9f8",
+        "independent_validation.json": "6ebb79c413cb58c06dec3d75763be3afdab9f3da061cfd93712529a87b33c81b",
+        "metrics.json": "f708f125a9d446f8b509f56008a6d334f9be51901e3d7d0f2472d9d13d416e8c",
+        "metrics_by_assigned_model.csv": "69b1fd972d5715760cad525de708507030f1beb7720c612606b4f1afe2acb9dd",
+        "metrics_by_job_group.csv": "e8be144120cb906f3bee1e89853e695b53ee40d78322171739709c949b2f85ca",
+        "metrics_by_requested_model.csv": "98b2c0c94b51543b6618c204d00d5f7182b9cf90b6b4801a3d381de4e987ab86",
+        "paired_wait_changes.csv": "7c645515c5c990b5105362ef68bb44753385305a9e5ef7cdb351ca5528846621",
+        "scenario.json": "16ba8dfc3d8008ba3e617ec52f111c4c887cac14a148712245710148d2d3ee5d",
+        "schedule.csv": "5a0737046d8f15bfaf7185264a700bca9c3e30fc8bc51b63d7a8ddd9214f8a2f"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 2,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 16.568138300004648,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 318712,
+        "event_count": 392888,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 40472,
+        "simulated_until": 20093910.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 318712,
+        "current_rows": 318712,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 956136,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "e4a45ba4067c7b8165a1741ab65ef5393cf154def2c3c390ac63943eefdaa9f8",
+        "independent_validation.json": "6ebb79c413cb58c06dec3d75763be3afdab9f3da061cfd93712529a87b33c81b",
+        "metrics.json": "f708f125a9d446f8b509f56008a6d334f9be51901e3d7d0f2472d9d13d416e8c",
+        "metrics_by_assigned_model.csv": "69b1fd972d5715760cad525de708507030f1beb7720c612606b4f1afe2acb9dd",
+        "metrics_by_job_group.csv": "e8be144120cb906f3bee1e89853e695b53ee40d78322171739709c949b2f85ca",
+        "metrics_by_requested_model.csv": "98b2c0c94b51543b6618c204d00d5f7182b9cf90b6b4801a3d381de4e987ab86",
+        "paired_wait_changes.csv": "7c645515c5c990b5105362ef68bb44753385305a9e5ef7cdb351ca5528846621",
+        "scenario.json": "16ba8dfc3d8008ba3e617ec52f111c4c887cac14a148712245710148d2d3ee5d",
+        "schedule.csv": "5a0737046d8f15bfaf7185264a700bca9c3e30fc8bc51b63d7a8ddd9214f8a2f"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 19.08803899999475
+    },
+    {
+      "scenario": "question3/cap10",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "26900d87214605cb06b294ddaa3358e28c96e9dadacfaa6f5f193932f5d7095b",
+        "independent_validation.json": "62453af91b3a31338e2c49354eee5f5ae3e97271dc3b253e808f7909839f645d",
+        "metrics.json": "974b47f1079ab75e7410664346ba915082a6bc43b1eb531e48ef131da9933bc3",
+        "metrics_by_assigned_model.csv": "c8301bde48929d8525d87e24e1fad5be58179737fa8072428ed439616252e457",
+        "metrics_by_job_group.csv": "2fdd66af7e0fc49510d3f3e0c60559b1d5377d62cdf5b6eeb93a9f4c5174fa1f",
+        "metrics_by_requested_model.csv": "d6c0d131237a1c6a7f4a81caadb11ee15b29545a8042ad64d5b1376ff4778e0b",
+        "paired_wait_changes.csv": "7d9c4df9ff5d7abd523c56daee9a5388d3ed402445fb35c4b62592d8da36876f",
+        "scenario.json": "e62b436d1ee285a7258b06d817208eb2a7f1c62d748572f1e1c232a26dbaa03c",
+        "schedule.csv": "1789eb749b91c27f8e77b1829f12154264f9346368bdcf259196a65d60bed129"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1,
+          "donor_cap_fraction": 0.1,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 16.46553380001569,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317210,
+        "event_count": 391744,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 16475,
+        "simulated_until": 25448254.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317210,
+        "current_rows": 317210,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 951630,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "26900d87214605cb06b294ddaa3358e28c96e9dadacfaa6f5f193932f5d7095b",
+        "independent_validation.json": "62453af91b3a31338e2c49354eee5f5ae3e97271dc3b253e808f7909839f645d",
+        "metrics.json": "974b47f1079ab75e7410664346ba915082a6bc43b1eb531e48ef131da9933bc3",
+        "metrics_by_assigned_model.csv": "c8301bde48929d8525d87e24e1fad5be58179737fa8072428ed439616252e457",
+        "metrics_by_job_group.csv": "2fdd66af7e0fc49510d3f3e0c60559b1d5377d62cdf5b6eeb93a9f4c5174fa1f",
+        "metrics_by_requested_model.csv": "d6c0d131237a1c6a7f4a81caadb11ee15b29545a8042ad64d5b1376ff4778e0b",
+        "paired_wait_changes.csv": "7d9c4df9ff5d7abd523c56daee9a5388d3ed402445fb35c4b62592d8da36876f",
+        "scenario.json": "e62b436d1ee285a7258b06d817208eb2a7f1c62d748572f1e1c232a26dbaa03c",
+        "schedule.csv": "1789eb749b91c27f8e77b1829f12154264f9346368bdcf259196a65d60bed129"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 18.967614099994535
+    },
+    {
+      "scenario": "question3/cap50",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "2129dd8e7788303c5ecd932d512399077af58c297ba625856f07c362dd8b41b2",
+        "independent_validation.json": "50a2368692f8e41268f2389ffa472aa2d69f8efcdcf50b7c966a6749f8067d73",
+        "metrics.json": "10e919ef9756a1857c57cb4ebc9161bd2ba006a215a903c05a7482635bc57999",
+        "metrics_by_assigned_model.csv": "8aed5c242136f38bf0e67763f2251a20c25f88df530136af1b2147941eed3fd5",
+        "metrics_by_job_group.csv": "d6c463f1754651b8f3af452f496256229ccd645795208df358ce357dbb18004a",
+        "metrics_by_requested_model.csv": "3fa5dfd209ddbe5df43eb08af8d569d5e95cce4f92353317d8fae245d024a442",
+        "paired_wait_changes.csv": "5fbc13de8726a71c4e1ee38536827c3054f18ef53c6ca74dca29af0781e1fbdb",
+        "scenario.json": "cd0d0c6a7bef624252c9590e28b99ff0a2eb80acf8c59f76b79e12db37f772b5",
+        "schedule.csv": "c410775636876f73f5b381ffbbd31ac39bca10b0ee80964d7cc6e83714e9569e"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1,
+          "donor_cap_fraction": 0.5,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 18.34779980001622,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317628,
+        "event_count": 395033,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 31759,
+        "simulated_until": 22175133.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317628,
+        "current_rows": 317628,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952884,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "2129dd8e7788303c5ecd932d512399077af58c297ba625856f07c362dd8b41b2",
+        "independent_validation.json": "50a2368692f8e41268f2389ffa472aa2d69f8efcdcf50b7c966a6749f8067d73",
+        "metrics.json": "10e919ef9756a1857c57cb4ebc9161bd2ba006a215a903c05a7482635bc57999",
+        "metrics_by_assigned_model.csv": "8aed5c242136f38bf0e67763f2251a20c25f88df530136af1b2147941eed3fd5",
+        "metrics_by_job_group.csv": "d6c463f1754651b8f3af452f496256229ccd645795208df358ce357dbb18004a",
+        "metrics_by_requested_model.csv": "3fa5dfd209ddbe5df43eb08af8d569d5e95cce4f92353317d8fae245d024a442",
+        "paired_wait_changes.csv": "5fbc13de8726a71c4e1ee38536827c3054f18ef53c6ca74dca29af0781e1fbdb",
+        "scenario.json": "cd0d0c6a7bef624252c9590e28b99ff0a2eb80acf8c59f76b79e12db37f772b5",
+        "schedule.csv": "c410775636876f73f5b381ffbbd31ac39bca10b0ee80964d7cc6e83714e9569e"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 20.889840200019535
+    },
+    {
+      "scenario": "question3/seed18",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "598322e03cc391f56243b24d08efedd2d85afe6f5b66818b2b9bd580e43e2480",
+        "independent_validation.json": "4f800a916b65b3b8aa094dbdc218cf32f139f7b27dcea7c1549fa17ad865e683",
+        "metrics.json": "459d01892b8a0e4c5ad53a22dd22fd875f42d50925a7563ae8fb4742708036c1",
+        "metrics_by_assigned_model.csv": "138bf580bb7ba73302f6dd7bee41b379a519e5fb05d795dc20208c39efc4da98",
+        "metrics_by_job_group.csv": "9e0ca4521b919c62ffe06ed9e6c4c97c1cac1fed61454a7a144c3ec003c9a927",
+        "metrics_by_requested_model.csv": "b5323c617abab14687a0897252f16472b20c70c2c43a91d12d6440faea877fb4",
+        "paired_wait_changes.csv": "9f6e8286ff8ef038e0470853e570dfb96fc55177ad9bff309f290016a459e117",
+        "scenario.json": "8e1234feb73fd339f162049fa25bd75db4d161d30ed3ffd294981858d9a6ec90",
+        "schedule.csv": "c2cf41e37fc6cf365487134885cc56ce7927c859ff4dac1a9e497ff7c4689aed"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261018,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 17.549203000002308,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317897,
+        "event_count": 392876,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 35803,
+        "simulated_until": 22155424.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317897,
+        "current_rows": 317897,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 953691,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "598322e03cc391f56243b24d08efedd2d85afe6f5b66818b2b9bd580e43e2480",
+        "independent_validation.json": "4f800a916b65b3b8aa094dbdc218cf32f139f7b27dcea7c1549fa17ad865e683",
+        "metrics.json": "459d01892b8a0e4c5ad53a22dd22fd875f42d50925a7563ae8fb4742708036c1",
+        "metrics_by_assigned_model.csv": "138bf580bb7ba73302f6dd7bee41b379a519e5fb05d795dc20208c39efc4da98",
+        "metrics_by_job_group.csv": "9e0ca4521b919c62ffe06ed9e6c4c97c1cac1fed61454a7a144c3ec003c9a927",
+        "metrics_by_requested_model.csv": "b5323c617abab14687a0897252f16472b20c70c2c43a91d12d6440faea877fb4",
+        "paired_wait_changes.csv": "9f6e8286ff8ef038e0470853e570dfb96fc55177ad9bff309f290016a459e117",
+        "scenario.json": "8e1234feb73fd339f162049fa25bd75db4d161d30ed3ffd294981858d9a6ec90",
+        "schedule.csv": "c2cf41e37fc6cf365487134885cc56ce7927c859ff4dac1a9e497ff7c4689aed"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 20.068099399999483
+    },
+    {
+      "scenario": "question3/seed19",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "84bfee95b4d90046bf9175d7b50aa2e8bae0a046370cab6df2628dd428fa11e6",
+        "independent_validation.json": "eeb03c2381ab309232332c89369d237a45806bda33550d86080349d7f9633b25",
+        "metrics.json": "cafb65f9e07ea57a26ffbf8fdfaf50d1e0aac04be0523a46f7ee65bf7f92d7f4",
+        "metrics_by_assigned_model.csv": "4b08a607279b6ab726661b2f1671a4abf9f0deeb37ef88598dbf88454efebedb",
+        "metrics_by_job_group.csv": "9a3a4320da5e7f530571643e8c672c141b966512343d2867f1b8e8eff69be516",
+        "metrics_by_requested_model.csv": "e178a6b42e5ae078c71184ae7be65c52ac517e7308c510f3417ab57195d84163",
+        "paired_wait_changes.csv": "66f76e01c7287930c35eb1e5a11f7e46fd542be59503b49a49ef0a79610012ba",
+        "scenario.json": "6d735f352398050f2b73197233449c33ccc184d27a2247ecf71ab6d54dea69f7",
+        "schedule.csv": "ebfd71b8f54883128a09fce285ea8e9797f6775271caa9de6f776ad5a8ca3a64"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261019,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 17.48303329999908,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317799,
+        "event_count": 392671,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 36180,
+        "simulated_until": 22153813.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317799,
+        "current_rows": 317799,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 953397,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "84bfee95b4d90046bf9175d7b50aa2e8bae0a046370cab6df2628dd428fa11e6",
+        "independent_validation.json": "eeb03c2381ab309232332c89369d237a45806bda33550d86080349d7f9633b25",
+        "metrics.json": "cafb65f9e07ea57a26ffbf8fdfaf50d1e0aac04be0523a46f7ee65bf7f92d7f4",
+        "metrics_by_assigned_model.csv": "4b08a607279b6ab726661b2f1671a4abf9f0deeb37ef88598dbf88454efebedb",
+        "metrics_by_job_group.csv": "9a3a4320da5e7f530571643e8c672c141b966512343d2867f1b8e8eff69be516",
+        "metrics_by_requested_model.csv": "e178a6b42e5ae078c71184ae7be65c52ac517e7308c510f3417ab57195d84163",
+        "paired_wait_changes.csv": "66f76e01c7287930c35eb1e5a11f7e46fd542be59503b49a49ef0a79610012ba",
+        "scenario.json": "6d735f352398050f2b73197233449c33ccc184d27a2247ecf71ab6d54dea69f7",
+        "schedule.csv": "ebfd71b8f54883128a09fce285ea8e9797f6775271caa9de6f776ad5a8ca3a64"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 19.99275130001479
+    },
+    {
+      "scenario": "question3/backfill_flex50",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "5fea5be2065b8ded69af2401f2c6af3c5d0b8440fed201878ff18e347194caa5",
+        "independent_validation.json": "559fc17e941ed2c53cf27dfdb4f88dbc022a7ff804b21403e402aeb0e9b0a7c1",
+        "metrics.json": "07d2d8e6931a606a4c967c2d67d30135a90fd3dd9d24999a8f9b688cb8d99757",
+        "metrics_by_assigned_model.csv": "986a3b44e1d9d3487715c20f1f6169754b7e6a22d85d788d5ab18fc2171462d1",
+        "metrics_by_job_group.csv": "bf2b9c1a91e0d35dbd8e9133894397a02ce43b04de098f9ca3bd47b8ea93bfc7",
+        "metrics_by_requested_model.csv": "af349b6a08fe070d710c3d3ed6e5e0881f594dabdd00795fc360d2f2a3d9c8d6",
+        "paired_wait_changes.csv": "a0ab93d10df0de6a8c422ed88be54658508119256637593decc4eb02e344ed05",
+        "scenario.json": "b6e58b490ece4b3e77539d4fb38bae51dfc6f8c1e0619a183a5c248e58c348a7",
+        "schedule.csv": "2434ef4b4b8799d7fc78613258222630a975793801f6aba2b5a505ff2eac869d"
+      },
+      "configuration": {
+        "policy": "backfill",
+        "aging_alpha": null,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ]
+        },
+        "schedule_storage": null
+      },
+      "current_simulation_wall_seconds": 23.14742340001976,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317794,
+        "event_count": 394873,
+        "backfilled_jobs": 20009,
+        "migrated_jobs": 39691,
+        "simulated_until": 17585595.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317794,
+        "current_rows": 317794,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 953382,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "5fea5be2065b8ded69af2401f2c6af3c5d0b8440fed201878ff18e347194caa5",
+        "independent_validation.json": "559fc17e941ed2c53cf27dfdb4f88dbc022a7ff804b21403e402aeb0e9b0a7c1",
+        "metrics.json": "07d2d8e6931a606a4c967c2d67d30135a90fd3dd9d24999a8f9b688cb8d99757",
+        "metrics_by_assigned_model.csv": "986a3b44e1d9d3487715c20f1f6169754b7e6a22d85d788d5ab18fc2171462d1",
+        "metrics_by_job_group.csv": "bf2b9c1a91e0d35dbd8e9133894397a02ce43b04de098f9ca3bd47b8ea93bfc7",
+        "metrics_by_requested_model.csv": "af349b6a08fe070d710c3d3ed6e5e0881f594dabdd00795fc360d2f2a3d9c8d6",
+        "paired_wait_changes.csv": "a0ab93d10df0de6a8c422ed88be54658508119256637593decc4eb02e344ed05",
+        "scenario.json": "b6e58b490ece4b3e77539d4fb38bae51dfc6f8c1e0619a183a5c248e58c348a7",
+        "schedule.csv": "2434ef4b4b8799d7fc78613258222630a975793801f6aba2b5a505ff2eac869d"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 25.653991599974688
+    },
+    {
+      "scenario": "question2/aging_best",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": false,
+      "artifact_sha256_before": {
+        "allocations.csv": "e8b60b05cf1de6cccd012d46a17964b60c90c8d7ca26c78ca9e45094e644bd3f",
+        "independent_validation.json": "800aeeebf1e05e1139f59d89e0559667e05a755acffa0496730ec02ac0900276",
+        "metrics.json": "b701dd600ca859046b15d025d81aec509b8fb38e10ce4fcc065a1780de93597e",
+        "metrics_by_assigned_model.csv": "f00f95b9bb9370543817bdf8ccd20789f02e01d6e47692fc74bdb231f99e2978",
+        "metrics_by_job_group.csv": "87943414aecba072eabd11e980cc5607073513ee0e7430ba992112bacb408858",
+        "metrics_by_requested_model.csv": "89fe64320646b7b3c6ecd4e763d287a579698bd33ceab939f351049991c5b8e6",
+        "metrics_idle_while_queued_by_model.csv": "b06b903fb39db6a33cc11e7f1f5ff0466e37cf3afffb5d116aadfd7252f31344",
+        "scenario.json": "5ac5ea0b60f42ca99367197338a90bc977f2d72be2979d4876300ce75d624470",
+        "schedule.csv": "2357ac241a3ab7ad990d69af714de561cd81e6ecf4e34e61a63b167004031f31"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "full"
+      },
+      "current_simulation_wall_seconds": 16.279684399982216,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316144,
+        "event_count": 394870,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 21014697.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316144,
+        "current_rows": 316144,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948432,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "e8b60b05cf1de6cccd012d46a17964b60c90c8d7ca26c78ca9e45094e644bd3f",
+        "independent_validation.json": "800aeeebf1e05e1139f59d89e0559667e05a755acffa0496730ec02ac0900276",
+        "metrics.json": "b701dd600ca859046b15d025d81aec509b8fb38e10ce4fcc065a1780de93597e",
+        "metrics_by_assigned_model.csv": "f00f95b9bb9370543817bdf8ccd20789f02e01d6e47692fc74bdb231f99e2978",
+        "metrics_by_job_group.csv": "87943414aecba072eabd11e980cc5607073513ee0e7430ba992112bacb408858",
+        "metrics_by_requested_model.csv": "89fe64320646b7b3c6ecd4e763d287a579698bd33ceab939f351049991c5b8e6",
+        "metrics_idle_while_queued_by_model.csv": "b06b903fb39db6a33cc11e7f1f5ff0466e37cf3afffb5d116aadfd7252f31344",
+        "scenario.json": "5ac5ea0b60f42ca99367197338a90bc977f2d72be2979d4876300ce75d624470",
+        "schedule.csv": "2357ac241a3ab7ad990d69af714de561cd81e6ecf4e34e61a63b167004031f31"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 18.683947199984686
+    },
+    {
+      "scenario": "question3/improved/q3_arrival_old",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "allocations.csv": "b42685ecbf908314aa3f2d6a86ed25648c76169aee117286d97823485f1c30cd",
+        "independent_validation.json": "1461921ded89be73ab5ed1b8b0903b3f046400bb076622d279c5af932c72adab",
+        "metrics.json": "a748c178dafa85bb73ae4db2b27a7a23273859390c48acd56c2bca06e1ca4915",
+        "metrics_by_assigned_model.csv": "74776729ebf003f41efb0a5cd881a825da6bc7ab419c569fd1b75228d80f68a6",
+        "metrics_by_job_group.csv": "9af17e3693d18cacc90ae4ab9119946265011a3f6547668de67fad8a9b3abd17",
+        "metrics_by_requested_model.csv": "f2d0dddb55ed85c9210f5ecef8739345f6c1483aa6706981c9f57426698895c8",
+        "metrics_idle_while_queued_by_model.csv": "93775908c92cd55b653291fe2a3b4fef8da2faa5efafe4e809624a4f725bdbd6",
+        "paired_wait_changes.csv": "fc3d61ee0f73f12ad5f09fa3eabfc0b5f0c6bf3bc5ce94576bb64f8115b0420a",
+        "scenario.json": "6dbf7712be5d0121120c9c5166342a90fc754db5e1fbc08217da2e160f7a1d1e",
+        "schedule.csv": "f3af39f97e872af44943e2c430a16f88e24f140885c618ea23e08d852d6b331b"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ],
+          "mode": "arrival",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "full"
+      },
+      "current_simulation_wall_seconds": 17.849809700011974,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317429,
+        "event_count": 395779,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 39212,
+        "simulated_until": 17654481.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317429,
+        "current_rows": 317429,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952287,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "previous_simulation_wall_seconds": 17.690462300000945,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317429,
+        "current_rows": 317429,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952287,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "b42685ecbf908314aa3f2d6a86ed25648c76169aee117286d97823485f1c30cd",
+        "independent_validation.json": "1461921ded89be73ab5ed1b8b0903b3f046400bb076622d279c5af932c72adab",
+        "metrics.json": "a748c178dafa85bb73ae4db2b27a7a23273859390c48acd56c2bca06e1ca4915",
+        "metrics_by_assigned_model.csv": "74776729ebf003f41efb0a5cd881a825da6bc7ab419c569fd1b75228d80f68a6",
+        "metrics_by_job_group.csv": "9af17e3693d18cacc90ae4ab9119946265011a3f6547668de67fad8a9b3abd17",
+        "metrics_by_requested_model.csv": "f2d0dddb55ed85c9210f5ecef8739345f6c1483aa6706981c9f57426698895c8",
+        "metrics_idle_while_queued_by_model.csv": "93775908c92cd55b653291fe2a3b4fef8da2faa5efafe4e809624a4f725bdbd6",
+        "paired_wait_changes.csv": "fc3d61ee0f73f12ad5f09fa3eabfc0b5f0c6bf3bc5ce94576bb64f8115b0420a",
+        "scenario.json": "6dbf7712be5d0121120c9c5166342a90fc754db5e1fbc08217da2e160f7a1d1e",
+        "schedule.csv": "f3af39f97e872af44943e2c430a16f88e24f140885c618ea23e08d852d6b331b"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 39.340800499980105
+    },
+    {
+      "scenario": "question3/improved/q3_pull_aa",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "allocations.csv": "87d277ba62b3831306b81d24d2959e58119fe3460061feb875fe3dcc7ce50cfd",
+        "independent_validation.json": "fbc3e56f13a439d9e7246a829e7c8bdc2ebd0afe1ee918fe43e54890f76d97cb",
+        "metrics.json": "23995fd2e537e77d996f75361a77574199ef5d1fe5494caa0bf4a457e2b54d5d",
+        "metrics_by_assigned_model.csv": "f12ad4498c2d34f6361a4544d34757fe4b417d32fac15f25831c8d95133ed923",
+        "metrics_by_job_group.csv": "32c937a28157bd46dbb7f776b44b616e543468a17f654608e630c1a67e24a47e",
+        "metrics_by_requested_model.csv": "77ba781ffc10a4b0e9017e6395f0b9c336246c2492ba9b5ed5706bdf8a341d83",
+        "metrics_idle_while_queued_by_model.csv": "e48c244edfbd2288862c5208441f219434ab8c708000729bcd257e2bf2345a22",
+        "paired_wait_changes.csv": "7b1df46648de9522d09a55137a51eb7d4d9f2a0d30be696a57399d892d42e4f5",
+        "scenario.json": "144647f52a759e832a7ddc6551e550b4a6df2f44b4487909de35591b28a0b44b",
+        "schedule.csv": "e3cc8ec566c1f49c395014773d31ae013c1136b5ed1d70a963b07a2444b527ec"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "A800-SXM4-80GB"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "full"
+      },
+      "current_simulation_wall_seconds": 26.021695400006138,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317464,
+        "event_count": 397078,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 29537,
+        "simulated_until": 17334671.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317464,
+        "current_rows": 317464,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952392,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "previous_simulation_wall_seconds": 25.754845699993894,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317464,
+        "current_rows": 317464,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952392,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "87d277ba62b3831306b81d24d2959e58119fe3460061feb875fe3dcc7ce50cfd",
+        "independent_validation.json": "fbc3e56f13a439d9e7246a829e7c8bdc2ebd0afe1ee918fe43e54890f76d97cb",
+        "metrics.json": "23995fd2e537e77d996f75361a77574199ef5d1fe5494caa0bf4a457e2b54d5d",
+        "metrics_by_assigned_model.csv": "f12ad4498c2d34f6361a4544d34757fe4b417d32fac15f25831c8d95133ed923",
+        "metrics_by_job_group.csv": "32c937a28157bd46dbb7f776b44b616e543468a17f654608e630c1a67e24a47e",
+        "metrics_by_requested_model.csv": "77ba781ffc10a4b0e9017e6395f0b9c336246c2492ba9b5ed5706bdf8a341d83",
+        "metrics_idle_while_queued_by_model.csv": "e48c244edfbd2288862c5208441f219434ab8c708000729bcd257e2bf2345a22",
+        "paired_wait_changes.csv": "7b1df46648de9522d09a55137a51eb7d4d9f2a0d30be696a57399d892d42e4f5",
+        "scenario.json": "144647f52a759e832a7ddc6551e550b4a6df2f44b4487909de35591b28a0b44b",
+        "schedule.csv": "e3cc8ec566c1f49c395014773d31ae013c1136b5ed1d70a963b07a2444b527ec"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 55.69694769999478
+    },
+    {
+      "scenario": "question3/improved/q3_pull_ahs",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "allocations.csv": "6bd0764fa24c435a3f3e700ccf6721ffebf1f199d5c91d484bdaed6245bb7dc7",
+        "independent_validation.json": "7aa3038bc4c0c07b2d0e4eb3ba13a613f336a25a49493a10856d2bd7c8542413",
+        "metrics.json": "8d6c35c64067a230cf9b0f27dd4a9ee349a70ebb5a722d93e82d227a0e611bad",
+        "metrics_by_assigned_model.csv": "8fbc5154022de72f34698043d6561703370332ab61de24596d1328e1626f6998",
+        "metrics_by_job_group.csv": "bb2be8286f83fa0ca272e99718ae7cf4d22fb836d2e1fd93db275cabd1e9041e",
+        "metrics_by_requested_model.csv": "2e1532e42a53dd0edaa0f322efa264f5245d35a6444702c486d3869eaf9286f4",
+        "metrics_idle_while_queued_by_model.csv": "41b9921ac8bcab1894765a0bace2f61f1998b1621b9ff87454926c13b978fb85",
+        "paired_wait_changes.csv": "5248d6c0e9c60ed8aa154881760e313906413673b53272e5769d551bc256d22d",
+        "scenario.json": "6da1a547d2daa9555042449352a74ba65d9c5c5c54b1329598f94d1f98ca6784",
+        "schedule.csv": "4ecd52d0884f5dd36f8ba7bb638d14ddb035df7433db51329b242e023ef2f0e2"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "full"
+      },
+      "current_simulation_wall_seconds": 17.497205199993914,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317580,
+        "event_count": 393896,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 44189,
+        "simulated_until": 16464476.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317580,
+        "current_rows": 317580,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952740,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "previous_simulation_wall_seconds": 17.385939500003587,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317580,
+        "current_rows": 317580,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952740,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "6bd0764fa24c435a3f3e700ccf6721ffebf1f199d5c91d484bdaed6245bb7dc7",
+        "independent_validation.json": "7aa3038bc4c0c07b2d0e4eb3ba13a613f336a25a49493a10856d2bd7c8542413",
+        "metrics.json": "8d6c35c64067a230cf9b0f27dd4a9ee349a70ebb5a722d93e82d227a0e611bad",
+        "metrics_by_assigned_model.csv": "8fbc5154022de72f34698043d6561703370332ab61de24596d1328e1626f6998",
+        "metrics_by_job_group.csv": "bb2be8286f83fa0ca272e99718ae7cf4d22fb836d2e1fd93db275cabd1e9041e",
+        "metrics_by_requested_model.csv": "2e1532e42a53dd0edaa0f322efa264f5245d35a6444702c486d3869eaf9286f4",
+        "metrics_idle_while_queued_by_model.csv": "41b9921ac8bcab1894765a0bace2f61f1998b1621b9ff87454926c13b978fb85",
+        "paired_wait_changes.csv": "5248d6c0e9c60ed8aa154881760e313906413673b53272e5769d551bc256d22d",
+        "scenario.json": "6da1a547d2daa9555042449352a74ba65d9c5c5c54b1329598f94d1f98ca6784",
+        "schedule.csv": "4ecd52d0884f5dd36f8ba7bb638d14ddb035df7433db51329b242e023ef2f0e2"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 38.71997390000615
+    },
+    {
+      "scenario": "question3/improved/q3_pull_all",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "allocations.csv": "5a725a7b9890fc7bb90c713720ff29730e0f0d2034bf2039c075668c76597824",
+        "independent_validation.json": "dcadf366b9717c0b444d15874399b1916f1f8a82685f8e2fcd8af4a9afed1fc2",
+        "metrics.json": "f4051404f7dedadfc09806812a0003f741bc1db94b143266198e5ced92d771d9",
+        "metrics_by_assigned_model.csv": "97269836af006486ea298ae549d6f8ba2b2697ad2c5e9974652c0c19751e0d09",
+        "metrics_by_job_group.csv": "aaa11ce011e53a117107ad064b7098631358725d5d2dcf693233435ecb7ed475",
+        "metrics_by_requested_model.csv": "46bb6a426a15b2ea3a5d6fc57d318407412b888aa2e4ff66adc355d4f5b25382",
+        "metrics_idle_while_queued_by_model.csv": "b20cc5da4f9ccbaeadd08708c6027196d4989f75769cd1a4056bf38e74a82321",
+        "paired_wait_changes.csv": "7b38567cd445e0b28ff352aaa6d7b0ba652db7099a35b5d545059415e01dee04",
+        "scenario.json": "c53cbde29a460bcb79fc5f4416fed3af43555a3b2c097f3d3dbcf6e20d8b6330",
+        "schedule.csv": "ac8d71dc7e79f7259c510bc973f968d0438b872f080be135c02372e028910333"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2",
+            "A800-SXM4-80GB"
+          ],
+          "mode": "pull",
+          "donor_caps": [
+            [
+              "A800-SXM4-80GB",
+              0.1
+            ]
+          ],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "full"
+      },
+      "current_simulation_wall_seconds": 18.05343780000112,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317584,
+        "event_count": 394212,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 44124,
+        "simulated_until": 16408489.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317584,
+        "current_rows": 317584,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952752,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "previous_simulation_wall_seconds": 11.480789099994581,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317584,
+        "current_rows": 317584,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952752,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "5a725a7b9890fc7bb90c713720ff29730e0f0d2034bf2039c075668c76597824",
+        "independent_validation.json": "dcadf366b9717c0b444d15874399b1916f1f8a82685f8e2fcd8af4a9afed1fc2",
+        "metrics.json": "f4051404f7dedadfc09806812a0003f741bc1db94b143266198e5ced92d771d9",
+        "metrics_by_assigned_model.csv": "97269836af006486ea298ae549d6f8ba2b2697ad2c5e9974652c0c19751e0d09",
+        "metrics_by_job_group.csv": "aaa11ce011e53a117107ad064b7098631358725d5d2dcf693233435ecb7ed475",
+        "metrics_by_requested_model.csv": "46bb6a426a15b2ea3a5d6fc57d318407412b888aa2e4ff66adc355d4f5b25382",
+        "metrics_idle_while_queued_by_model.csv": "b20cc5da4f9ccbaeadd08708c6027196d4989f75769cd1a4056bf38e74a82321",
+        "paired_wait_changes.csv": "7b38567cd445e0b28ff352aaa6d7b0ba652db7099a35b5d545059415e01dee04",
+        "scenario.json": "c53cbde29a460bcb79fc5f4416fed3af43555a3b2c097f3d3dbcf6e20d8b6330",
+        "schedule.csv": "ac8d71dc7e79f7259c510bc973f968d0438b872f080be135c02372e028910333"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 32.709484399994835
+    },
+    {
+      "scenario": "question3/improved/q3_cap10",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": true,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "allocations.csv": "2d26d6417856ccf4318d28ceb15ef1107d1156efbbc0559cc4b42a68ba59ea6b",
+        "independent_validation.json": "9c24711e37610450bff5b5bb3d4519ec32d7e02d45ef2d740dbeed675fe5aafb",
+        "metrics.json": "c0fd1c1cb88809e35fe71da0b0c700d1e1b8dcaf1e1ba7927d117307d492adb6",
+        "metrics_by_assigned_model.csv": "20f3f0c9687e4e2ae6d8060b54e13af05674afde700334fab39e4f728ef37211",
+        "metrics_by_job_group.csv": "d5cdbb91446d20fa2ed7a871746fe8573340ec38424adbaaea5e541a40062d4f",
+        "metrics_by_requested_model.csv": "784f66ab7783d13c46eb9241b0e9e2f6677398f41ead392586887e4442b1f9e9",
+        "metrics_idle_while_queued_by_model.csv": "c773bfbe48dcec10b691f11bd993aaba916de4f4fcf0eddfa81493cb5bbdc3fd",
+        "paired_wait_changes.csv": "c2e3a3ca97ca317e22ce1ffcfaee29845d2e622c7f607ccb84ffe7b69270dd78",
+        "scenario.json": "009ee184480af38c6561ece8c6d0a068e6aa408c38c1199934aedf25b7412d04",
+        "schedule.csv": "d3d6f70d13cd2300dfa75247639067500101f02459c241dbd29568748102b44e"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.1,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "full"
+      },
+      "current_simulation_wall_seconds": 7.287033800006611,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317042,
+        "event_count": 393879,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 14755,
+        "simulated_until": 17944396.0
+      },
+      "stored_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "stored_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317042,
+        "current_rows": 317042,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 951126,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "previous_simulation_wall_seconds": 7.3711452999850735,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317042,
+        "current_rows": 317042,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 951126,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "allocations.csv": "2d26d6417856ccf4318d28ceb15ef1107d1156efbbc0559cc4b42a68ba59ea6b",
+        "independent_validation.json": "9c24711e37610450bff5b5bb3d4519ec32d7e02d45ef2d740dbeed675fe5aafb",
+        "metrics.json": "c0fd1c1cb88809e35fe71da0b0c700d1e1b8dcaf1e1ba7927d117307d492adb6",
+        "metrics_by_assigned_model.csv": "20f3f0c9687e4e2ae6d8060b54e13af05674afde700334fab39e4f728ef37211",
+        "metrics_by_job_group.csv": "d5cdbb91446d20fa2ed7a871746fe8573340ec38424adbaaea5e541a40062d4f",
+        "metrics_by_requested_model.csv": "784f66ab7783d13c46eb9241b0e9e2f6677398f41ead392586887e4442b1f9e9",
+        "metrics_idle_while_queued_by_model.csv": "c773bfbe48dcec10b691f11bd993aaba916de4f4fcf0eddfa81493cb5bbdc3fd",
+        "paired_wait_changes.csv": "c2e3a3ca97ca317e22ce1ffcfaee29845d2e622c7f607ccb84ffe7b69270dd78",
+        "scenario.json": "009ee184480af38c6561ece8c6d0a068e6aa408c38c1199934aedf25b7412d04",
+        "schedule.csv": "d3d6f70d13cd2300dfa75247639067500101f02459c241dbd29568748102b44e"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 16.77377759999945
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_0",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "f4615e30b3ae8491894014764cc7a8805dc5a9b153b53993c4dc4bf8d2c00dba",
+        "metrics_by_assigned_model.csv": "8361e863a53e44362b460ad6a157bf5fdae14fb4d95c1833a42f8301d25a1420",
+        "metrics_by_job_group.csv": "fe609d87ee1ac2f3799e04e00e0029af60ac57171a8950ab10af8a18f331adef",
+        "metrics_by_requested_model.csv": "da09fd7397b292036edeb53ef672853c62c4262eab4fa5d786808fbea7524a9b",
+        "metrics_idle_while_queued_by_model.csv": "cb620d8c691e774dc16c4b9ec8260db71d0e4570240582f63deefbbf64835f94",
+        "scenario.json": "cfbf7fd2f12a7d89abb56bddb10ba5451e2818e6726f6648ca743ba2a16addef"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 0,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 9.420497299986891,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316203,
+        "event_count": 391937,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26759836.0
+      },
+      "previous_simulation_wall_seconds": 16.020576299983077,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316203,
+        "current_rows": 316203,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948609,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "f4615e30b3ae8491894014764cc7a8805dc5a9b153b53993c4dc4bf8d2c00dba",
+        "metrics_by_assigned_model.csv": "8361e863a53e44362b460ad6a157bf5fdae14fb4d95c1833a42f8301d25a1420",
+        "metrics_by_job_group.csv": "fe609d87ee1ac2f3799e04e00e0029af60ac57171a8950ab10af8a18f331adef",
+        "metrics_by_requested_model.csv": "da09fd7397b292036edeb53ef672853c62c4262eab4fa5d786808fbea7524a9b",
+        "metrics_idle_while_queued_by_model.csv": "cb620d8c691e774dc16c4b9ec8260db71d0e4570240582f63deefbbf64835f94",
+        "scenario.json": "cfbf7fd2f12a7d89abb56bddb10ba5451e2818e6726f6648ca743ba2a16addef"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 27.038845400005812
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_0.001",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "103d59660efef6eba592fa60b65ba9d62c36c08be901da528b1c88a72f8b48c2",
+        "metrics_by_assigned_model.csv": "941531162537251bcf5e0de4feec0aa3758c42d886c766a3bc91fe3ac979ed27",
+        "metrics_by_job_group.csv": "455660e97f6af16acd3fa4ae0ae0c99c12edabfb39db4b82719576c9b08da92e",
+        "metrics_by_requested_model.csv": "d85d7c82e30871db8c9b9b6cbfac85accab607742847d52f9b44aa6a406e4be9",
+        "metrics_idle_while_queued_by_model.csv": "74d5e08ecda84c127d1863facf2ea5a8596227ddc9296210d3eb83350cbfa1f4",
+        "scenario.json": "5610441f9a7ba36b53671c9cfdc48e33dd9af24a356690f9b4552022de2cb36d"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 0.001,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 16.28458320000209,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316183,
+        "event_count": 392172,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26759836.0
+      },
+      "previous_simulation_wall_seconds": 16.224068599985912,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316183,
+        "current_rows": 316183,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948549,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "103d59660efef6eba592fa60b65ba9d62c36c08be901da528b1c88a72f8b48c2",
+        "metrics_by_assigned_model.csv": "941531162537251bcf5e0de4feec0aa3758c42d886c766a3bc91fe3ac979ed27",
+        "metrics_by_job_group.csv": "455660e97f6af16acd3fa4ae0ae0c99c12edabfb39db4b82719576c9b08da92e",
+        "metrics_by_requested_model.csv": "d85d7c82e30871db8c9b9b6cbfac85accab607742847d52f9b44aa6a406e4be9",
+        "metrics_idle_while_queued_by_model.csv": "74d5e08ecda84c127d1863facf2ea5a8596227ddc9296210d3eb83350cbfa1f4",
+        "scenario.json": "5610441f9a7ba36b53671c9cfdc48e33dd9af24a356690f9b4552022de2cb36d"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 34.06339070000104
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_0.003",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "cb81ce7f51b68aa95e08e4c232e5f06ed2593ca13cdf7ae5f1beedc94fe7db0b",
+        "metrics_by_assigned_model.csv": "779412db4eace88148271f540c3370e4b507d3455bef34041512bf26d4a5eb91",
+        "metrics_by_job_group.csv": "b25fc1bf914bacf14b3b933ba8c86dd334ffcdfa8f3cdaaee092c777469f8f2e",
+        "metrics_by_requested_model.csv": "daa1508e5861e6f16ba86ca0e2beb5c2ae85d99e85e8c890cddec96a6438956b",
+        "metrics_idle_while_queued_by_model.csv": "201b5089c336bd9dd11b5c8391a9d01fc32d3311fc26a960f8fc809b40702770",
+        "scenario.json": "f0bc44b8bf8a587e9d7b4da2ddd5bac98fac8761745f1da3de5fc5d1a0dd1261"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 0.003,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 16.338146699999925,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316170,
+        "event_count": 391978,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26761419.0
+      },
+      "previous_simulation_wall_seconds": 15.995914099999936,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316170,
+        "current_rows": 316170,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948510,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "cb81ce7f51b68aa95e08e4c232e5f06ed2593ca13cdf7ae5f1beedc94fe7db0b",
+        "metrics_by_assigned_model.csv": "779412db4eace88148271f540c3370e4b507d3455bef34041512bf26d4a5eb91",
+        "metrics_by_job_group.csv": "b25fc1bf914bacf14b3b933ba8c86dd334ffcdfa8f3cdaaee092c777469f8f2e",
+        "metrics_by_requested_model.csv": "daa1508e5861e6f16ba86ca0e2beb5c2ae85d99e85e8c890cddec96a6438956b",
+        "metrics_idle_while_queued_by_model.csv": "201b5089c336bd9dd11b5c8391a9d01fc32d3311fc26a960f8fc809b40702770",
+        "scenario.json": "f0bc44b8bf8a587e9d7b4da2ddd5bac98fac8761745f1da3de5fc5d1a0dd1261"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 33.73810080002295
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_0.01",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "12069c74b2b9590ec657489c6a92154d23ae29661e73b28054aee643b422b4cf",
+        "metrics_by_assigned_model.csv": "03657281792a4bc6dbffa597becdec9cd2c28d473eb392a671b0da364044a63f",
+        "metrics_by_job_group.csv": "12aff36bed3f8285230369c4d9956dfe7614d18bdff1a1827d048456ecb01713",
+        "metrics_by_requested_model.csv": "72752a54ccb90ea302798060e14537e3449d0216c817eaf1ae555b2bf972d365",
+        "metrics_idle_while_queued_by_model.csv": "03dbd215a834cff817f5870efc525db1f761903e2236e39a92a982f3702c78ef",
+        "scenario.json": "239689c427c27febeaa3f7ea896619829b36606b4636e61662f63ca3b35b2947"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 0.01,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 16.00022800001898,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316149,
+        "event_count": 392036,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26759836.0
+      },
+      "previous_simulation_wall_seconds": 16.13632280001184,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316149,
+        "current_rows": 316149,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948447,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "12069c74b2b9590ec657489c6a92154d23ae29661e73b28054aee643b422b4cf",
+        "metrics_by_assigned_model.csv": "03657281792a4bc6dbffa597becdec9cd2c28d473eb392a671b0da364044a63f",
+        "metrics_by_job_group.csv": "12aff36bed3f8285230369c4d9956dfe7614d18bdff1a1827d048456ecb01713",
+        "metrics_by_requested_model.csv": "72752a54ccb90ea302798060e14537e3449d0216c817eaf1ae555b2bf972d365",
+        "metrics_idle_while_queued_by_model.csv": "03dbd215a834cff817f5870efc525db1f761903e2236e39a92a982f3702c78ef",
+        "scenario.json": "239689c427c27febeaa3f7ea896619829b36606b4636e61662f63ca3b35b2947"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 33.717425899987575
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_0.03",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "a489593d521c93e17e6d06132077c7d20686b8e6a2f2ae4f72d1d1144e799711",
+        "metrics_by_assigned_model.csv": "0b840f84ced2fbd39ccb73b252a858cc7b483dad3241d0134e3342d650524f6f",
+        "metrics_by_job_group.csv": "cde0777e12908bc1c3254ed279b64ade3a4de74fc721fa6d7c540c3f52198ed9",
+        "metrics_by_requested_model.csv": "d9882cbd8e6a4c198c47a485423c053148b494564ccc3aef539ad03427c98213",
+        "metrics_idle_while_queued_by_model.csv": "886b87b03bd8f6944629561168d49cb4f6bb64b5c9dcf3712859544263ffc785",
+        "scenario.json": "25f0a566da30ee0c4c7dcc0269caff5c0117c0415866d116e9481fc487342a2d"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 0.03,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 9.448361500020837,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316194,
+        "event_count": 392018,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26758858.0
+      },
+      "previous_simulation_wall_seconds": 6.337076099996921,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316194,
+        "current_rows": 316194,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948582,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "a489593d521c93e17e6d06132077c7d20686b8e6a2f2ae4f72d1d1144e799711",
+        "metrics_by_assigned_model.csv": "0b840f84ced2fbd39ccb73b252a858cc7b483dad3241d0134e3342d650524f6f",
+        "metrics_by_job_group.csv": "cde0777e12908bc1c3254ed279b64ade3a4de74fc721fa6d7c540c3f52198ed9",
+        "metrics_by_requested_model.csv": "d9882cbd8e6a4c198c47a485423c053148b494564ccc3aef539ad03427c98213",
+        "metrics_idle_while_queued_by_model.csv": "886b87b03bd8f6944629561168d49cb4f6bb64b5c9dcf3712859544263ffc785",
+        "scenario.json": "25f0a566da30ee0c4c7dcc0269caff5c0117c0415866d116e9481fc487342a2d"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 16.5204919000098
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_0.1",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "00bda4580c2935ed69f658beeb6b8a8ea69f4b4c5bf5568533376d608c180259",
+        "metrics_by_assigned_model.csv": "a46dc0f66ba1072dae8d942428afad085c0ae71188691eb9c7e19b3b7540a827",
+        "metrics_by_job_group.csv": "b5e5ff333017452ef9c52141d76914eaab5625f50a698463788c7cf490cc95c7",
+        "metrics_by_requested_model.csv": "d1d96f328e6c6312763950402883e94e9b63107fb0c05ba9f13c8eab6384aca6",
+        "metrics_idle_while_queued_by_model.csv": "4887c47a8be92ed8b9112e08f1949c8e0a907bc13e0f06ff5143235126f69b44",
+        "scenario.json": "b30d7fd35a7064cdb6b0f98b14a65b3db24f3ec133af3c3b073e4508856788d9"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 0.1,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 6.1842854999995325,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316248,
+        "event_count": 392031,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26760076.0
+      },
+      "previous_simulation_wall_seconds": 6.175420400017174,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316248,
+        "current_rows": 316248,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948744,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "00bda4580c2935ed69f658beeb6b8a8ea69f4b4c5bf5568533376d608c180259",
+        "metrics_by_assigned_model.csv": "a46dc0f66ba1072dae8d942428afad085c0ae71188691eb9c7e19b3b7540a827",
+        "metrics_by_job_group.csv": "b5e5ff333017452ef9c52141d76914eaab5625f50a698463788c7cf490cc95c7",
+        "metrics_by_requested_model.csv": "d1d96f328e6c6312763950402883e94e9b63107fb0c05ba9f13c8eab6384aca6",
+        "metrics_idle_while_queued_by_model.csv": "4887c47a8be92ed8b9112e08f1949c8e0a907bc13e0f06ff5143235126f69b44",
+        "scenario.json": "b30d7fd35a7064cdb6b0f98b14a65b3db24f3ec133af3c3b073e4508856788d9"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 13.097713799972553
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_0.3",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "a16aa08a364b1d892350879494667061ab61ae3c57ee9c36dc593fe670b25cdf",
+        "metrics_by_assigned_model.csv": "6a2a8d4920c03029de01436c858e199d627bbe2cc7742c36a048b5fa016e7743",
+        "metrics_by_job_group.csv": "3a6396ce1669e1a5d8361eaec45d69cdab487f19a68d056ccf2bfa8d98a65549",
+        "metrics_by_requested_model.csv": "4cab05d2f6a493d2e0d0965df0fe21f6b23bcc98f094fe4e9363584f4605359e",
+        "metrics_idle_while_queued_by_model.csv": "bda4dab316d5adc0c16d163aaecd915930e978af8cbb0ef4a3d59ea4ea9ebf20",
+        "scenario.json": "9c3cfceabd276fbadc8cc4193aa3614fc488c42b61ffd602a9048b1ecdc77eb1"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 0.3,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 6.244983099983074,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316155,
+        "event_count": 391900,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26814107.0
+      },
+      "previous_simulation_wall_seconds": 7.157374299975345,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316155,
+        "current_rows": 316155,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948465,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "a16aa08a364b1d892350879494667061ab61ae3c57ee9c36dc593fe670b25cdf",
+        "metrics_by_assigned_model.csv": "6a2a8d4920c03029de01436c858e199d627bbe2cc7742c36a048b5fa016e7743",
+        "metrics_by_job_group.csv": "3a6396ce1669e1a5d8361eaec45d69cdab487f19a68d056ccf2bfa8d98a65549",
+        "metrics_by_requested_model.csv": "4cab05d2f6a493d2e0d0965df0fe21f6b23bcc98f094fe4e9363584f4605359e",
+        "metrics_idle_while_queued_by_model.csv": "bda4dab316d5adc0c16d163aaecd915930e978af8cbb0ef4a3d59ea4ea9ebf20",
+        "scenario.json": "9c3cfceabd276fbadc8cc4193aa3614fc488c42b61ffd602a9048b1ecdc77eb1"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 14.991027499985648
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_1",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "ce266abcc8b33cb129ab510d74d908821c79f0046c76e357b68fbebb3e1b7fe3",
+        "metrics_by_assigned_model.csv": "a495858f2ca20655af8fbfa09ca6742b400aaaa1dc9c242a82b84abb75c7806b",
+        "metrics_by_job_group.csv": "cf3e39f84cd7fdd515e8fc91559ae3922c53f65702efe9ea8aa26dfdb82e655b",
+        "metrics_by_requested_model.csv": "b4aa99c3be40a851c972f97e9fc5c045fe47fcc1bc303a12ba4a527a024c7c83",
+        "metrics_idle_while_queued_by_model.csv": "0ce493fddc58bb1f5c4f553c46793e604b9939fe4f51a644d055d1dfc6599ed8",
+        "scenario.json": "24b9dc2ed07713ba6256fb4d1c650e04dc49e1c1addbf7676e207901fe363aa1"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 1,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 9.431200099992566,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316211,
+        "event_count": 392137,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 26128175.0
+      },
+      "previous_simulation_wall_seconds": 14.367719200003194,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316211,
+        "current_rows": 316211,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948633,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "ce266abcc8b33cb129ab510d74d908821c79f0046c76e357b68fbebb3e1b7fe3",
+        "metrics_by_assigned_model.csv": "a495858f2ca20655af8fbfa09ca6742b400aaaa1dc9c242a82b84abb75c7806b",
+        "metrics_by_job_group.csv": "cf3e39f84cd7fdd515e8fc91559ae3922c53f65702efe9ea8aa26dfdb82e655b",
+        "metrics_by_requested_model.csv": "b4aa99c3be40a851c972f97e9fc5c045fe47fcc1bc303a12ba4a527a024c7c83",
+        "metrics_idle_while_queued_by_model.csv": "0ce493fddc58bb1f5c4f553c46793e604b9939fe4f51a644d055d1dfc6599ed8",
+        "scenario.json": "24b9dc2ed07713ba6256fb4d1c650e04dc49e1c1addbf7676e207901fe363aa1"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 25.343710300017847
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_3",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "958359585ff4bb5792c76c5dbb0020deb31e8ddfd8b265afd7596eb024f254b1",
+        "metrics_by_assigned_model.csv": "115fc5b3678742e9f2657d683e48505c71f71f623fc53b6f3676dd8c41ffd0fe",
+        "metrics_by_job_group.csv": "2d57a88658ad1bdec650a62e3b3a8b1781d83cfdd47094b921bbf1bfe3d71fd7",
+        "metrics_by_requested_model.csv": "1cfdf9ce51476d0d95bef8b32ab744f5e5cca6e7c6726a4c07904bbda4d69b79",
+        "metrics_idle_while_queued_by_model.csv": "a90724159ffd85f9663dc87c0c1669ea4e2a68ec6f2fcf60efc4981586b0cc12",
+        "scenario.json": "43760a1b8061c8099f41b7ec632a15f722d12ff7ff99425730c8c72596457229"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 3,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 16.815805499994894,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316184,
+        "event_count": 393707,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 23745651.0
+      },
+      "previous_simulation_wall_seconds": 17.018786100001307,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316184,
+        "current_rows": 316184,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948552,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "958359585ff4bb5792c76c5dbb0020deb31e8ddfd8b265afd7596eb024f254b1",
+        "metrics_by_assigned_model.csv": "115fc5b3678742e9f2657d683e48505c71f71f623fc53b6f3676dd8c41ffd0fe",
+        "metrics_by_job_group.csv": "2d57a88658ad1bdec650a62e3b3a8b1781d83cfdd47094b921bbf1bfe3d71fd7",
+        "metrics_by_requested_model.csv": "1cfdf9ce51476d0d95bef8b32ab744f5e5cca6e7c6726a4c07904bbda4d69b79",
+        "metrics_idle_while_queued_by_model.csv": "a90724159ffd85f9663dc87c0c1669ea4e2a68ec6f2fcf60efc4981586b0cc12",
+        "scenario.json": "43760a1b8061c8099f41b7ec632a15f722d12ff7ff99425730c8c72596457229"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 35.37923960000626
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_10",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "57a521c5c3372e76e743968e829337fbb616192f160b9c9550058d5d243611bd",
+        "metrics_by_assigned_model.csv": "58e8ad2eb6f3986f80e117a8458ec94e303162054af9ced831cfc2466b60da4c",
+        "metrics_by_job_group.csv": "1b2a5ceb5acdf80576dc9b552c7799c2db3875b7b158b79aecdb82742219a4ef",
+        "metrics_by_requested_model.csv": "9db8b6ed3835b2cee64a112858cfe97998e95daaa9421e598320c7d9a3041f6d",
+        "metrics_idle_while_queued_by_model.csv": "002a8025aae27bd389f7bc62dbb7382d439f76c7493281aa14e1a3bd65846dd1",
+        "scenario.json": "c6ba5ad5fd743c22f50f4351258ce9e985f4008ce2e070ab53615ad21e5ce330"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 10,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 16.717398200009484,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316189,
+        "event_count": 394376,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 21340975.0
+      },
+      "previous_simulation_wall_seconds": 16.39889760001097,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316189,
+        "current_rows": 316189,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948567,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "57a521c5c3372e76e743968e829337fbb616192f160b9c9550058d5d243611bd",
+        "metrics_by_assigned_model.csv": "58e8ad2eb6f3986f80e117a8458ec94e303162054af9ced831cfc2466b60da4c",
+        "metrics_by_job_group.csv": "1b2a5ceb5acdf80576dc9b552c7799c2db3875b7b158b79aecdb82742219a4ef",
+        "metrics_by_requested_model.csv": "9db8b6ed3835b2cee64a112858cfe97998e95daaa9421e598320c7d9a3041f6d",
+        "metrics_idle_while_queued_by_model.csv": "002a8025aae27bd389f7bc62dbb7382d439f76c7493281aa14e1a3bd65846dd1",
+        "scenario.json": "c6ba5ad5fd743c22f50f4351258ce9e985f4008ce2e070ab53615ad21e5ce330"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 34.652795400004834
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_30",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "2a98930fcfe23f1841f643f1183b921ac0aca1f7fb7c7019870b668609ed78fb",
+        "metrics_by_assigned_model.csv": "ecc3256f38c7be7136264077262ae90d80657468da66268c6db99bf7aa25710f",
+        "metrics_by_job_group.csv": "e17a9a9f424378383b0da77ca202095799176b9b72869960cac1da9a524aedb9",
+        "metrics_by_requested_model.csv": "056f1f45c16a40675bc206037b4ba32b833896b5d747afea2e32c53592a09064",
+        "metrics_idle_while_queued_by_model.csv": "16f2599b6820e607727ce14800525aedbaaed09c794e626b9d8e1b3d4e11744e",
+        "scenario.json": "dc34b3a85324b04151128c4742160cbe902ce2b6e53cc4dca764c258071134e5"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 30,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 16.253229800000554,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316153,
+        "event_count": 394674,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 21021319.0
+      },
+      "previous_simulation_wall_seconds": 16.48384349999833,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316153,
+        "current_rows": 316153,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948459,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "2a98930fcfe23f1841f643f1183b921ac0aca1f7fb7c7019870b668609ed78fb",
+        "metrics_by_assigned_model.csv": "ecc3256f38c7be7136264077262ae90d80657468da66268c6db99bf7aa25710f",
+        "metrics_by_job_group.csv": "e17a9a9f424378383b0da77ca202095799176b9b72869960cac1da9a524aedb9",
+        "metrics_by_requested_model.csv": "056f1f45c16a40675bc206037b4ba32b833896b5d747afea2e32c53592a09064",
+        "metrics_idle_while_queued_by_model.csv": "16f2599b6820e607727ce14800525aedbaaed09c794e626b9d8e1b3d4e11744e",
+        "scenario.json": "dc34b3a85324b04151128c4742160cbe902ce2b6e53cc4dca764c258071134e5"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 34.405955200025346
+    },
+    {
+      "scenario": "question2/aging_sweep/alpha_100",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "b701dd600ca859046b15d025d81aec509b8fb38e10ce4fcc065a1780de93597e",
+        "metrics_by_assigned_model.csv": "f00f95b9bb9370543817bdf8ccd20789f02e01d6e47692fc74bdb231f99e2978",
+        "metrics_by_job_group.csv": "87943414aecba072eabd11e980cc5607073513ee0e7430ba992112bacb408858",
+        "metrics_by_requested_model.csv": "89fe64320646b7b3c6ecd4e763d287a579698bd33ceab939f351049991c5b8e6",
+        "metrics_idle_while_queued_by_model.csv": "b06b903fb39db6a33cc11e7f1f5ff0466e37cf3afffb5d116aadfd7252f31344",
+        "scenario.json": "37c44d32bcbc7f2ed73386a5f56739058f1c2c3fee9d80e82abbdae1a714c3c3"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100,
+        "max_backfill_scan": 128,
+        "routing": null,
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 16.57684799999697,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 316144,
+        "event_count": 394870,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 0,
+        "simulated_until": 21014697.0
+      },
+      "previous_simulation_wall_seconds": 16.554846500017447,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 316144,
+        "current_rows": 316144,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 948432,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "b701dd600ca859046b15d025d81aec509b8fb38e10ce4fcc065a1780de93597e",
+        "metrics_by_assigned_model.csv": "f00f95b9bb9370543817bdf8ccd20789f02e01d6e47692fc74bdb231f99e2978",
+        "metrics_by_job_group.csv": "87943414aecba072eabd11e980cc5607073513ee0e7430ba992112bacb408858",
+        "metrics_by_requested_model.csv": "89fe64320646b7b3c6ecd4e763d287a579698bd33ceab939f351049991c5b8e6",
+        "metrics_idle_while_queued_by_model.csv": "b06b903fb39db6a33cc11e7f1f5ff0466e37cf3afffb5d116aadfd7252f31344",
+        "scenario.json": "37c44d32bcbc7f2ed73386a5f56739058f1c2c3fee9d80e82abbdae1a714c3c3"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 34.8019449999847
+    },
+    {
+      "scenario": "question3/improved/q3_p25",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "3684d96dbf9723e76df352e87ff4fe21fd7023904073573702225d54b344d1f2",
+        "metrics_by_assigned_model.csv": "1faa91a0b1844d6d1bddbd12359a949bd3e28a63eab996b573225eb191eae7a0",
+        "metrics_by_job_group.csv": "bf421b3337a4faef0a7a0e8b44c8652c2f67090af0d43570552f05205c8c35ed",
+        "metrics_by_requested_model.csv": "739bcb90d36fda64458cc6f4c5b027cc92e9012d9ef606d0c8e07ab5d185d3d1",
+        "metrics_idle_while_queued_by_model.csv": "47c6a9b390354a3306750b1f3a2e8f958353a7bba611849e773422f071de24a7",
+        "paired_wait_changes.csv": "8eefb2649e2bf717d83b6489b396d5e9ee0bb2331b8e8155194081f864521de2",
+        "scenario.json": "70aaf625837ff33dcc298ed6ac1ae7218eab654a2b86c611dbcdb418bbb25f3b"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.25,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 17.173509700020077,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317122,
+        "event_count": 392911,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 26916,
+        "simulated_until": 18716396.0
+      },
+      "previous_simulation_wall_seconds": 17.318997299997136,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317122,
+        "current_rows": 317122,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 951366,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "3684d96dbf9723e76df352e87ff4fe21fd7023904073573702225d54b344d1f2",
+        "metrics_by_assigned_model.csv": "1faa91a0b1844d6d1bddbd12359a949bd3e28a63eab996b573225eb191eae7a0",
+        "metrics_by_job_group.csv": "bf421b3337a4faef0a7a0e8b44c8652c2f67090af0d43570552f05205c8c35ed",
+        "metrics_by_requested_model.csv": "739bcb90d36fda64458cc6f4c5b027cc92e9012d9ef606d0c8e07ab5d185d3d1",
+        "metrics_idle_while_queued_by_model.csv": "47c6a9b390354a3306750b1f3a2e8f958353a7bba611849e773422f071de24a7",
+        "paired_wait_changes.csv": "8eefb2649e2bf717d83b6489b396d5e9ee0bb2331b8e8155194081f864521de2",
+        "scenario.json": "70aaf625837ff33dcc298ed6ac1ae7218eab654a2b86c611dbcdb418bbb25f3b"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 36.10250300000189
+    },
+    {
+      "scenario": "question3/improved/q3_p100",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "256bc34fb147b083a2b57ad26ab48ac9256c9dcc1326c9393583d2692a7426df",
+        "metrics_by_assigned_model.csv": "67cf760cc15838fef41e3c01dd3eb00242df704012672a178aded052c1ee4027",
+        "metrics_by_job_group.csv": "3b470a0905d004841da778ba2ffab2a77d27ee86695483c4002734831fa729c7",
+        "metrics_by_requested_model.csv": "b0dc0d2fd479bb9a81b33806e6367c9b85712331ef8363940e9524bb3ad06ebc",
+        "metrics_idle_while_queued_by_model.csv": "a376a6823fe5b90c27f3520ba0b8c0017b4e821890ca17a109efd17190c80de3",
+        "paired_wait_changes.csv": "a06cffa360440cca2585f5f516f564cd843e888e6941bde490953d4cf47cf42f",
+        "scenario.json": "131223c8e58f8665d3b187f56565ade058741296dae9e2746a9a7bd15e659396"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 1,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 19.433332599990536,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317702,
+        "event_count": 392283,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 33545,
+        "simulated_until": 16370509.0
+      },
+      "previous_simulation_wall_seconds": 19.175123200024245,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317702,
+        "current_rows": 317702,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 953106,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "256bc34fb147b083a2b57ad26ab48ac9256c9dcc1326c9393583d2692a7426df",
+        "metrics_by_assigned_model.csv": "67cf760cc15838fef41e3c01dd3eb00242df704012672a178aded052c1ee4027",
+        "metrics_by_job_group.csv": "3b470a0905d004841da778ba2ffab2a77d27ee86695483c4002734831fa729c7",
+        "metrics_by_requested_model.csv": "b0dc0d2fd479bb9a81b33806e6367c9b85712331ef8363940e9524bb3ad06ebc",
+        "metrics_idle_while_queued_by_model.csv": "a376a6823fe5b90c27f3520ba0b8c0017b4e821890ca17a109efd17190c80de3",
+        "paired_wait_changes.csv": "a06cffa360440cca2585f5f516f564cd843e888e6941bde490953d4cf47cf42f",
+        "scenario.json": "131223c8e58f8665d3b187f56565ade058741296dae9e2746a9a7bd15e659396"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 40.19012719998136
+    },
+    {
+      "scenario": "question3/improved/q3_cap50",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "e5272cfc101aa4d730bde2bafb697e91e32adad3da3cd7265f020567d673d046",
+        "metrics_by_assigned_model.csv": "dd47cd2a31e43635f8c20474c06c1417514b9d09ff004b43539f81adf497a94d",
+        "metrics_by_job_group.csv": "2c618508ae9afc266d9c90b3ec6c079f745ed5636802803067e08ee6c6106c90",
+        "metrics_by_requested_model.csv": "dddf3749feb675bdb815575bda1793b0dfe923cdd1663324418c101de7e690a0",
+        "metrics_idle_while_queued_by_model.csv": "98e0252bb68d6ee02c92fda821d0fc5a16f006479dc820a35bb172541cbde4fb",
+        "paired_wait_changes.csv": "ba19877199221fd380a12d98f8fac13bc9f5d220e61484287ed9474e5265584a",
+        "scenario.json": "dc5958259a6dd9a9b076edf338262348efe2438f5b3c0807fa4327bf657a6aad"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.5,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 18.610183000011602,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317732,
+        "event_count": 396784,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 43123,
+        "simulated_until": 16408489.0
+      },
+      "previous_simulation_wall_seconds": 18.29099489998771,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317732,
+        "current_rows": 317732,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 953196,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "e5272cfc101aa4d730bde2bafb697e91e32adad3da3cd7265f020567d673d046",
+        "metrics_by_assigned_model.csv": "dd47cd2a31e43635f8c20474c06c1417514b9d09ff004b43539f81adf497a94d",
+        "metrics_by_job_group.csv": "2c618508ae9afc266d9c90b3ec6c079f745ed5636802803067e08ee6c6106c90",
+        "metrics_by_requested_model.csv": "dddf3749feb675bdb815575bda1793b0dfe923cdd1663324418c101de7e690a0",
+        "metrics_idle_while_queued_by_model.csv": "98e0252bb68d6ee02c92fda821d0fc5a16f006479dc820a35bb172541cbde4fb",
+        "paired_wait_changes.csv": "ba19877199221fd380a12d98f8fac13bc9f5d220e61484287ed9474e5265584a",
+        "scenario.json": "dc5958259a6dd9a9b076edf338262348efe2438f5b3c0807fa4327bf657a6aad"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 38.55347680000705
+    },
+    {
+      "scenario": "question3/improved/q3_tau1h",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "355b33a1f935f55039977f5ee28061fa48b2de6ea8e6d20e0c8dcf1304b9f632",
+        "metrics_by_assigned_model.csv": "9c61a79ebc19dbb6070d53445d7aa71f31752d0667d6750e80ddf391861f19ec",
+        "metrics_by_job_group.csv": "11b385cecbf78790eda78c020e5f8e7221e34d5f3de650697104e850ff8c6245",
+        "metrics_by_requested_model.csv": "f4d92b86fed2245f65af2cb5122ee82c3fd8a14af8019767b75d33a0ddbaaf45",
+        "metrics_idle_while_queued_by_model.csv": "e5437fa3810dcfa1f3773d7c1f57d249bfc04d02f0bf42eb986624bf109d2051",
+        "paired_wait_changes.csv": "56043de4c66bb714050b37df9b94b4dcdb718834150a67e39b101e02e507c006",
+        "scenario.json": "7310a8061ddb6b17b0cfd723fefbfa11913ebbac1bd1a77aacfcd4492775feb7"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 3600,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 21.484190299990587,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317576,
+        "event_count": 432707,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 40655,
+        "simulated_until": 16465060.0
+      },
+      "previous_simulation_wall_seconds": 21.425597199995536,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317576,
+        "current_rows": 317576,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952728,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "355b33a1f935f55039977f5ee28061fa48b2de6ea8e6d20e0c8dcf1304b9f632",
+        "metrics_by_assigned_model.csv": "9c61a79ebc19dbb6070d53445d7aa71f31752d0667d6750e80ddf391861f19ec",
+        "metrics_by_job_group.csv": "11b385cecbf78790eda78c020e5f8e7221e34d5f3de650697104e850ff8c6245",
+        "metrics_by_requested_model.csv": "f4d92b86fed2245f65af2cb5122ee82c3fd8a14af8019767b75d33a0ddbaaf45",
+        "metrics_idle_while_queued_by_model.csv": "e5437fa3810dcfa1f3773d7c1f57d249bfc04d02f0bf42eb986624bf109d2051",
+        "paired_wait_changes.csv": "56043de4c66bb714050b37df9b94b4dcdb718834150a67e39b101e02e507c006",
+        "scenario.json": "7310a8061ddb6b17b0cfd723fefbfa11913ebbac1bd1a77aacfcd4492775feb7"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 44.54099490001681
+    },
+    {
+      "scenario": "question3/improved/q3_tau6h",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "601dbe5877a869e2f9de92161442c2df23d949f04c69f1ed7d4d178b1029768e",
+        "metrics_by_assigned_model.csv": "866df0a50852650bacda718688fd72552d077daab0c741e56113bd99a79cd8c8",
+        "metrics_by_job_group.csv": "4ec0124d4c8d84d45f97f1e08ba83c81d8dbb323697f87d8c4682e3dff7f5534",
+        "metrics_by_requested_model.csv": "e4a0de774195421f011d0f7a88bd9aeeeb768cb623db9260ee96164e5cede5ae",
+        "metrics_idle_while_queued_by_model.csv": "e90482a0d6dbcefda31eebb2dc0e8ef425ab366bc1ff51b15108f6e262e0fcd9",
+        "paired_wait_changes.csv": "d07cad6adfadefba9773edd14fcde0593b6edb4bef6760afd07f139e8e3d5a7c",
+        "scenario.json": "5474282a10366433f9d6cf209fa99df44c0797862cb67ec48ba8b3813b79bc37"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 21600,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 27.612796100002015,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317714,
+        "event_count": 430324,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 37712,
+        "simulated_until": 16486649.0
+      },
+      "previous_simulation_wall_seconds": 29.008382800006075,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317714,
+        "current_rows": 317714,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 953142,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "601dbe5877a869e2f9de92161442c2df23d949f04c69f1ed7d4d178b1029768e",
+        "metrics_by_assigned_model.csv": "866df0a50852650bacda718688fd72552d077daab0c741e56113bd99a79cd8c8",
+        "metrics_by_job_group.csv": "4ec0124d4c8d84d45f97f1e08ba83c81d8dbb323697f87d8c4682e3dff7f5534",
+        "metrics_by_requested_model.csv": "e4a0de774195421f011d0f7a88bd9aeeeb768cb623db9260ee96164e5cede5ae",
+        "metrics_idle_while_queued_by_model.csv": "e90482a0d6dbcefda31eebb2dc0e8ef425ab366bc1ff51b15108f6e262e0fcd9",
+        "paired_wait_changes.csv": "d07cad6adfadefba9773edd14fcde0593b6edb4bef6760afd07f139e8e3d5a7c",
+        "scenario.json": "5474282a10366433f9d6cf209fa99df44c0797862cb67ec48ba8b3813b79bc37"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 58.08933269997942
+    },
+    {
+      "scenario": "question3/improved/q3_speed2",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "953c4c83221ef1b29ea50e930c65475863a8773eaa5f9696c471e04161da8b82",
+        "metrics_by_assigned_model.csv": "5cb73076130cfa0d6079e57fba12c0555c4ba7770618aa3b20ecf66f5e564073",
+        "metrics_by_job_group.csv": "1bf6ee027e0b32d958e23c5aff6fce8765eae036e8cae876d97e69de6e9663d0",
+        "metrics_by_requested_model.csv": "d41b4c4cdeb370dc13efd5b373012e2df529988fa130eaa0c2289cbeaf0c4b13",
+        "metrics_idle_while_queued_by_model.csv": "588b4993cf096b1bd033ac4c2386ec19963083870d3f013fe9c58a43ad30e319",
+        "paired_wait_changes.csv": "59c59f477a69907b9a78d5f2ce81a2fe37c045d81f626f497b93e4eebb069781",
+        "scenario.json": "a62f1b3b1c37dacc970fd43d527d61d013f03019d58f021d3c718e67c9461efa"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 2,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 17.327937800000655,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 318036,
+        "event_count": 393368,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 44621,
+        "simulated_until": 16408489.0
+      },
+      "previous_simulation_wall_seconds": 17.127106300002197,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 318036,
+        "current_rows": 318036,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 954108,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "953c4c83221ef1b29ea50e930c65475863a8773eaa5f9696c471e04161da8b82",
+        "metrics_by_assigned_model.csv": "5cb73076130cfa0d6079e57fba12c0555c4ba7770618aa3b20ecf66f5e564073",
+        "metrics_by_job_group.csv": "1bf6ee027e0b32d958e23c5aff6fce8765eae036e8cae876d97e69de6e9663d0",
+        "metrics_by_requested_model.csv": "d41b4c4cdeb370dc13efd5b373012e2df529988fa130eaa0c2289cbeaf0c4b13",
+        "metrics_idle_while_queued_by_model.csv": "588b4993cf096b1bd033ac4c2386ec19963083870d3f013fe9c58a43ad30e319",
+        "paired_wait_changes.csv": "59c59f477a69907b9a78d5f2ce81a2fe37c045d81f626f497b93e4eebb069781",
+        "scenario.json": "a62f1b3b1c37dacc970fd43d527d61d013f03019d58f021d3c718e67c9461efa"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 35.972956000012346
+    },
+    {
+      "scenario": "question3/improved/q3_seed18",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "16dc3583abbdbfdc7fc70075a74bc9964a4fe58e04e1f6c91baeadd8e8cf185d",
+        "metrics_by_assigned_model.csv": "5f4031db92add5305456dd1c8beda76d4518b066351084a3d1c8150c9238ed36",
+        "metrics_by_job_group.csv": "56e9a221743c6073dddcacaeaa9adec46eefc7d7e478c3290564fe5ed64450d9",
+        "metrics_by_requested_model.csv": "0e721f093f2a48d751eafe19fef3c5a3b40aba7532d5eae50c0c1c5b5ea83805",
+        "metrics_idle_while_queued_by_model.csv": "9817f82927e09d93518a214549d7d0ece95a9bda3c2264fe237b30986ef02035",
+        "paired_wait_changes.csv": "5bb44a2fb3fa65bea2d31acea042b5dfd7f49d05f70e87975b90b1fa3d9d75f0",
+        "scenario.json": "f35f93033138c27c7ddc0dac210f03ea0ccd2a455fc510135b433a7a68694907"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261018,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 18.3054628999962,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317542,
+        "event_count": 394097,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 44835,
+        "simulated_until": 16667669.0
+      },
+      "previous_simulation_wall_seconds": 18.389090999990003,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317542,
+        "current_rows": 317542,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952626,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "16dc3583abbdbfdc7fc70075a74bc9964a4fe58e04e1f6c91baeadd8e8cf185d",
+        "metrics_by_assigned_model.csv": "5f4031db92add5305456dd1c8beda76d4518b066351084a3d1c8150c9238ed36",
+        "metrics_by_job_group.csv": "56e9a221743c6073dddcacaeaa9adec46eefc7d7e478c3290564fe5ed64450d9",
+        "metrics_by_requested_model.csv": "0e721f093f2a48d751eafe19fef3c5a3b40aba7532d5eae50c0c1c5b5ea83805",
+        "metrics_idle_while_queued_by_model.csv": "9817f82927e09d93518a214549d7d0ece95a9bda3c2264fe237b30986ef02035",
+        "paired_wait_changes.csv": "5bb44a2fb3fa65bea2d31acea042b5dfd7f49d05f70e87975b90b1fa3d9d75f0",
+        "scenario.json": "f35f93033138c27c7ddc0dac210f03ea0ccd2a455fc510135b433a7a68694907"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 38.176967099978356
+    },
+    {
+      "scenario": "question3/improved/q3_seed19",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "163c2b14967b7c473cd5405028a53c6f8e5064b3473c049f5e1c0f4587f0797c",
+        "metrics_by_assigned_model.csv": "4041ddb90e2203f5b6685b1da73b630cf7a48c628ef243fe329776143e213b86",
+        "metrics_by_job_group.csv": "7519946486c3b571f9547cb6c98d8500cd57d0e5d73268fc6803a3af1462693b",
+        "metrics_by_requested_model.csv": "b5cc9cef4552fdd57b0b5975a5bb74f3ce0b7fc60669f79f5a9c5cd637e299ca",
+        "metrics_idle_while_queued_by_model.csv": "50e8f4e6a09faa8c4daf530531ead235f86c633b8ac86d6e19017bf240ae3a43",
+        "paired_wait_changes.csv": "542f72bf845aba6da5979bdf21c2b7ffb0f8bdefad13ab6b42dca98528e61d8f",
+        "scenario.json": "d5be88d1fd122384980b89bbc2ede5286e3cb5810240829681f8cc6f49544c0f"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261019,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 18.63967619999312,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317589,
+        "event_count": 393709,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 45008,
+        "simulated_until": 16609406.0
+      },
+      "previous_simulation_wall_seconds": 18.241860200010706,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317589,
+        "current_rows": 317589,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952767,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "163c2b14967b7c473cd5405028a53c6f8e5064b3473c049f5e1c0f4587f0797c",
+        "metrics_by_assigned_model.csv": "4041ddb90e2203f5b6685b1da73b630cf7a48c628ef243fe329776143e213b86",
+        "metrics_by_job_group.csv": "7519946486c3b571f9547cb6c98d8500cd57d0e5d73268fc6803a3af1462693b",
+        "metrics_by_requested_model.csv": "b5cc9cef4552fdd57b0b5975a5bb74f3ce0b7fc60669f79f5a9c5cd637e299ca",
+        "metrics_idle_while_queued_by_model.csv": "50e8f4e6a09faa8c4daf530531ead235f86c633b8ac86d6e19017bf240ae3a43",
+        "paired_wait_changes.csv": "542f72bf845aba6da5979bdf21c2b7ffb0f8bdefad13ab6b42dca98528e61d8f",
+        "scenario.json": "d5be88d1fd122384980b89bbc2ede5286e3cb5810240829681f8cc6f49544c0f"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 38.67128560002311
+    },
+    {
+      "scenario": "question3/improved/q3_noanon",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "3b88b3d1ecdc9111311f8c4658994b8663fd35511dba1a8ce89c747f25a7cf32",
+        "metrics_by_assigned_model.csv": "186fcae6ab59c123de3932eaed45a6bcab49b19f567979339d6ade7513821d77",
+        "metrics_by_job_group.csv": "99bfdc14925dcf05d92d42220bddb1243f3529b9c82812a806990ca91164f1a4",
+        "metrics_by_requested_model.csv": "01d5c7fda9d2f36599207c56ea448711271574fbd3d04b3b86b93618717e383a",
+        "metrics_idle_while_queued_by_model.csv": "6a1019a7d71bf53c385b420fa5dd1447220067fa6afc36dab9cc6dffb4e3302c",
+        "paired_wait_changes.csv": "a93834054a0e2854a7b0a2be98a1e32a929a0ff3ba6d56be67a0f202e064c541",
+        "scenario.json": "2672b28f7c821818ee52b02754c20092e6a5fa043d60f70b7eaaced34421128c"
+      },
+      "configuration": {
+        "policy": "aging",
+        "aging_alpha": 100.0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 21.280224799993448,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317058,
+        "event_count": 394663,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 41227,
+        "simulated_until": 16737814.0
+      },
+      "previous_simulation_wall_seconds": 20.846636399975978,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317058,
+        "current_rows": 317058,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 951174,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "3b88b3d1ecdc9111311f8c4658994b8663fd35511dba1a8ce89c747f25a7cf32",
+        "metrics_by_assigned_model.csv": "186fcae6ab59c123de3932eaed45a6bcab49b19f567979339d6ade7513821d77",
+        "metrics_by_job_group.csv": "99bfdc14925dcf05d92d42220bddb1243f3529b9c82812a806990ca91164f1a4",
+        "metrics_by_requested_model.csv": "01d5c7fda9d2f36599207c56ea448711271574fbd3d04b3b86b93618717e383a",
+        "metrics_idle_while_queued_by_model.csv": "6a1019a7d71bf53c385b420fa5dd1447220067fa6afc36dab9cc6dffb4e3302c",
+        "paired_wait_changes.csv": "a93834054a0e2854a7b0a2be98a1e32a929a0ff3ba6d56be67a0f202e064c541",
+        "scenario.json": "2672b28f7c821818ee52b02754c20092e6a5fa043d60f70b7eaaced34421128c"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 43.803686799976276
+    },
+    {
+      "scenario": "question3/improved/q3_sjf_bridge",
+      "passed": true,
+      "failure_count": 0,
+      "compare_saved_csv": false,
+      "compare_previous_core": true,
+      "artifact_sha256_before": {
+        "metrics.json": "d3697647a64d07d5d23351e00f9cdfd27e6e4f8fc98608650df2403cbce8a9d3",
+        "metrics_by_assigned_model.csv": "294508b6720c52820fe44abdedfd5ce4cca865d401c421da490592b8e26f60f3",
+        "metrics_by_job_group.csv": "15a3e980c27db6fdf8a71b857220b57a4093ccb4eec3ef3dba81c120ba8115bb",
+        "metrics_by_requested_model.csv": "bac4b236bff6088f0d621867e442990d576b1910f6e558a6eee4b0e25afffa87",
+        "metrics_idle_while_queued_by_model.csv": "b06c8b9e96f777b66083fc155e5a68f4107919b421e6f1e8116501c31eebc36a",
+        "paired_wait_changes.csv": "8a07a113bed35f0ec36e8f2b892a09e9f9430438d75f54677a7a9adb4be2e7bd",
+        "scenario.json": "41715e2afed44bb6141291f62b499fa36f57455c7d71173912b51734f9e5203b"
+      },
+      "configuration": {
+        "policy": "sjf",
+        "aging_alpha": 0,
+        "max_backfill_scan": 128,
+        "routing": {
+          "flexible_fraction": 0.5,
+          "speedup": 1.0,
+          "donor_cap_fraction": 0.25,
+          "seed": 20261017,
+          "donors": [
+            "A100-SXM4-80GB",
+            "H800",
+            "GPU-series-2"
+          ],
+          "mode": "pull",
+          "donor_caps": [],
+          "min_wait_seconds": 0.0,
+          "pull_scan_limit": 256
+        },
+        "schedule_storage": "metrics_only"
+      },
+      "current_simulation_wall_seconds": 7.888032499991823,
+      "diagnostics": {
+        "jobs_scheduled": 224112,
+        "allocation_rows": 317401,
+        "event_count": 391105,
+        "backfilled_jobs": 0,
+        "migrated_jobs": 38469,
+        "simulated_until": 19871249.0
+      },
+      "previous_simulation_wall_seconds": 14.834785999992164,
+      "snapshot_schedule_comparison": {
+        "passed": true,
+        "reference_rows": 224112,
+        "current_rows": 224112,
+        "reference_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "current_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "failure_count": 0,
+        "compared_cells": 3585792,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "snapshot_allocation_comparison": {
+        "passed": true,
+        "reference_rows": 317401,
+        "current_rows": 317401,
+        "reference_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "current_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "failure_count": 0,
+        "compared_cells": 952203,
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": []
+      },
+      "artifact_sha256_after": {
+        "metrics.json": "d3697647a64d07d5d23351e00f9cdfd27e6e4f8fc98608650df2403cbce8a9d3",
+        "metrics_by_assigned_model.csv": "294508b6720c52820fe44abdedfd5ce4cca865d401c421da490592b8e26f60f3",
+        "metrics_by_job_group.csv": "15a3e980c27db6fdf8a71b857220b57a4093ccb4eec3ef3dba81c120ba8115bb",
+        "metrics_by_requested_model.csv": "bac4b236bff6088f0d621867e442990d576b1910f6e558a6eee4b0e25afffa87",
+        "metrics_idle_while_queued_by_model.csv": "b06c8b9e96f777b66083fc155e5a68f4107919b421e6f1e8116501c31eebc36a",
+        "paired_wait_changes.csv": "8a07a113bed35f0ec36e8f2b892a09e9f9430438d75f54677a7a9adb4be2e7bd",
+        "scenario.json": "41715e2afed44bb6141291f62b499fa36f57455c7d71173912b51734f9e5203b"
+      },
+      "historical_artifacts_unchanged": true,
+      "scenario_wall_seconds": 24.39355280000018
+    }
+  ],
+  "scheduler_sha256_after": {
+    "current": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966",
+    "previous": "81058052fcf18c2f6a15e2251fef7892fcdffcda3ebbc615e03e2a607167d36b"
+  },
+  "source_sha256_after": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "cores_unchanged_during_run": true,
+  "sources_unchanged": true,
+  "historical_artifact_hash_errors": [],
+  "completed_scenarios": 41,
+  "stored_schedule_cells": 68130048,
+  "stored_allocation_cells": 18088101,
+  "snapshot_schedule_cells": 96816384,
+  "snapshot_allocation_cells": 25670262,
+  "total_compared_cells": 208704795,
+  "total_wall_seconds": 1203.717632600019
+}

@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "scenarios": 2,
+  "audited_new": 2,
+  "preserved_history": 0,
+  "comparisons": 11701433,
+  "current_run_comparisons": 11701433,
+  "failure_count": 0,
+  "results": [
+    {
+      "relative_path": "outputs/question3/v3/v2_reference/v2_ah",
+      "status": "audited_new",
+      "passed": true,
+      "failure_count": 0,
+      "feasibility_passed": true,
+      "paired_ledger_failure_count": 0,
+      "comparisons": 5726604,
+      "schedule_rows": 224112,
+      "allocation_rows": 317235,
+      "paired_ledger_decimal": {
+        "a10_job_hours_saved": "6703307.366388888888888888889",
+        "a10_gpu_wait_hours_saved": "6823034.740277777777777777778",
+        "donor_native_job_hours_added": "18442.82611111111111111111111",
+        "compensation_gpu_hours": "794345.2719444444444444444445",
+        "a10_wait_increased_jobs": "30342",
+        "a10_wait_increased_fraction": "0.2726537507638115092915423601",
+        "a10_max_wait_increase_hours": "79.51666666666666666666666667",
+        "exchange_ratio": "363.4642177941697113364193672",
+        "compensation_share": "0.1164211091078374382525927394"
+      },
+      "audit_sha256": "f1c32890b56f652f022c4849d5bc0c652ca677d1f47e901dc0b47309ab9f766b"
+    },
+    {
+      "relative_path": "outputs/question3/v3/v3_ah_d60",
+      "status": "audited_new",
+      "passed": true,
+      "failure_count": 0,
+      "feasibility_passed": true,
+      "paired_ledger_failure_count": 0,
+      "comparisons": 5974829,
+      "schedule_rows": 224112,
+      "allocation_rows": 316900,
+      "paired_ledger_decimal": {
+        "a10_job_hours_saved": "5467397.861666666666666666667",
+        "a10_gpu_wait_hours_saved": "5601825.317777777777777777778",
+        "donor_native_job_hours_added": "5421.691388888888888888888889",
+        "compensation_gpu_hours": "35177.76888888888888888888889",
+        "a10_wait_increased_jobs": "30375",
+        "a10_wait_increased_fraction": "0.2729502893497717551489881744",
+        "a10_max_wait_increase_hours": "33.26722222222222222222222222",
+        "exchange_ratio": "1008.430297761220373572433244",
+        "compensation_share": "0.006279697579510346530925366516"
+      },
+      "audit_sha256": "e78f2499db45f7ecdfa98ac523b7251896a4ed2cbe17a09cae3baee54cd36434"
+    }
+  ],
+  "scope": "Only final selected full CSVs independently audited. Historical reports remain unchanged; other v3 scenarios are metrics-only.",
+  "preserved_pre_v3_history": 24,
+  "historical_summary_sha256": "fbf253bc1f0590187b154b37df46b67757ef9c39a2fcf1d64ba33ccf1555dc0c",
+  "paired_and_history_comparisons": 489,
+  "paired_and_history_failures": 0,
+  "failures": [],
+  "skipped_metrics": 39
+}

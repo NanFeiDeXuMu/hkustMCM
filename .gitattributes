@@ -1,0 +1,5 @@
+# Keep data files byte-identical so the recorded SHA-256 hashes stay valid on any checkout.
+*.csv -text
+*.json -text
+*.pdf binary
+*.png binary

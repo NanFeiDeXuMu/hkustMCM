@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "jobs": {
+      "file": "job_info_clean.csv",
+      "sha256": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+      "bytes": 9813075
+    },
+    "nodes": {
+      "file": "node_info_df.csv",
+      "sha256": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18",
+      "bytes": 78330
+    }
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "3.0.1",
+  "window_definition": "[0, (floor(last_submit_seconds/86400)+1)*86400); bins are zero-based days",
+  "window_days": 90,
+  "quantiles": "linear interpolation (pandas default)",
+  "daily_cv": "population standard deviation (ddof=0) / mean; descriptive of the full observed daily series",
+  "top_fraction": "ceil(fraction * number_of_jobs), ranked descending by full GPU work",
+  "cpu_unit": "vCPU",
+  "gpu_work_unit": "GPU-hours",
+  "cpu_work_unit": "vCPU-hours",
+  "offered_load": "Each job occupies [submit, submit+duration), with no capacity or placement restrictions; not actual utilization",
+  "daily_work": "Full lifetime work assigned to the job's submission day; not work executed that day",
+  "time_zero": "All time-zero submissions retained; no assertion of a natural day-zero arrival process",
+  "code_sha256": "7d9b9bc219a7cefe2cf204466347af9fa5a15be7fd5076ed5e085ed39a17366c"
+}

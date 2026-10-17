@@ -1,0 +1,9 @@
+{
+  "selected_scenario": "q3_cap10",
+  "named_only_selected_scenario": "q3_base",
+  "aging_alpha": 100.0,
+  "max_native_mean_increase_hours": 0.5,
+  "max_native_p95_increase_hours": 2,
+  "rule": "DECISIONS.md D019",
+  "anonymous_compatibility_is_assumed": true
+}

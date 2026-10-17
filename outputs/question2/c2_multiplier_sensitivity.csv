@@ -1,0 +1,4 @@
+c2_multiplier,mean_bound_hours,selected_scenario,wait_hours_mean,wait_hours_max,feasible_candidates,fallback,candidate_scope
+1.5,24.851468136839316,tau_2592000,19.83334086800845,2187.630277777778,10,False,original 22 v2 candidates; v3 curve points excluded
+2.0,33.13529084911909,tau_604800,31.189515740641585,1514.5511111111111,11,False,original 22 v2 candidates; v3 curve points excluded
+3.0,49.70293627367863,tau_604800,31.189515740641585,1514.5511111111111,11,False,original 22 v2 candidates; v3 curve points excluded

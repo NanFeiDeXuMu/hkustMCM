@@ -1,0 +1,10 @@
+.venv/
+tmp/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Full per-job schedules and per-node allocations (~715 MB); regenerate with the
+# commands in CURRENT_STATUS.md / SUBMISSION_PACKAGE.md.
+outputs/**/schedule.csv
+outputs/**/allocations.csv

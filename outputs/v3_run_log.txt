@@ -1,0 +1,76 @@
+{"scenario": "v2_ahs", "seconds": null, "mean_wait_h": 0.994596298081118, "gain_h": 60.99255158972638, "native_mean_h": 0.7944327820186599, "ratio": 331.8336604865664, "ratio_infinite": false}
+{"scenario": "v2_ah", "seconds": null, "mean_wait_h": 1.3612845871211219, "gain_h": 60.236039020783664, "native_mean_h": 0.8567385260578645, "ratio": 363.46421779416977, "ratio_infinite": false}
+Start v2_ah_d1
+{"scenario": "v2_ah_d1", "seconds": 17.304169399983948, "mean_wait_h": 30.051805232056594, "gain_h": 2.291206080838216, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+{"scenario": "v2_ah_d7", "seconds": null, "mean_wait_h": 26.3680402531869, "gain_h": 9.70984610945369, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_ah_r10
+{"scenario": "v2_ah_r10", "seconds": 20.2396212000167, "mean_wait_h": 1.46757860033277, "gain_h": 60.0254232064907, "native_mean_h": 1.291347186881538, "ratio": 354.81357022048996, "ratio_infinite": false}
+Start v2_ah_r20
+{"scenario": "v2_ah_r20", "seconds": 22.96815840000636, "mean_wait_h": 1.5296926809412754, "gain_h": 59.83210495968274, "native_mean_h": 0.9906142799924607, "ratio": 592.7124920471211, "ratio_infinite": false}
+Start v2_ah_d7_r10
+{"scenario": "v2_ah_d7_r10", "seconds": 18.926350199995795, "mean_wait_h": 26.3680402531869, "gain_h": 9.70984610945369, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_ah_d1_cap50
+{"scenario": "v2_ah_d1_cap50", "seconds": 17.11815110000316, "mean_wait_h": 30.051805232056594, "gain_h": 2.291206080838216, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_ahs_d1
+{"scenario": "v2_ahs_d1", "seconds": 17.043579199991655, "mean_wait_h": 30.051805232056594, "gain_h": 2.291206080838216, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+{"scenario": "v2_ahs_d7_r10", "seconds": null, "mean_wait_h": 26.3680402531869, "gain_h": 9.70984610945369, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_aha_d7_r10
+{"scenario": "v2_aha_d7_r10", "seconds": 17.217910599982133, "mean_wait_h": 26.3680402531869, "gain_h": 9.70984610945369, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_p25
+{"scenario": "v2_p25", "seconds": 17.307639500009827, "mean_wait_h": 28.63314750115022, "gain_h": 5.148204583667813, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_p100
+{"scenario": "v2_p100", "seconds": 16.52858140002354, "mean_wait_h": 22.49318173130696, "gain_h": 17.51333031802515, "native_mean_h": 7.957900405691496e-06, "ratio": 3028153.8299525245, "ratio_infinite": false}
+Start v2_seed18
+{"scenario": "v2_seed18", "seconds": 17.16449470000225, "mean_wait_h": 26.563192793484212, "gain_h": 9.316833402226136, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_seed19
+{"scenario": "v2_seed19", "seconds": 17.107062900002347, "mean_wait_h": 26.431945028229933, "gain_h": 9.581149918227238, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_speed2
+{"scenario": "v2_speed2", "seconds": 17.019938500015996, "mean_wait_h": 26.3680402531869, "gain_h": 9.70984610945369, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_tau1h
+{"scenario": "v2_tau1h", "seconds": 20.890947999985656, "mean_wait_h": 27.005399900496176, "gain_h": 8.426283824868506, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v2_sjf_bridge
+{"scenario": "v2_sjf_bridge", "seconds": 16.876175999990664, "mean_wait_h": 14.82192542741526, "gain_h": 3.5156608317458033, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v3_ah_d14
+{"scenario": "v3_ah_d14", "seconds": 17.078922700020485, "mean_wait_h": 22.922413412589343, "gain_h": 16.648905835020706, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v3_ah_d30
+{"scenario": "v3_ah_d30", "seconds": 17.022264600003837, "mean_wait_h": 15.80284573487066, "gain_h": 30.98682100152163, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v3_ah_d60
+{"scenario": "v3_ah_d60", "seconds": 17.253693700011354, "mean_wait_h": 6.817879370086782, "gain_h": 49.130134266081974, "native_mean_h": 0.06699076993459203, "ratio": 1008.4302977612203, "ratio_infinite": false}
+Start v3_ah_d7_t1h
+{"scenario": "v3_ah_d7_t1h", "seconds": 19.21137470001122, "mean_wait_h": 27.005399900496176, "gain_h": 8.426283824868506, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v3_ah_d14_t1h
+{"scenario": "v3_ah_d14_t1h", "seconds": 18.970367800007807, "mean_wait_h": 23.676040279711334, "gain_h": 15.13119597156824, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v3_ah_d30_t1h
+{"scenario": "v3_ah_d30_t1h", "seconds": 19.107379299995955, "mean_wait_h": 16.54817749359447, "gain_h": 29.485816444612183, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v3_ah_d60_t1h
+{"scenario": "v3_ah_d60_t1h", "seconds": 19.502650100010214, "mean_wait_h": 7.46452543569485, "gain_h": 47.80966205584111, "native_mean_h": 0.04192615192068065, "ratio": 1566.9560574429918, "ratio_infinite": false}
+Start v3_ah_t1h
+{"scenario": "v3_ah_t1h", "seconds": 19.648113399976864, "mean_wait_h": 1.766638571835114, "gain_h": 59.429850797159624, "native_mean_h": 0.9793602747149185, "ratio": 337.9165995120072, "ratio_infinite": false}
+Start v3_ah_cap10
+{"scenario": "v3_ah_cap10", "seconds": 17.66227400000207, "mean_wait_h": 12.107762156867997, "gain_h": 38.43181174592334, "native_mean_h": 0.08392263924229573, "ratio": 9571.521785863262, "ratio_infinite": false}
+Start v3_ah_cap15
+{"scenario": "v3_ah_cap15", "seconds": 21.23228509997716, "mean_wait_h": 6.079936612794793, "gain_h": 50.60010640693082, "native_mean_h": 0.7684995523513336, "ratio": 1553.6984855385163, "ratio_infinite": false}
+Start v3_ha_d30
+{"scenario": "v3_ha_d30", "seconds": 17.171172100002877, "mean_wait_h": 16.179116027303806, "gain_h": 30.98682100152163, "native_mean_h": 17.88097705211573, "ratio": 40.89259852611046, "ratio_infinite": false}
+Start v3_ha
+{"scenario": "v3_ha", "seconds": 29.648493499989854, "mean_wait_h": 7.04291111264804, "gain_h": 54.31124757627133, "native_mean_h": 130.38792774008104, "ratio": 9.555993607562153, "ratio_infinite": false}
+Start v3_ah_d60
+{"scenario": "v3_ah_d60", "seconds": 17.364279200002784, "mean_wait_h": 6.817879370086782, "gain_h": 49.130134266081974, "native_mean_h": 0.06699076993459203, "ratio": 1008.4302977612203, "ratio_infinite": false}
+{"scenario": "v2_ah", "seconds": null, "mean_wait_h": 1.3612845871211219, "gain_h": 60.236039020783664, "native_mean_h": 0.8567385260578645, "ratio": 363.46421779416977, "ratio_infinite": false}
+{"strict_selected_scenario": "v3_ah_d60", "compensation_selected_scenario": "v2_ah", "compensation_fallback_to_strict": false, "thresholds": {"strict_mean_hours": 0.5, "strict_p95_hours": 2.0, "compensation_exchange_ratio": 100.0, "compensation_mean_hours": 1.0, "compensation_affected_fraction_per_donor": 0.2}, "strict_feasible_candidates": ["v2_ah_d1", "v2_ah_d7", "v2_ah_d7_r10", "v2_ah_d1_cap50", "v2_aha_d7_r10", "v3_ah_d14", "v3_ah_d30", "v3_ah_d60", "v3_ah_d7_t1h", "v3_ah_d14_t1h", "v3_ah_d30_t1h", "v3_ah_d60_t1h", "v3_ah_cap10"], "compensation_feasible_candidates": ["v2_ah", "v2_ah_d1", "v2_ah_d7", "v2_ah_d7_r10", "v2_ah_d1_cap50", "v2_aha_d7_r10", "v3_ah_d14", "v3_ah_d30", "v3_ah_d60", "v3_ah_d7_t1h", "v3_ah_d14_t1h", "v3_ah_d30_t1h", "v3_ah_d60_t1h", "v3_ah_t1h", "v3_ah_cap10", "v3_ah_cap15"], "rule": "DECISIONS.md D026", "affected_fraction_scope": "each donor separately; pooled fraction also reported", "scope": "v2 main + v3 main only; named donors; positive net A10 gain; in-sample; sensitivities excluded", "q2_star_config": {"policy": "log_aging", "log_aging_tau_seconds": 604800}, "q2_star_unchanged": true, "v2_main_candidates": 11, "v3_main_candidates": 12, "selected_output_paths": {"v3_ah_d60": "outputs/question3/v3/v3_ah_d60", "v2_ah": "outputs/question3/v3/v2_reference/v2_ah"}, "selected_configs": {"v3_ah_d60": {"flexible_fraction": 0.5, "speedup": 1.0, "donor_cap_fraction": 0.25, "seed": 20261017, "donors": ["A100-SXM4-80GB", "H800"], "mode": "pull", "donor_caps": [], "min_wait_seconds": 0.0, "pull_scan_limit": 256, "max_routed_duration_seconds": 5184000, "donor_reserve_fraction": 0.0}, "v2_ah": {"flexible_fraction": 0.5, "speedup": 1.0, "donor_cap_fraction": 0.25, "seed": 20261017, "donors": ["A100-SXM4-80GB", "H800"], "mode": "pull", "donor_caps": [], "min_wait_seconds": 0.0, "pull_scan_limit": 256, "max_routed_duration_seconds": null, "donor_reserve_fraction": 0.0}}}
+Start v3_strict_seed18
+{"scenario": "v3_strict_seed18", "seconds": 17.283267999999225, "mean_wait_h": 6.653467787435647, "gain_h": 49.44172010601504, "native_mean_h": 0.04011011577251052, "ratio": 1693.1530122711633, "ratio_infinite": false}
+Start v3_strict_seed19
+{"scenario": "v3_strict_seed19", "seconds": 17.278757099993527, "mean_wait_h": 6.951409601498854, "gain_h": 48.84047915942793, "native_mean_h": 0.03845478318928743, "ratio": 1745.7103293133362, "ratio_infinite": false}
+Start v3_strict_p25
+{"scenario": "v3_strict_p25", "seconds": 17.214188100013416, "mean_wait_h": 16.758351260877497, "gain_h": 29.062552872730034, "native_mean_h": 0.0, "ratio": null, "ratio_infinite": true}
+Start v3_strict_p100
+{"scenario": "v3_strict_p100", "seconds": 18.42430260000401, "mean_wait_h": 0.9283873750128903, "gain_h": 61.11867457236539, "native_mean_h": 0.8858363961926303, "ratio": 346.1588721752607, "ratio_infinite": false}
+Start v3_compensation_seed18
+{"scenario": "v3_compensation_seed18", "seconds": 17.4766827999847, "mean_wait_h": 1.4113614162660735, "gain_h": 60.14387452124494, "native_mean_h": 1.2538508976533784, "ratio": 343.80776539495037, "ratio_infinite": false}
+Start v3_compensation_seed19
+{"scenario": "v3_compensation_seed19", "seconds": 17.71811830002116, "mean_wait_h": 1.4119318267453576, "gain_h": 60.15800990658535, "native_mean_h": 1.314490092828197, "ratio": 317.1291312823866, "ratio_infinite": false}
+Start v3_compensation_p25
+{"scenario": "v3_compensation_p25", "seconds": 16.888917600008426, "mean_wait_h": 10.71031423152511, "gain_h": 41.254719473998456, "native_mean_h": 0.016732754676854977, "ratio": 3387.201404225423, "ratio_infinite": false}
+Start v3_compensation_p100
+{"scenario": "v3_compensation_p100", "seconds": 17.719834099989384, "mean_wait_h": 0.8672474216760667, "gain_h": 61.2823501406811, "native_mean_h": 1.6078795589482613, "ratio": 281.9196671730777, "ratio_infinite": false}

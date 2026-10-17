@@ -1,0 +1,14 @@
+{
+  "selected_alpha": 100.0,
+  "method": "minimum_mean_subject_to_fcfs_bounds",
+  "fcfs_bounds_feasible_count": 1,
+  "ideal_distance": null,
+  "fcfs_max_wait_bound_hours": 1423.256388888889,
+  "fcfs_last_completion_bound_days": 243.26445601851853,
+  "selection_scope": "Same-trace tuning; not out-of-sample validation",
+  "rule": "DECISIONS.md D018",
+  "neighbor_alphas": [
+    30,
+    100
+  ]
+}

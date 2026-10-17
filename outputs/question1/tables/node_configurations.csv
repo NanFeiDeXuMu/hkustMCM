@@ -1,0 +1,11 @@
+gpu_model,gpu_capacity_num,cpu_num,nodes
+A10,1,126,2
+A10,1,128,2492
+A100-SXM4-80GB,8,128,432
+A800-SXM4-80GB,8,128,22
+GPU-series-1,1,128,1
+GPU-series-1,1,192,901
+GPU-series-1,4,192,10
+GPU-series-1,8,192,77
+GPU-series-2,8,192,122
+H800,8,192,219

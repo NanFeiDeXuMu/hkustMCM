@@ -1,0 +1,748 @@
+{
+  "passed": true,
+  "discovered_scenarios": 88,
+  "scenarios": 24,
+  "audited_new": 5,
+  "preserved_history": 19,
+  "preserved_legacy": 13,
+  "skipped_metrics": 64,
+  "comparisons": 137251679,
+  "current_run_comparisons": 29208229,
+  "failure_count": 0,
+  "results": [
+    {
+      "suite": "question2",
+      "scenario": "aging_best",
+      "relative_path": "question2/aging_best",
+      "legacy_manifest": false,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5434425,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 316144
+    },
+    {
+      "suite": "question2",
+      "scenario": "backfill",
+      "relative_path": "question2/backfill",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5442581,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 316763
+    },
+    {
+      "suite": "question2",
+      "scenario": "backfill_l512",
+      "relative_path": "question2/backfill_l512",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5442847,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 316755
+    },
+    {
+      "suite": "question2",
+      "scenario": "fcfs",
+      "relative_path": "question2/fcfs",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5442637,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 316774
+    },
+    {
+      "suite": "question2",
+      "scenario": "q2_star",
+      "relative_path": "question2/q2_star",
+      "status": "audited_new",
+      "passed": true,
+      "comparisons": 5452357,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 316211
+    },
+    {
+      "suite": "question2",
+      "scenario": "sjf",
+      "relative_path": "question2/sjf",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5448007,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 316203
+    },
+    {
+      "suite": "question3",
+      "scenario": "backfill_flex50",
+      "relative_path": "question3/backfill_flex50",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5828987,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317794
+    },
+    {
+      "suite": "question3",
+      "scenario": "cap10",
+      "relative_path": "question3/cap10",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5624685,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317210
+    },
+    {
+      "suite": "question3",
+      "scenario": "cap50",
+      "relative_path": "question3/cap50",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5756381,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317628
+    },
+    {
+      "suite": "question3",
+      "scenario": "flex100",
+      "relative_path": "question3/flex100",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5868009,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317460
+    },
+    {
+      "suite": "question3",
+      "scenario": "flex25",
+      "relative_path": "question3/flex25",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5700085,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317266
+    },
+    {
+      "suite": "question3",
+      "scenario": "flex50",
+      "relative_path": "question3/flex50",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5808243,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317863
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_arrival_old",
+      "relative_path": "question3/improved/q3_arrival_old",
+      "legacy_manifest": false,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5814395,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317429
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_cap10",
+      "relative_path": "question3/improved/q3_cap10",
+      "legacy_manifest": false,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5539434,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317042
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_pull_aa",
+      "relative_path": "question3/improved/q3_pull_aa",
+      "legacy_manifest": false,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5674541,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317464
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_pull_ahs",
+      "relative_path": "question3/improved/q3_pull_ahs",
+      "legacy_manifest": false,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5846448,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317580
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_pull_all",
+      "relative_path": "question3/improved/q3_pull_all",
+      "legacy_manifest": false,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5838276,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317584
+    },
+    {
+      "suite": "question3",
+      "scenario": "seed18",
+      "relative_path": "question3/seed18",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5812701,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317897
+    },
+    {
+      "suite": "question3",
+      "scenario": "seed19",
+      "relative_path": "question3/seed19",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5816485,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317799
+    },
+    {
+      "suite": "question3",
+      "scenario": "speed2",
+      "relative_path": "question3/speed2",
+      "legacy_manifest": true,
+      "status": "preserved_history",
+      "passed": true,
+      "comparisons": 5904283,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 318712
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ah",
+      "relative_path": "question3/v2/v2_ah",
+      "status": "audited_new",
+      "passed": true,
+      "comparisons": 5726604,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317235
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ah_d7",
+      "relative_path": "question3/v2/v2_ah_d7",
+      "status": "audited_new",
+      "passed": true,
+      "comparisons": 5936896,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 315404
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ahs",
+      "relative_path": "question3/v2/v2_ahs",
+      "status": "audited_new",
+      "passed": true,
+      "comparisons": 5841683,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 317615
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ahs_d7_r10",
+      "relative_path": "question3/v2/v2_ahs_d7_r10",
+      "status": "audited_new",
+      "passed": true,
+      "comparisons": 6250689,
+      "failure_count": 0,
+      "schedule_rows": 224112,
+      "allocation_rows": 315404
+    }
+  ],
+  "skipped": [
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_0",
+      "relative_path": "question2/aging_sweep/alpha_0",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_0.001",
+      "relative_path": "question2/aging_sweep/alpha_0.001",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_0.003",
+      "relative_path": "question2/aging_sweep/alpha_0.003",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_0.01",
+      "relative_path": "question2/aging_sweep/alpha_0.01",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_0.03",
+      "relative_path": "question2/aging_sweep/alpha_0.03",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_0.1",
+      "relative_path": "question2/aging_sweep/alpha_0.1",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_0.3",
+      "relative_path": "question2/aging_sweep/alpha_0.3",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_1",
+      "relative_path": "question2/aging_sweep/alpha_1",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_10",
+      "relative_path": "question2/aging_sweep/alpha_10",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_100",
+      "relative_path": "question2/aging_sweep/alpha_100",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_3",
+      "relative_path": "question2/aging_sweep/alpha_3",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "aging_sweep/alpha_30",
+      "relative_path": "question2/aging_sweep/alpha_30",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "legacy_diagnostics/backfill",
+      "relative_path": "question2/legacy_diagnostics/backfill",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "legacy_diagnostics/backfill_l512",
+      "relative_path": "question2/legacy_diagnostics/backfill_l512",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "legacy_diagnostics/fcfs",
+      "relative_path": "question2/legacy_diagnostics/fcfs",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "legacy_diagnostics/sjf",
+      "relative_path": "question2/legacy_diagnostics/sjf",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "log_aging_sweep/tau_21600",
+      "relative_path": "question2/log_aging_sweep/tau_21600",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "log_aging_sweep/tau_259200",
+      "relative_path": "question2/log_aging_sweep/tau_259200",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "log_aging_sweep/tau_2592000",
+      "relative_path": "question2/log_aging_sweep/tau_2592000",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "log_aging_sweep/tau_3600",
+      "relative_path": "question2/log_aging_sweep/tau_3600",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "log_aging_sweep/tau_604800",
+      "relative_path": "question2/log_aging_sweep/tau_604800",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "log_aging_sweep/tau_86400",
+      "relative_path": "question2/log_aging_sweep/tau_86400",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_0",
+      "relative_path": "question2/v2_candidates/alpha_0",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_0.001",
+      "relative_path": "question2/v2_candidates/alpha_0.001",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_0.003",
+      "relative_path": "question2/v2_candidates/alpha_0.003",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_0.01",
+      "relative_path": "question2/v2_candidates/alpha_0.01",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_0.03",
+      "relative_path": "question2/v2_candidates/alpha_0.03",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_0.1",
+      "relative_path": "question2/v2_candidates/alpha_0.1",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_0.3",
+      "relative_path": "question2/v2_candidates/alpha_0.3",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_1",
+      "relative_path": "question2/v2_candidates/alpha_1",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_10",
+      "relative_path": "question2/v2_candidates/alpha_10",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_100",
+      "relative_path": "question2/v2_candidates/alpha_100",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_3",
+      "relative_path": "question2/v2_candidates/alpha_3",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/alpha_30",
+      "relative_path": "question2/v2_candidates/alpha_30",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/backfill",
+      "relative_path": "question2/v2_candidates/backfill",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/backfill_l512",
+      "relative_path": "question2/v2_candidates/backfill_l512",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/fcfs",
+      "relative_path": "question2/v2_candidates/fcfs",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question2",
+      "scenario": "v2_candidates/sjf",
+      "relative_path": "question2/v2_candidates/sjf",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_base",
+      "relative_path": "question3/improved/q3_base",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_cap50",
+      "relative_path": "question3/improved/q3_cap50",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_noanon",
+      "relative_path": "question3/improved/q3_noanon",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_p100",
+      "relative_path": "question3/improved/q3_p100",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_p25",
+      "relative_path": "question3/improved/q3_p25",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_seed18",
+      "relative_path": "question3/improved/q3_seed18",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_seed19",
+      "relative_path": "question3/improved/q3_seed19",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_sjf_bridge",
+      "relative_path": "question3/improved/q3_sjf_bridge",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_speed2",
+      "relative_path": "question3/improved/q3_speed2",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_tau1h",
+      "relative_path": "question3/improved/q3_tau1h",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "improved/q3_tau6h",
+      "relative_path": "question3/improved/q3_tau6h",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ah_d1",
+      "relative_path": "question3/v2/v2_ah_d1",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ah_d1_cap50",
+      "relative_path": "question3/v2/v2_ah_d1_cap50",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ah_d7_r10",
+      "relative_path": "question3/v2/v2_ah_d7_r10",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ah_r10",
+      "relative_path": "question3/v2/v2_ah_r10",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ah_r20",
+      "relative_path": "question3/v2/v2_ah_r20",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_aha_d7_r10",
+      "relative_path": "question3/v2/v2_aha_d7_r10",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_ahs_d1",
+      "relative_path": "question3/v2/v2_ahs_d1",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_base",
+      "relative_path": "question3/v2/v2_base",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_p100",
+      "relative_path": "question3/v2/v2_p100",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_p25",
+      "relative_path": "question3/v2/v2_p25",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_seed18",
+      "relative_path": "question3/v2/v2_seed18",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_seed19",
+      "relative_path": "question3/v2/v2_seed19",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_sjf_bridge",
+      "relative_path": "question3/v2/v2_sjf_bridge",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_speed2",
+      "relative_path": "question3/v2/v2_speed2",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    },
+    {
+      "suite": "question3",
+      "scenario": "v2/v2_tau1h",
+      "relative_path": "question3/v2/v2_tau1h",
+      "status": "skipped_metrics",
+      "reason": "No per-job/per-node artifacts saved; no independent feasibility audit."
+    }
+  ],
+  "scope": "Only full schedule/placement CSVs receive independent feasibility audits. Metric-only scans are explicitly skipped. Preserved audits are hash-authenticated historical evidence, not proof that current scheduler code reproduces earlier schedules; separate regression evidence is required."
+}

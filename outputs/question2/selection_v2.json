@@ -1,0 +1,774 @@
+{
+  "selected_scenario": "tau_604800",
+  "fallback": false,
+  "feasible_candidates": [
+    "sjf",
+    "alpha_0",
+    "alpha_0.001",
+    "alpha_0.003",
+    "alpha_0.01",
+    "alpha_0.03",
+    "alpha_0.1",
+    "alpha_0.3",
+    "alpha_1",
+    "tau_604800",
+    "tau_2592000"
+  ],
+  "c1_c2_checks": [
+    {
+      "scenario": "fcfs",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 502.8097620208849,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 272.90051134118977,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 250.7814356994491,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 480.9237915871482,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 447.3190729796312,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1423.256388888889,
+      "feasible": false
+    },
+    {
+      "scenario": "sjf",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.0329019475732591,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.2821642491011775,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.320894292423011,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 270.18724128601053,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 16.567645424559544,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 3017.2880555555557,
+      "feasible": true
+    },
+    {
+      "scenario": "backfill",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 501.284262654356,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 272.55250863416245,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 250.67996523074143,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 480.741516345701,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 446.15604271648897,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1422.3272222222222,
+      "feasible": false
+    },
+    {
+      "scenario": "backfill_l512",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 496.8558088283728,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 272.5624827565216,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 250.6307746319877,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 480.660818173181,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 443.01838432470265,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1422.1663888888888,
+      "feasible": false
+    },
+    {
+      "scenario": "alpha_0",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.0329019475732591,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.2821642491011775,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.320894292423011,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 270.18724128601053,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 16.567645424559544,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 3017.2880555555557,
+      "feasible": true
+    },
+    {
+      "scenario": "alpha_0.001",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.0312585070123288,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.2768275850930874,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.315869306722057,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 270.2231671086657,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 16.567408196943198,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 3017.2880555555557,
+      "feasible": true
+    },
+    {
+      "scenario": "alpha_0.003",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.031909077977209,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.2768598544988334,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.330093357716969,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 270.2961949669946,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 16.572725861771495,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 3017.7277777777776,
+      "feasible": true
+    },
+    {
+      "scenario": "alpha_0.01",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.0327368666865677,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.2873377522852578,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.359067815105814,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 270.3341042497997,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 16.57863160681564,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 3017.2880555555557,
+      "feasible": true
+    },
+    {
+      "scenario": "alpha_0.03",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.0331625571630585,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.2907103120473276,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.331022494656672,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 270.28849396072405,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 16.575944880982128,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 3017.0163888888887,
+      "feasible": true
+    },
+    {
+      "scenario": "alpha_0.1",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.036791086977544,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.304998192416348,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.317979921129474,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 270.3081922860849,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 16.58211558655196,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 3017.3547222222223,
+      "feasible": true
+    },
+    {
+      "scenario": "alpha_0.3",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.0643766791538956,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.384071883440049,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.561470694482074,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 270.82531169190605,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 16.656463728701127,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 3032.3633333333332,
+      "feasible": true
+    },
+    {
+      "scenario": "alpha_1",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.1582694816889012,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.4676068524191805,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 9.027491909750443,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 298.8245654984675,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 18.43515279438654,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 2841.826666666667,
+      "feasible": true
+    },
+    {
+      "scenario": "alpha_3",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 187.0257919580003,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 104.42873555485986,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 109.03154260363046,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 383.15282433225104,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 179.7450624315818,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 2180.0144444444445,
+      "feasible": false
+    },
+    {
+      "scenario": "alpha_10",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 374.5356244052449,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 213.4382359225882,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 188.8528291038261,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 441.8554879751489,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 340.3141652003859,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1512.048888888889,
+      "feasible": false
+    },
+    {
+      "scenario": "alpha_30",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 451.1219492848224,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 250.80128316077432,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 223.13296257412927,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 465.247530877967,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 404.48821427084073,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1423.2555555555555,
+      "feasible": false
+    },
+    {
+      "scenario": "alpha_100",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 485.3279728539415,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 265.68595826158906,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 240.42133383756283,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 475.8448121504284,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 432.86486919114844,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1421.4161111111111,
+      "feasible": false
+    },
+    {
+      "scenario": "tau_3600",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 491.3417294286567,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 270.0642195276181,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 248.62267599114963,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 480.96932665377847,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": false
+        }
+      },
+      "c1_passed": false,
+      "c2_passed": false,
+      "mean_wait_hours": 438.57097434789546,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1421.858611111111,
+      "feasible": false
+    },
+    {
+      "scenario": "tau_21600",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 444.0598532014817,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 257.17881345488246,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 238.64784637556815,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 479.004103113821,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 402.1008352383828,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1424.9283333333333,
+      "feasible": false
+    },
+    {
+      "scenario": "tau_86400",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 336.5682449399394,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 215.8086726497064,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 214.6192010972636,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 472.9766542741716,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 316.6410725540008,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1426.9144444444444,
+      "feasible": false
+    },
+    {
+      "scenario": "tau_259200",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 123.5936758789762,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 121.48105250440403,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 174.01471191185766,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 460.3958921357226,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": false,
+      "mean_wait_hours": 145.04449818989315,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1443.0172222222222,
+      "feasible": false
+    },
+    {
+      "scenario": "tau_604800",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.0333040545654065,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 5.679236007066347,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 117.76866890935908,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 435.8187170256359,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 31.189515740641582,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 1514.5511111111111,
+      "feasible": true
+    },
+    {
+      "scenario": "tau_2592000",
+      "groups": {
+        "<=1h": {
+          "candidate_mean_hours": 0.0317502266901555,
+          "fcfs_mean_hours": 502.8097620208849,
+          "passed": true
+        },
+        "1h-1d": {
+          "candidate_mean_hours": 0.3008672488204119,
+          "fcfs_mean_hours": 272.90051134118977,
+          "passed": true
+        },
+        "1d-7d": {
+          "candidate_mean_hours": 8.70532440019266,
+          "fcfs_mean_hours": 250.7814356994491,
+          "passed": true
+        },
+        ">7d": {
+          "candidate_mean_hours": 324.34665194025166,
+          "fcfs_mean_hours": 480.9237915871482,
+          "passed": true
+        }
+      },
+      "c1_passed": true,
+      "c2_passed": true,
+      "mean_wait_hours": 19.833340868008452,
+      "mean_bound_hours": 33.13529084911909,
+      "max_wait_hours": 2187.630277777778,
+      "feasible": true
+    }
+  ],
+  "c2_mean_bound_hours": 33.13529084911909,
+  "rule": "DECISIONS.md D023",
+  "scope": "Same-trace in-sample tuning; maximum and P99 reported separately",
+  "legacy_candidates_only_selected": "alpha_1",
+  "selected_config": {
+    "policy": "log_aging",
+    "log_aging_tau_seconds": 604800
+  },
+  "selected_metrics": {
+    "scenario": "tau_604800",
+    "policy": "log_aging",
+    "alpha": null,
+    "tau_seconds": 604800,
+    "output_path": "outputs/question2/log_aging_sweep/tau_604800",
+    "jobs": 224112,
+    "wait_hours_mean": 31.189515740641582,
+    "wait_hours_median": 0.0,
+    "wait_hours_p95": 6.9271805555552985,
+    "wait_hours_p99": 1097.5893861111101,
+    "wait_hours_max": 1514.5511111111111,
+    "turnaround_hours_mean": 108.18019128952389,
+    "turnaround_hours_median": 0.38722222222222225,
+    "turnaround_hours_p95": 623.9997222222222,
+    "turnaround_hours_p99": 2700.225897222222,
+    "turnaround_hours_max": 5287.683055555555,
+    "completed_at_90d": 215229,
+    "waiting_at_90d": 4224,
+    "running_at_90d": 4659,
+    "immediate_start_fraction": 0.5572169272506604,
+    "wait_over_1day_fraction": 0.0450712143928036,
+    "wait_over_7days_fraction": 0.03501820518312272,
+    "last_completion_days": 247.10628472222223,
+    "bounded_slowdown_60s_mean": 1.4507946858916123,
+    "allocated_gpu_hours": 24605876.430555556,
+    "gpu_allocation_rate_90d": 0.6943795063645303,
+    "gpu_allocation_rate_until_last_completion": 0.39848286062946764,
+    "allocated_cpu_hours": 646986320.4942333,
+    "cpu_allocation_rate_90d": 0.28640048780377236,
+    "cpu_allocation_rate_until_last_completion": 0.17244323590036653,
+    "migrated_jobs": 0,
+    "a10_migrated_job_fraction": 0.0,
+    "a10_migrated_original_work_fraction": 0.0,
+    "a10_flexible_jobs": 0,
+    "a10_flexible_job_fraction": 0.0,
+    "a10_flexible_original_work_fraction": 0.0,
+    "gpu_stranded_upper_bound_hours_90d": 3681108.4616666664,
+    "donor_idle_while_a10_queued_gpu_hours_90d": 5486503.794166666,
+    "a10_queue_nonempty_hours_90d": 2150.3969444444447,
+    "gpu_idle_while_native_queued_hours_90d": 112421.1425,
+    "gpu_allocation_rate_range_90d": 0.44103412984020374,
+    "donor_gpu_allocation_rate_90d": 0.5979919709612871,
+    "a10_minus_donor_gpu_allocation_rate_90d": 0.40119880737998304,
+    "gpu_stranded_upper_bound_hours_until_last_completion": 6231691.236111111,
+    "donor_idle_while_a10_queued_gpu_hours_until_last_completion": 12091174.980277779,
+    "a10_queue_nonempty_hours_until_last_completion": 3356.641666666667,
+    "gpu_idle_while_native_queued_hours_until_last_completion": 133411.17444444445,
+    "gpu_allocation_rate_range_until_last_completion": 0.540326318693392,
+    "donor_gpu_allocation_rate_until_last_completion": 0.2543926654878632,
+    "a10_minus_donor_gpu_allocation_rate_until_last_completion": 0.49735714050437807,
+    "fcfs_max_wait_hours": 1423.256388888889,
+    "fcfs_harmed_jobs": 3012,
+    "fcfs_harmed_fraction": 0.013439708717070037,
+    "fcfs_harmed_mean_wait_increase_hours": 118.59395639663569,
+    "fcfs_harmed_original_gpu_work_fraction": 0.1918253184012582,
+    "wait_over_1000h_jobs": 3354,
+    "wait_over_fcfs_max_jobs": 159,
+    "bounded_slowdown_60s_p99": 7.883333333333334,
+    "bounded_slowdown_60s_max": 251.27433628318585,
+    "group_le1h_mean_wait_hours": 0.0333040545654065,
+    "group_1h_1d_mean_wait_hours": 5.679236007066347,
+    "group_1d_7d_mean_wait_hours": 117.76866890935908,
+    "group_gt7d_mean_wait_hours": 435.8187170256359
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "comparisons": 4088,
+  "q3_rows": 38,
+  "q3_main_new": 12,
+  "q3_main_historical": 11,
+  "new_sensitivities": 8,
+  "v3_manifests_checked": 41,
+  "current_code_hash_checks": 205,
+  "q2_curve_points": 3,
+  "selected": {
+    "strict_selected_scenario": "v3_ah_d60",
+    "compensation_selected_scenario": "v2_ah",
+    "compensation_fallback_to_strict": false,
+    "strict_feasible_candidates": [
+      "v2_ah_d1",
+      "v2_ah_d7",
+      "v2_ah_d7_r10",
+      "v2_ah_d1_cap50",
+      "v2_aha_d7_r10",
+      "v3_ah_d14",
+      "v3_ah_d30",
+      "v3_ah_d60",
+      "v3_ah_d7_t1h",
+      "v3_ah_d14_t1h",
+      "v3_ah_d30_t1h",
+      "v3_ah_d60_t1h",
+      "v3_ah_cap10"
+    ],
+    "compensation_feasible_candidates": [
+      "v2_ah",
+      "v2_ah_d1",
+      "v2_ah_d7",
+      "v2_ah_d7_r10",
+      "v2_ah_d1_cap50",
+      "v2_aha_d7_r10",
+      "v3_ah_d14",
+      "v3_ah_d30",
+      "v3_ah_d60",
+      "v3_ah_d7_t1h",
+      "v3_ah_d14_t1h",
+      "v3_ah_d30_t1h",
+      "v3_ah_d60_t1h",
+      "v3_ah_t1h",
+      "v3_ah_cap10",
+      "v3_ah_cap15"
+    ]
+  },
+  "selected_full_paths": [
+    "outputs/question3/v3/v2_reference/v2_ah",
+    "outputs/question3/v3/v3_ah_d60"
+  ],
+  "scheduling_summary": "outputs/v3_scheduling_validation.json",
+  "historical_regression": {
+    "evidence": "outputs/v2_regression.json",
+    "sha256": "ebac19e2bed44adc4c141594b8093102808529a892024646ea3ad3c39eec54f6",
+    "scenarios": 41,
+    "artifact_hashes_checked": 314,
+    "historical_compared_cells": 208704795,
+    "regression_rerun": false,
+    "preserved_feasibility_audits": 24,
+    "historical_feasibility_comparisons": 137251679,
+    "historical_feasibility_summary_sha256": "fbf253bc1f0590187b154b37df46b67757ef9c39a2fcf1d64ba33ccf1555dc0c",
+    "current_core_sha256": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966",
+    "previous_core_sha256": "81058052fcf18c2f6a15e2251fef7892fcdffcda3ebbc615e03e2a607167d36b",
+    "source_sha256": {
+      "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+      "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+    }
+  },
+  "local_links_checked": 132,
+  "new_figure_files": 6,
+  "unit_tests": 140,
+  "verifier_sha256": "686717951bd1dd76e058deffaa3318d7ef8ddab408396e53961b7740b8e5b378"
+}

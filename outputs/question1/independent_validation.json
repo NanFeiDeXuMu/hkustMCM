@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "method": "Independent stdlib CSV and Decimal event sweep; no imports from src",
+  "sources": {
+    "jobs": {
+      "file": "job_info_clean.csv",
+      "sha256": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1"
+    },
+    "nodes": {
+      "file": "node_info_df.csv",
+      "sha256": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+    }
+  },
+  "verifier_sha256": "04e39ec50c83231d77f6cfc314c0fb816ce3c88cda945a25d1eae7fb9a260836",
+  "window": {
+    "days": 90,
+    "seconds": "7776000",
+    "interval": "[0, days * 86400)"
+  },
+  "comparison_tolerance": {
+    "relative": "1e-10",
+    "absolute": "1e-7",
+    "counts_and_event_reconciliations": "exact"
+  },
+  "comparison_count": 2350,
+  "comparisons_by_section": {
+    "provenance": 2,
+    "window": 3,
+    "totals": 6,
+    "fractional_requests": 2,
+    "models": 24,
+    "event_invariants": 24,
+    "event_metrics": 72,
+    "daily_integrals": 2160,
+    "bands": 57
+  },
+  "failures": [],
+  "exact_totals": {
+    "gpu_work_seconds": "88581155150.00",
+    "cpu_work_seconds": "2329150753779.240",
+    "all_gpu_work_values_integral": true,
+    "fractional_cpu_request_jobs": 73,
+    "zero_cpu_request_jobs": 1
+  },
+  "event_diagnostics": {
+    "A10": {
+      "gpu": {
+        "full_work_seconds": "40028314872.00",
+        "window_work_seconds": "28106641322.00",
+        "peak_demand_units": "4103.0",
+        "peak_demand_to_capacity": "1.645148356054530874097834804",
+        "over_capacity_seconds": "7741400.0",
+        "over_capacity_fraction": "0.9955504115226337448559670782"
+      },
+      "cpu": {
+        "full_work_seconds": "970212044266.00",
+        "window_work_seconds": "626979064218.00",
+        "peak_demand_units": "88100.0",
+        "peak_demand_to_capacity": "0.2759782976430638916385780696",
+        "over_capacity_seconds": "0",
+        "over_capacity_fraction": "0"
+      }
+    },
+    "GPU-series-1": {
+      "gpu": {
+        "full_work_seconds": "14009905307.00",
+        "window_work_seconds": "7374064303.00",
+        "peak_demand_units": "1484.0",
+        "peak_demand_to_capacity": "0.9525032092426187419768934531",
+        "over_capacity_seconds": "0",
+        "over_capacity_fraction": "0"
+      },
+      "cpu": {
+        "full_work_seconds": "871451862276.00",
+        "window_work_seconds": "513877172292.00",
+        "peak_demand_units": "80230.0",
+        "peak_demand_to_capacity": "0.4226546695886716115981119353",
+        "over_capacity_seconds": "0",
+        "over_capacity_fraction": "0"
+      }
+    },
+    "A800-SXM4-80GB": {
+      "gpu": {
+        "full_work_seconds": "836561634.00",
+        "window_work_seconds": "784348568.00",
+        "peak_demand_units": "261.0",
+        "peak_demand_to_capacity": "1.482954545454545454545454545",
+        "over_capacity_seconds": "95013.0",
+        "over_capacity_fraction": "0.01221875"
+      },
+      "cpu": {
+        "full_work_seconds": "11528729378.00",
+        "window_work_seconds": "10837491219.00",
+        "peak_demand_units": "3506.0",
+        "peak_demand_to_capacity": "1.245028409090909090909090909",
+        "over_capacity_seconds": "43202.0",
+        "over_capacity_fraction": "0.005555812757201646090534979424"
+      }
+    },
+    "A100-SXM4-80GB": {
+      "gpu": {
+        "full_work_seconds": "21369246615.00",
+        "window_work_seconds": "16864748898.00",
+        "peak_demand_units": "2922.0",
+        "peak_demand_to_capacity": "0.8454861111111111111111111111",
+        "over_capacity_seconds": "0",
+        "over_capacity_fraction": "0"
+      },
+      "cpu": {
+        "full_work_seconds": "229758346835.240",
+        "window_work_seconds": "180730186660.320",
+        "peak_demand_units": "32512.4",
+        "peak_demand_to_capacity": "0.5879701967592592592592592593",
+        "over_capacity_seconds": "0",
+        "over_capacity_fraction": "0"
+      }
+    },
+    "GPU-series-2": {
+      "gpu": {
+        "full_work_seconds": "4405554551.00",
+        "window_work_seconds": "4320744724.00",
+        "peak_demand_units": "1183.0",
+        "peak_demand_to_capacity": "1.212090163934426229508196721",
+        "over_capacity_seconds": "47676.0",
+        "over_capacity_fraction": "0.006131172839506172839506172840"
+      },
+      "cpu": {
+        "full_work_seconds": "69553326721.00",
+        "window_work_seconds": "68165658831.00",
+        "peak_demand_units": "21246.0",
+        "peak_demand_to_capacity": "0.9070184426229508196721311475",
+        "over_capacity_seconds": "0",
+        "over_capacity_fraction": "0"
+      }
+    },
+    "H800": {
+      "gpu": {
+        "full_work_seconds": "7931572171.00",
+        "window_work_seconds": "7604255717.00",
+        "peak_demand_units": "1881.0",
+        "peak_demand_to_capacity": "1.073630136986301369863013699",
+        "over_capacity_seconds": "4432.0",
+        "over_capacity_fraction": "0.0005699588477366255144032921811"
+      },
+      "cpu": {
+        "full_work_seconds": "176646444303.00",
+        "window_work_seconds": "170658468975.00",
+        "peak_demand_units": "41973.0",
+        "peak_demand_to_capacity": "0.9982163242009132420091324201",
+        "over_capacity_seconds": "0",
+        "over_capacity_fraction": "0"
+      }
+    }
+  },
+  "interpretation": "Unconstrained immediate-start demand; not utilization or a feasible schedule."
+}

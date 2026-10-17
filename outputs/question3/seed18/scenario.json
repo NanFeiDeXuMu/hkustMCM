@@ -1,0 +1,74 @@
+{
+  "name": "seed18",
+  "suite": "question3",
+  "policy": "sjf",
+  "max_backfill_scan": 128,
+  "routing": {
+    "flexible_fraction": 0.5,
+    "speedup": 1,
+    "donor_cap_fraction": 0.25,
+    "seed": 20261018,
+    "donors": [
+      "A100-SXM4-80GB",
+      "A800-SXM4-80GB"
+    ]
+  },
+  "source_sha256": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "code_sha256": {
+    "scheduler.py": "9059822fa8e83b3376c0a8670a79015cce5832c0480b199f0d8d832ce6601322",
+    "evaluate_scheduling.py": "8f956851d5ea9f736c6be7c60fece7129eb5de361927e96ffeb4310bee001262",
+    "run_scheduling_experiments.py": "98f9b0be601b6dbcdd7b5f125232fff0dbb099d9e86333538c371fc54f8605a0"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "simulation_wall_seconds": 6.459315999993123,
+  "diagnostics": {
+    "event_count": 392876,
+    "placement_checks": 549214,
+    "reservations_computed": 0,
+    "backfilled_jobs": 0,
+    "routing_candidates": 47979,
+    "migrated_jobs": 35803,
+    "max_backfill_scan": 128,
+    "policy": "sjf",
+    "routing": {
+      "flexible_fraction": 0.5,
+      "speedup": 1,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261018,
+      "donors": [
+        "A100-SXM4-80GB",
+        "A800-SXM4-80GB"
+      ]
+    },
+    "jobs_scheduled": 224112,
+    "allocation_rows": 317897,
+    "simulated_until": 22155424.0,
+    "elapsed_seconds": 6.410055700020166,
+    "peak_borrowed_gpus": {
+      "A10": 0,
+      "A100-SXM4-80GB": 864,
+      "A800-SXM4-80GB": 44,
+      "GPU-series-1": 0,
+      "GPU-series-2": 0,
+      "H800": 0
+    },
+    "peak_borrowed_cpus": {
+      "A10": 0.0,
+      "A100-SXM4-80GB": 13824.0,
+      "A800-SXM4-80GB": 704.0,
+      "GPU-series-1": 0.0,
+      "GPU-series-2": 0.0,
+      "H800": 0.0
+    },
+    "routing_rule": "native dispatch first; newly arrived waiting A10 only; immediate donor start; no retries",
+    "tie_breaking": "submission time then string job_name; node_name string order",
+    "backfill_rule": "first lookahead FCFS successors; finish by protected head reservation"
+  }
+}

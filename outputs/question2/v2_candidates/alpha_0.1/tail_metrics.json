@@ -1,0 +1,26 @@
+{
+  "jobs": 224112,
+  "fcfs_max_wait_hours": 1423.256388888889,
+  "fcfs_harmed_jobs": 2497,
+  "fcfs_harmed_fraction": 0.01114175055329478,
+  "fcfs_harmed_mean_wait_increase_hours": 748.3359867396431,
+  "fcfs_harmed_original_gpu_work_fraction": 0.14844597380484714,
+  "wait_over_1000h_jobs": 1523,
+  "wait_over_fcfs_max_jobs": 1172,
+  "bounded_slowdown_60s_mean": 1.2701868835155954,
+  "bounded_slowdown_60s_p99": 4.133333333333334,
+  "bounded_slowdown_60s_max": 619.4,
+  "metric_definitions": {
+    "population": "All submitted jobs followed through completion; no fixed-window censoring",
+    "pairing": "Exact, unique, nonnull text job_name sets; original attributes must match after alignment",
+    "harm": "(candidate start-submit) - (FCFS start-submit) > 0 exactly; no epsilon",
+    "harm_mean": "Mean positive wait increment conditional on strict harm; null when no job is harmed",
+    "original_gpu_work": "original_duration_seconds * gpu_request_per_worker * worker_num / 3600",
+    "harm_work_fraction": "Original GPU work of harmed jobs divided by original GPU work of all jobs",
+    "tail_thresholds": "Strict wait > 1000 hours and strict wait > FCFS's exact maximum wait",
+    "duration_quantiles": "Original requested runtime in hours; linear interpolation; empty cohorts null",
+    "duration_groups": "Original duration: (0,1h], (1h,1d], (1d,7d], (7d,infinity)",
+    "bounded_slowdown": "max(1,(end-submit)/max(run_duration_seconds,60)); unitless",
+    "quantiles": "Linear interpolation as in pandas Series.quantile; no rounding before comparisons"
+  }
+}

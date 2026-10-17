@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "new_manifests_checked": 29,
+  "aging_zero_full_trace_exact": true,
+  "aging_zero_comparison_cells": 4534401,
+  "aging_zero_check_wall_seconds": 6.731500399997458,
+  "max_simulation_seconds": 10.616520700015826,
+  "simulations_above_60_seconds": [],
+  "code_sha256": {
+    "scheduler.py": "81058052fcf18c2f6a15e2251fef7892fcdffcda3ebbc615e03e2a607167d36b"
+  }
+}

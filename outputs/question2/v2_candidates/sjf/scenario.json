@@ -1,0 +1,33 @@
+{
+  "name": "sjf",
+  "policy": "sjf",
+  "aging_alpha": 0.0,
+  "log_aging_tau_seconds": 86400.0,
+  "max_backfill_scan": 128,
+  "routing": null,
+  "baseline": null,
+  "baseline_schedule_sha256": null,
+  "tail_fcfs_schedule_sha256": "dd23d73f52ebe68faaad84d7765daa04a0bd01c3fd375b1b03a536d647af5f32",
+  "experiment_version": "v2",
+  "source_sha256": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "code_sha256": {
+    "scheduler.py": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966",
+    "evaluate_scheduling.py": "97aecd11542294408caeeaa0be9cf96496c1bc45f7d7c1ed6d456e81f4e6fb4a",
+    "analyze_tail.py": "fc16552748c8636a3a506c18680b69a6ee5e18c6c0cb2254c82c4c6fdd678e48",
+    "run_v2_experiments.py": "b89c0f7a7880a98f4fe4a19e3d621ee34b1208c7f2d278cd9844b91d7e0d9bf1"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "derived_from": "outputs\\question2\\sjf",
+  "historical_schedule_sha256": "d706a9febd27157fbe8ac7d41e2d55eb6d37768dde228a4e9214ee46f6d5e607",
+  "schedule_storage": "metrics_only",
+  "simulation_wall_seconds": null,
+  "diagnostics": null,
+  "simulation_origin": "historical_full_csv"
+}

@@ -1,0 +1,11 @@
+{"selected_scenario": "q3_noanon", "named_only_selected_scenario": "q3_noanon", "aging_alpha": 0.3, "max_native_mean_increase_hours": 0.5, "max_native_p95_increase_hours": 2, "rule": "DECISIONS.md D019", "anonymous_compatibility_is_assumed": true}
+{"selected_scenario": "q3_pull_ahs", "named_only_selected_scenario": "q3_noanon", "aging_alpha": 0.3, "max_native_mean_increase_hours": 0.5, "max_native_p95_increase_hours": 2, "rule": "DECISIONS.md D019", "anonymous_compatibility_is_assumed": true}
+{"selected_scenario": "q3_base", "named_only_selected_scenario": "q3_base", "aging_alpha": 0.3, "max_native_mean_increase_hours": 0.5, "max_native_p95_increase_hours": 2, "rule": "DECISIONS.md D019", "anonymous_compatibility_is_assumed": true}
+{"selected_scenario": "q3_pull_ahs", "named_only_selected_scenario": "q3_base", "aging_alpha": 0.3, "max_native_mean_increase_hours": 0.5, "max_native_p95_increase_hours": 2, "rule": "DECISIONS.md D019", "anonymous_compatibility_is_assumed": true}
+{"selected_scenario": "q3_noanon", "named_only_selected_scenario": "q3_noanon", "aging_alpha": 0.3, "max_native_mean_increase_hours": 0.5, "max_native_p95_increase_hours": 2, "rule": "DECISIONS.md D019", "anonymous_compatibility_is_assumed": true}
+{"selected_scenario": "q3_base", "named_only_selected_scenario": "q3_base", "aging_alpha": 0.3, "max_native_mean_increase_hours": 0.5, "max_native_p95_increase_hours": 2, "rule": "DECISIONS.md D019", "anonymous_compatibility_is_assumed": true}
+............................................................................................................................................
+----------------------------------------------------------------------
+Ran 140 tests in 1.795s
+
+OK

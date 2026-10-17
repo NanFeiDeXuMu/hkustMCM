@@ -1,0 +1,16 @@
+{
+  "primary_selected_scenario": "v2_ah_d7",
+  "conditional_selected_scenario": "v2_ahs_d7_r10",
+  "rule": "DECISIONS.md D024",
+  "native_mean_increase_bound_hours": 0.5,
+  "native_p95_increase_bound_hours": 2.0,
+  "scope": "Main grid only; sensitivities do not reselect",
+  "q2_star_config": {
+    "policy": "log_aging",
+    "log_aging_tau_seconds": 604800
+  },
+  "sensitivity_anchor": "v2_ah_d7",
+  "sensitivity_anchor_is_recommendation": true,
+  "sjf_bridge_management_feasible": true,
+  "primary_and_sjf_bridge_both_feasible": true
+}

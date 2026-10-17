@@ -1,0 +1,65 @@
+{
+  "name": "tau_1814400",
+  "experiment_version": "v3",
+  "policy": "log_aging",
+  "log_aging_tau_seconds": 1814400,
+  "routing": null,
+  "schedule_storage": "metrics_only",
+  "selection_eligible": false,
+  "purpose": "Curve interpolation only; excluded from Q2 selection",
+  "source_sha256": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "code_sha256": {
+    "scheduler.py": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966",
+    "evaluate_scheduling.py": "97aecd11542294408caeeaa0be9cf96496c1bc45f7d7c1ed6d456e81f4e6fb4a",
+    "analyze_routing_frontier.py": "f393ab8856a534ecfbce61491acf1b2333aa7727b197cdf9a90a26909b82d5ee",
+    "analyze_tail.py": "fc16552748c8636a3a506c18680b69a6ee5e18c6c0cb2254c82c4c6fdd678e48",
+    "run_v3_experiments.py": "38de4c343218910e419b63c056a9c6d40829341d0bb1421f7cfd55ffea8ecad6"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "simulation_wall_seconds": 16.374483899999177,
+  "diagnostics": {
+    "event_count": 392102,
+    "placement_checks": 433497,
+    "reservations_computed": 0,
+    "backfilled_jobs": 0,
+    "routing_candidates": 0,
+    "migrated_jobs": 0,
+    "pull_candidates_checked": 0,
+    "eligibility_wakeups": 0,
+    "max_backfill_scan": 128,
+    "policy": "log_aging",
+    "aging_alpha": null,
+    "routing": null,
+    "log_aging_tau_seconds": 1814400,
+    "jobs_scheduled": 224112,
+    "allocation_rows": 316165,
+    "simulated_until": 22642985.0,
+    "elapsed_seconds": 16.26726489997236,
+    "peak_borrowed_gpus": {
+      "A10": 0,
+      "A100-SXM4-80GB": 0,
+      "A800-SXM4-80GB": 0,
+      "GPU-series-1": 0,
+      "GPU-series-2": 0,
+      "H800": 0
+    },
+    "peak_borrowed_cpus": {
+      "A10": 0.0,
+      "A100-SXM4-80GB": 0.0,
+      "A800-SXM4-80GB": 0.0,
+      "GPU-series-1": 0.0,
+      "GPU-series-2": 0.0,
+      "H800": 0.0
+    },
+    "routing_rule": "native dispatch first; newly arrived waiting A10 only; immediate donor start; no retries",
+    "tie_breaking": "submission time then string job_name; node_name string order",
+    "backfill_rule": "first lookahead FCFS successors; finish by protected head reservation"
+  }
+}

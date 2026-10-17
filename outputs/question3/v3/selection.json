@@ -1,0 +1,95 @@
+{
+  "strict_selected_scenario": "v3_ah_d60",
+  "compensation_selected_scenario": "v2_ah",
+  "compensation_fallback_to_strict": false,
+  "thresholds": {
+    "strict_mean_hours": 0.5,
+    "strict_p95_hours": 2.0,
+    "compensation_exchange_ratio": 100.0,
+    "compensation_mean_hours": 1.0,
+    "compensation_affected_fraction_per_donor": 0.2
+  },
+  "strict_feasible_candidates": [
+    "v2_ah_d1",
+    "v2_ah_d7",
+    "v2_ah_d7_r10",
+    "v2_ah_d1_cap50",
+    "v2_aha_d7_r10",
+    "v3_ah_d14",
+    "v3_ah_d30",
+    "v3_ah_d60",
+    "v3_ah_d7_t1h",
+    "v3_ah_d14_t1h",
+    "v3_ah_d30_t1h",
+    "v3_ah_d60_t1h",
+    "v3_ah_cap10"
+  ],
+  "compensation_feasible_candidates": [
+    "v2_ah",
+    "v2_ah_d1",
+    "v2_ah_d7",
+    "v2_ah_d7_r10",
+    "v2_ah_d1_cap50",
+    "v2_aha_d7_r10",
+    "v3_ah_d14",
+    "v3_ah_d30",
+    "v3_ah_d60",
+    "v3_ah_d7_t1h",
+    "v3_ah_d14_t1h",
+    "v3_ah_d30_t1h",
+    "v3_ah_d60_t1h",
+    "v3_ah_t1h",
+    "v3_ah_cap10",
+    "v3_ah_cap15"
+  ],
+  "rule": "DECISIONS.md D026",
+  "affected_fraction_scope": "each donor separately; pooled fraction also reported",
+  "scope": "v2 main + v3 main only; named donors; positive net A10 gain; in-sample; sensitivities excluded",
+  "q2_star_config": {
+    "policy": "log_aging",
+    "log_aging_tau_seconds": 604800
+  },
+  "q2_star_unchanged": true,
+  "v2_main_candidates": 11,
+  "v3_main_candidates": 12,
+  "selected_output_paths": {
+    "v3_ah_d60": "outputs/question3/v3/v3_ah_d60",
+    "v2_ah": "outputs/question3/v3/v2_reference/v2_ah"
+  },
+  "selected_configs": {
+    "v3_ah_d60": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0.0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 5184000,
+      "donor_reserve_fraction": 0.0
+    },
+    "v2_ah": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0.0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": null,
+      "donor_reserve_fraction": 0.0
+    }
+  },
+  "completed": true,
+  "sensitivity_configurations": 8
+}

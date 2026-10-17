@@ -1,0 +1,63 @@
+{
+  "name": "alpha_1",
+  "policy": "aging",
+  "aging_alpha": 1,
+  "max_backfill_scan": 128,
+  "routing": null,
+  "baseline": null,
+  "source_sha256": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "code_sha256": {
+    "scheduler.py": "81058052fcf18c2f6a15e2251fef7892fcdffcda3ebbc615e03e2a607167d36b",
+    "evaluate_scheduling.py": "97aecd11542294408caeeaa0be9cf96496c1bc45f7d7c1ed6d456e81f4e6fb4a",
+    "run_scheduling_experiments.py": "f2d2d6580153f5ee254040cdac6447a59eededd827f2b361e1cabffb0c642ff4",
+    "run_optimization_experiments.py": "3ee68b4bcd1ba94f6fe2cde76f011b03c8cdb9b976fec3f07a6314223d6f6362"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "schedule_storage": "metrics_only",
+  "simulation_wall_seconds": 5.888136800000211,
+  "diagnostics": {
+    "event_count": 392137,
+    "placement_checks": 433321,
+    "reservations_computed": 0,
+    "backfilled_jobs": 0,
+    "routing_candidates": 0,
+    "migrated_jobs": 0,
+    "pull_candidates_checked": 0,
+    "eligibility_wakeups": 0,
+    "max_backfill_scan": 128,
+    "policy": "aging",
+    "aging_alpha": 1,
+    "routing": null,
+    "jobs_scheduled": 224112,
+    "allocation_rows": 316211,
+    "simulated_until": 26128175.0,
+    "elapsed_seconds": 5.842477199999848,
+    "peak_borrowed_gpus": {
+      "A10": 0,
+      "A100-SXM4-80GB": 0,
+      "A800-SXM4-80GB": 0,
+      "GPU-series-1": 0,
+      "GPU-series-2": 0,
+      "H800": 0
+    },
+    "peak_borrowed_cpus": {
+      "A10": 0.0,
+      "A100-SXM4-80GB": 0.0,
+      "A800-SXM4-80GB": 0.0,
+      "GPU-series-1": 0.0,
+      "GPU-series-2": 0.0,
+      "H800": 0.0
+    },
+    "routing_rule": "native dispatch first; newly arrived waiting A10 only; immediate donor start; no retries",
+    "tie_breaking": "submission time then string job_name; node_name string order",
+    "backfill_rule": "first lookahead FCFS successors; finish by protected head reservation"
+  },
+  "simulation_under_60_seconds": true
+}
