@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "checks": 186597,
+  "failure_count": 0,
+  "failures": [],
+  "historical_files": 2057,
+  "full_schedules": 6,
+  "metrics_only": 12,
+  "independent_decimal_comparisons": 35613772,
+  "full_details": [
+    {
+      "case": "reference_d75_s20261030_v1",
+      "independent_decimal_comparisons": 5946457
+    },
+    {
+      "case": "reference_d75_s20261030_v0.8",
+      "independent_decimal_comparisons": 5875923
+    },
+    {
+      "case": "runtime75_s20261030_v1",
+      "independent_decimal_comparisons": 5946457
+    },
+    {
+      "case": "runtime75_s20261030_v0.8",
+      "independent_decimal_comparisons": 5947670
+    },
+    {
+      "case": "runtime75_h30_s20261030_v1",
+      "independent_decimal_comparisons": 5955649
+    },
+    {
+      "case": "runtime75_h30_s20261030_v0.8",
+      "independent_decimal_comparisons": 5941616
+    }
+  ],
+  "verifier_sha256": "08085bd6c4f54c7e44711e4397a423e0ab92233404d758cda36f2153a5ea6e7a",
+  "protocol_sha256": "cdf69f3c33693791ea76b0d9cbe5bd6a53393d7ec9ef1dc78eaf6e3f93192f07",
+  "limitations": "No optimality or out-of-trace generalization claim; twelve metrics-only cases are not independently node-audited."
+}

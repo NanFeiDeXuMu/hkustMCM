@@ -1,0 +1,241 @@
+{
+  "rule": "D028",
+  "registered_utc": "2026-10-20T00:55:36.198950+00:00",
+  "deadline_utc": "2026-10-20T03:55:36.198950+00:00",
+  "development_seeds": [
+    20261017,
+    20261018,
+    20261019
+  ],
+  "validation_seeds": [
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029
+  ],
+  "configurations": {
+    "d30_t0h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 2592000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d30_t1h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 3600,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 2592000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d45_t0h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 3888000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d45_t1h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 3600,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 3888000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d60_t0h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 5184000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d60_t1h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 3600,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 5184000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d75_t0h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 6480000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d75_t1h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 3600,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 6480000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d90_t0h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 7776000,
+      "donor_reserve_fraction": 0.0
+    },
+    "d90_t1h": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 3600,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 7776000,
+      "donor_reserve_fraction": 0.0
+    },
+    "unlimited_cap10": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.1,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0.0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": null,
+      "donor_reserve_fraction": 0.0
+    },
+    "unlimited_cap15": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.15,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0.0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": null,
+      "donor_reserve_fraction": 0.0
+    },
+    "unlimited_cap25": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0.0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": null,
+      "donor_reserve_fraction": 0.0
+    }
+  },
+  "thresholds": {
+    "strict_mean_hours": 0.5,
+    "strict_p95_hours": 2.0,
+    "compensation_exchange_ratio": 100.0,
+    "compensation_mean_hours": 1.0,
+    "compensation_affected_fraction_per_donor": 0.2
+  },
+  "history_files": 1272,
+  "scope": "Same trace; new eligibility assignments, not independent workloads"
+}

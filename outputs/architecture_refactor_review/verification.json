@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": 2362,
+  "failure_count": 0,
+  "failures": [],
+  "historical_files_unchanged": 2308,
+  "cases": [
+    {
+      "case": "reference_d75_s20261030_v1",
+      "scalar_comparisons": 66,
+      "exact_csv_comparisons": 2,
+      "decimal_comparisons": 5946457,
+      "donor_runtime_admission_checks": 0
+    },
+    {
+      "case": "runtime75_h30_s20261030_v0.8",
+      "scalar_comparisons": 66,
+      "exact_csv_comparisons": 2,
+      "decimal_comparisons": 5941616,
+      "donor_runtime_admission_checks": 45313
+    },
+    {
+      "case": "runtime75_h30_s20261031_v0.8",
+      "scalar_comparisons": 66,
+      "exact_csv_comparisons": 0,
+      "decimal_comparisons": 5932316,
+      "donor_runtime_admission_checks": 44959
+    }
+  ],
+  "independent_decimal_comparisons": 17820389,
+  "donor_runtime_admission_checks": 90272,
+  "cache_files_unchanged": 54,
+  "verifier_sha256": "6ac227db2008098fa6b9ec1385a1238a413194c69c186119286c3054cbe374cf",
+  "scope": "Engineering reproduction of known cases; no additional scientific samples"
+}

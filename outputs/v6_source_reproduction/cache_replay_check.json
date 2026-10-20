@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "files_unchanged": 20,
+  "staging_unchanged": true,
+  "stdout": "passed=True cache_hit=True output=C:\\Users\\nanfe\\hkustMCM\\outputs\\v6_source_reproduction\\cases\\development_loans512_s20261030_v0.8",
+  "scope": "Exact same-case cache replay, not a new experiment"
+}

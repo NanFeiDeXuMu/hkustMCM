@@ -1,0 +1,99 @@
+{
+  "name": "unlimited_cap15_s20261017",
+  "experiment_version": "v4",
+  "policy": "log_aging",
+  "log_aging_tau_seconds": 604800,
+  "routing": {
+    "flexible_fraction": 0.5,
+    "speedup": 1.0,
+    "donor_cap_fraction": 0.15,
+    "seed": 20261017,
+    "donors": [
+      "A100-SXM4-80GB",
+      "H800"
+    ],
+    "mode": "pull",
+    "donor_caps": [],
+    "min_wait_seconds": 0.0,
+    "pull_scan_limit": 256,
+    "max_routed_duration_seconds": null,
+    "donor_reserve_fraction": 0.0
+  },
+  "configuration": "unlimited_cap15",
+  "phase": "development",
+  "baseline": "q2_star",
+  "schedule_storage": "metrics_only",
+  "selection_eligible": true,
+  "source_sha256": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "code_sha256": {
+    "scheduler.py": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966",
+    "evaluate_scheduling.py": "97aecd11542294408caeeaa0be9cf96496c1bc45f7d7c1ed6d456e81f4e6fb4a",
+    "analyze_routing_frontier.py": "f393ab8856a534ecfbce61491acf1b2333aa7727b197cdf9a90a26909b82d5ee",
+    "run_v2_experiments.py": "b89c0f7a7880a98f4fe4a19e3d621ee34b1208c7f2d278cd9844b91d7e0d9bf1",
+    "run_v3_experiments.py": "38de4c343218910e419b63c056a9c6d40829341d0bb1421f7cfd55ffea8ecad6",
+    "run_v4_validation.py": "1a4e0af08e29f166c5b511056578dbc1620c53b22f8e6fce3533439b0d5c4c74"
+  },
+  "baseline_schedule_sha256": "e29516a6b9f098ae5ec5ab0ef41358a7a72a4de0ae26d605583f771d2928362a",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "diagnostics": {
+    "event_count": 392111,
+    "placement_checks": 436671,
+    "reservations_computed": 0,
+    "backfilled_jobs": 0,
+    "routing_candidates": 6910828,
+    "migrated_jobs": 13281,
+    "pull_candidates_checked": 6911825,
+    "eligibility_wakeups": 0,
+    "max_backfill_scan": 128,
+    "policy": "log_aging",
+    "aging_alpha": null,
+    "routing": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.15,
+      "seed": 20261017,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0.0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": null,
+      "donor_reserve_fraction": 0.0
+    },
+    "log_aging_tau_seconds": 604800,
+    "jobs_scheduled": 224112,
+    "allocation_rows": 317241,
+    "simulated_until": 18523274.0,
+    "elapsed_seconds": 19.8335522999987,
+    "peak_borrowed_gpus": {
+      "A10": 0,
+      "A100-SXM4-80GB": 518,
+      "A800-SXM4-80GB": 0,
+      "GPU-series-1": 0,
+      "GPU-series-2": 0,
+      "H800": 262
+    },
+    "peak_borrowed_cpus": {
+      "A10": 0.0,
+      "A100-SXM4-80GB": 8294.0,
+      "A800-SXM4-80GB": 0.0,
+      "GPU-series-1": 0.0,
+      "GPU-series-2": 0.0,
+      "H800": 6307.0
+    },
+    "routing_rule": "native dispatch first; eligible waiting A10 prefix; immediate donor start; repeated pull",
+    "tie_breaking": "submission time then string job_name; node_name string order",
+    "backfill_rule": "first lookahead FCFS successors; finish by protected head reservation"
+  },
+  "simulation_wall_seconds": 19.948470299947076
+}

@@ -1,0 +1,3 @@
+donor_model,migrated_jobs,peak_borrowed_gpus,peak_borrowed_cpus,donor_gpu_capacity,donor_cpu_capacity,peak_borrowed_gpu_fraction,peak_borrowed_cpu_fraction
+A100-SXM4-80GB,9278,518,8294.0,3456,55296.0,0.14988425925925927,0.1499927662037037
+H800,3526,262,6306.0,1752,42048.0,0.1495433789954338,0.1499714611872146

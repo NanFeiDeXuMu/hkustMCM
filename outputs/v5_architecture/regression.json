@@ -1,0 +1,1056 @@
+{
+  "passed": true,
+  "completed": true,
+  "results": [
+    {
+      "scenario": "question2/fcfs",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 316774,
+        "fresh_rows": 316774,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 950322
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question2/sjf",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 316203,
+        "fresh_rows": 316203,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 948609
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question2/backfill",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 316763,
+        "fresh_rows": 316763,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 950289
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question2/backfill_l512",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 316755,
+        "fresh_rows": 316755,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 950265
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/flex25",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317266,
+        "fresh_rows": 317266,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 951798
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/flex50",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317863,
+        "fresh_rows": 317863,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 953589
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/flex100",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317460,
+        "fresh_rows": 317460,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 952380
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/speed2",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 318712,
+        "fresh_rows": 318712,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 956136
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/cap10",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317210,
+        "fresh_rows": 317210,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 951630
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/cap50",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317628,
+        "fresh_rows": 317628,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 952884
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/seed18",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317897,
+        "fresh_rows": 317897,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 953691
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/seed19",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317799,
+        "fresh_rows": 317799,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 953397
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question3/backfill_flex50",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317794,
+        "fresh_rows": 317794,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 953382
+      },
+      "passed": true
+    },
+    {
+      "scenario": "question2/q2_star",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 316211,
+        "fresh_rows": 316211,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 948633
+      },
+      "passed": true
+    },
+    {
+      "scenario": "v4_validation/validation/d75_t0h_s20261020",
+      "schedule": {
+        "passed": true,
+        "stored_rows": 224112,
+        "fresh_rows": 224112,
+        "stored_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "requested_model",
+          "assigned_model",
+          "submit_time",
+          "start_time",
+          "end_time",
+          "original_duration",
+          "run_duration",
+          "wait_time",
+          "gpu_request",
+          "cpu_request",
+          "worker_num",
+          "migrated",
+          "flexible",
+          "backfilled",
+          "start_sequence"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 3585792
+      },
+      "allocations": {
+        "passed": true,
+        "stored_rows": 317531,
+        "fresh_rows": 317531,
+        "stored_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "fresh_columns": [
+          "job_name",
+          "node_name",
+          "worker_count"
+        ],
+        "mismatched_cells": 0,
+        "mismatches_by_column": {},
+        "examples": [],
+        "failure_count": 0,
+        "compared_cells": 952593
+      },
+      "passed": true
+    }
+  ]
+}

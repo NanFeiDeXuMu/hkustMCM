@@ -1,0 +1,38 @@
+{
+  "selected": "loans512",
+  "scores": [
+    {
+      "configuration": "current",
+      "eligible": false,
+      "mean_wait_hours": 5.127493770734094
+    },
+    {
+      "configuration": "loans128",
+      "eligible": true,
+      "mean_wait_hours": 18.275339086873974
+    },
+    {
+      "configuration": "loans128_cap10",
+      "eligible": true,
+      "mean_wait_hours": 27.18183503114514
+    },
+    {
+      "configuration": "loans128_cap15",
+      "eligible": true,
+      "mean_wait_hours": 21.654793126336966
+    },
+    {
+      "configuration": "loans512",
+      "eligible": true,
+      "mean_wait_hours": 12.616067102237572
+    },
+    {
+      "configuration": "shadow",
+      "eligible": true,
+      "mean_wait_hours": 19.002952884865024
+    }
+  ],
+  "rule": "D033",
+  "validation_used_for_selection": false,
+  "locked_utc": "2026-10-20T02:28:41.239658+00:00"
+}

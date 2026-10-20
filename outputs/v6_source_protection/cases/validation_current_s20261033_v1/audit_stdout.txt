@@ -1,0 +1,1 @@
+{"passed": true, "failure_count": 0, "report": "C:\\Users\\nanfe\\hkustMCM\\outputs\\v6_source_protection\\staging\\validation_current_s20261033_v1-d3e2552a19d94f05befba692fe770117\\independent_validation.json"}

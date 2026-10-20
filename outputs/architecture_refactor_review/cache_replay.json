@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "files_unchanged": 54,
+  "cases": [
+    {
+      "output": "C:\\Users\\nanfe\\hkustMCM\\outputs\\common_runtime_reproduction\\cases\\reference_d75_s20261030_v1",
+      "cache_hit": true,
+      "passed": true
+    },
+    {
+      "output": "C:\\Users\\nanfe\\hkustMCM\\outputs\\common_runtime_reproduction\\cases\\runtime75_h30_s20261030_v0.8",
+      "cache_hit": true,
+      "passed": true
+    },
+    {
+      "output": "C:\\Users\\nanfe\\hkustMCM\\outputs\\common_runtime_reproduction\\cases\\runtime75_h30_s20261031_v0.8",
+      "cache_hit": true,
+      "passed": true
+    }
+  ],
+  "staging_directories": 0
+}

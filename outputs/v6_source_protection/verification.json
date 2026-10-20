@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checks": 252508,
+  "failure_count": 0,
+  "failures": [],
+  "historical_files": 2372,
+  "exact_regression_cells": 72603825,
+  "development_cases": 36,
+  "validation_cases": 40,
+  "selected": "loans512",
+  "full_schedules": 4,
+  "metrics_only": 72,
+  "independent_decimal_comparisons": 23897403,
+  "donor_runtime_admission_checks": 184753,
+  "full_details": [
+    {
+      "case": "validation_current_s20261033_v1",
+      "decimal_comparisons": 5952967,
+      "admission_checks": 47134,
+      "a10_harmed_jobs": 31125,
+      "independent_loan_interval_checks": 0
+    },
+    {
+      "case": "validation_current_s20261033_v0.8",
+      "decimal_comparisons": 5944113,
+      "admission_checks": 45852,
+      "a10_harmed_jobs": 31793,
+      "independent_loan_interval_checks": 0
+    },
+    {
+      "case": "validation_loans512_s20261033_v1",
+      "decimal_comparisons": 6010334,
+      "admission_checks": 46567,
+      "a10_harmed_jobs": 0,
+      "independent_loan_interval_checks": 12607
+    },
+    {
+      "case": "validation_loans512_s20261033_v0.8",
+      "decimal_comparisons": 5989989,
+      "admission_checks": 45200,
+      "a10_harmed_jobs": 0,
+      "independent_loan_interval_checks": 6015
+    }
+  ],
+  "completed_utc": "2026-10-20T02:53:58.749539+00:00",
+  "verifier_sha256": "68704523a92fcd238087a14369b4998bfaed2c70382d42c370fae80ed79a80df",
+  "protocol_sha256": "810216ca1a3aff7bf8118ebb4c610be70f012e7e6a925d1304b586d835aedf34",
+  "limitations": "Same trace, assumed durations and compatibility. Zero source waiting harm is not zero completion harm. Metrics-only cases have no independent node audit."
+}

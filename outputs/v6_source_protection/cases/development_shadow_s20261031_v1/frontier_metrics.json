@@ -1,0 +1,69 @@
+{
+  "a10_jobs": 111284,
+  "a10_job_hours_saved": 2913472.3675,
+  "a10_mean_wait_gain_hours": 26.18051442705151,
+  "donor_native_jobs": 85593,
+  "donor_native_job_hours_added": 14949.878888888888,
+  "exchange_ratio": 194.88267357572798,
+  "exchange_ratio_infinite": false,
+  "native_wait_increased_jobs": 7761,
+  "native_wait_increased_fraction": 0.09067330272335354,
+  "native_wait_mean_delta_hours": 0.1746624010011203,
+  "native_wait_p95_delta_hours": 0.3134999999999935,
+  "max_donor_native_wait_increased_fraction": 0.09237484080764617,
+  "max_donor_mean_wait_delta_hours": 0.19349171849967017,
+  "max_donor_p95_delta_hours": 0.3194444444444444,
+  "a10_wait_increased_jobs": 0,
+  "a10_wait_increased_fraction": 0.0,
+  "a10_max_wait_increase_hours": 0.0,
+  "compensation_gpu_hours": 256340.75861111112,
+  "a10_gpu_wait_hours_saved": 2990114.995833333,
+  "compensation_share": 0.08572939802259008,
+  "compensation_share_undefined": false,
+  "native_harm_by_donor": [
+    {
+      "donor_model": "A100-SXM4-80GB",
+      "native_jobs": 80877,
+      "native_wait_increased_jobs": 7471,
+      "native_wait_increased_fraction": 0.09237484080764617,
+      "native_wait_mean_delta_hours": 0.17356444903303098,
+      "native_wait_p95_delta_hours": 0.3194444444444444,
+      "donor_native_job_hours_added": 14037.371944444445,
+      "native_max_wait_increase_hours": 41.71944444444444,
+      "compensation_gpu_hours": 76495.69194444445
+    },
+    {
+      "donor_model": "H800",
+      "native_jobs": 4716,
+      "native_wait_increased_jobs": 290,
+      "native_wait_increased_fraction": 0.06149279050042409,
+      "native_wait_mean_delta_hours": 0.19349171849967017,
+      "native_wait_p95_delta_hours": 0.188125,
+      "donor_native_job_hours_added": 912.5069444444445,
+      "native_max_wait_increase_hours": 39.38472222222222,
+      "compensation_gpu_hours": 179845.06666666668
+    }
+  ],
+  "borrowing_peaks": [
+    {
+      "donor_model": "A100-SXM4-80GB",
+      "migrated_jobs": 33475,
+      "peak_borrowed_gpus": 864,
+      "peak_borrowed_cpus": 13824.0,
+      "donor_gpu_capacity": 3456,
+      "donor_cpu_capacity": 55296.0,
+      "peak_borrowed_gpu_fraction": 0.25,
+      "peak_borrowed_cpu_fraction": 0.25
+    },
+    {
+      "donor_model": "H800",
+      "migrated_jobs": 12538,
+      "peak_borrowed_gpus": 318,
+      "peak_borrowed_cpus": 4098.0,
+      "donor_gpu_capacity": 1752,
+      "donor_cpu_capacity": 42048.0,
+      "peak_borrowed_gpu_fraction": 0.1815068493150685,
+      "peak_borrowed_cpu_fraction": 0.09746004566210045
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "configuration": "d60_t0h",
+      "passed": true,
+      "comparisons": 5970234,
+      "audit": "outputs/v4_reproduction/20261020T010530492122Z/reproduction/d60_t0h_s20261020/independent_validation.json"
+    },
+    {
+      "configuration": "unlimited_cap25",
+      "passed": true,
+      "comparisons": 5733028,
+      "audit": "outputs/v4_reproduction/20261020T010530492122Z/reproduction/unlimited_cap25_s20261020/independent_validation.json"
+    },
+    {
+      "configuration": "d75_t0h",
+      "passed": true,
+      "comparisons": 5938736,
+      "audit": "outputs/v4_reproduction/20261020T010530492122Z/reproduction/d75_t0h_s20261020/independent_validation.json"
+    }
+  ],
+  "comparisons": 17641998,
+  "separate_from_new_experiment_audit": true
+}

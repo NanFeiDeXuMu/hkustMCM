@@ -1,0 +1,23 @@
+{
+  "request_sha256": "d28567338af5e7ade04d9c4fa257af10783e3495cd0f6b32bf267d5bed851a1c",
+  "artifacts": {
+    "a10_harm_groups.csv": "9e15b99b200b7f37bb11e02d1233e2be9306ff8e39677fb824399f1ebf808703",
+    "allocations.csv": "21d916990a1dda158109707dfdc290b272e19ac8c18583b97f3f9337bcccafb8",
+    "audit_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audit_stdout.txt": "0c09d14ac62f84070d1414f62b2d36d1de32814d3e3673371687e7ebd05face8",
+    "borrowing_peaks.csv": "d8b316df67786666076f28e6104932d0f7ef210560cee808af84828505de0848",
+    "comparison_row.json": "ac3eeef5e75dd19dfeba121f096aff1b337fe70fc7e11bd08deb32426a6fd5a0",
+    "frontier_metrics.json": "b1b7f489b83da0936174ac2c788ddc7232aa63789fc8f4a4101d9fb706b326d6",
+    "independent_validation.json": "3dafd1853cb0cc75ef5db93e0a3e56fd9cec98cb6fc728eea512bc94cac90a00",
+    "metrics.json": "20ecef8edf2c8aeb4e4a2d41713f7a60fcabd04966cc36a882bc53c4be5c2fa6",
+    "metrics_by_assigned_model.csv": "875f0a1b99c69ea37e541cd358612739cc29d761aeca412ff658e1d8cbbe4ba2",
+    "metrics_by_job_group.csv": "8b511aaf41dc7629fa18bb20b4f9271597e73c483a47d48d7e38c8a883aabd4b",
+    "metrics_by_requested_model.csv": "a513dce3fcdcdceee25508af2ff81da3a26426c62afac5f36bd8c2811184f8ba",
+    "metrics_idle_while_queued_by_model.csv": "b048e342aa2bc9ee95353d19f44b5265c97396e93b7743d8011ec449302ad853",
+    "native_harm_by_donor.csv": "c2f13f99b37876b2bb6a260b2a102384e0e3767d6e18c5f10d6a0201cc54e0bd",
+    "request.json": "e6cfea59dbb9c69a69670e9a152a206439c7090c79c4cdbb32e3c7f0012097ef",
+    "scenario.json": "21d5be669cbabc3c5051eae70df865a372d2c29a92c2e7ca30a9d7d4a064a6a6",
+    "schedule.csv": "2d13ab1df75197de2163c44fc2fe8eac794aaa12273c50394d1d79f205870c48"
+  },
+  "completed_utc": "2026-10-20T02:34:56.157325+00:00"
+}

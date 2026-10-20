@@ -8,3 +8,13 @@ __pycache__/
 # commands in CURRENT_STATUS.md / SUBMISSION_PACKAGE.md.
 outputs/**/schedule.csv
 outputs/**/allocations.csv
+
+# Built submission archives
+submission/
+reports/paper/*.aux
+reports/paper/*.log
+reports/paper/*.out
+
+# Runtime lock and staging folders written by the experiment store
+outputs/**/locks/
+outputs/**/staging/

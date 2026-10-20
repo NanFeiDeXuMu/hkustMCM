@@ -1,0 +1,54 @@
+{
+  "baseline_schedule_sha256": "e29516a6b9f098ae5ec5ab0ef41358a7a72a4de0ae26d605583f771d2928362a",
+  "code_sha256": {
+    "analyze_routing_frontier.py": "f393ab8856a534ecfbce61491acf1b2333aa7727b197cdf9a90a26909b82d5ee",
+    "evaluate_scheduling.py": "97aecd11542294408caeeaa0be9cf96496c1bc45f7d7c1ed6d456e81f4e6fb4a",
+    "experiment_store.py": "7d651f8665bafee94aa1fc15b0c472017c961aa38b84817be423112c9c1bd72a",
+    "experimental_scheduler.py": "0d2b7556fa7574e653b4dc9a7839b9eed685f432b4f4ade1549aaeabc61830cd",
+    "reproduce_case.py": "7c746ea564bc478c25f1a92740c146dc36df1085fc9d237b08d92954eb582e10",
+    "routing_admission.py": "9732af7166aa8d995d5a45f435cc17a379577683b04733cda84fc08a2abb1f1b",
+    "scheduler.py": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966",
+    "simulation_contract.py": "05434df889815cc3006c82ba65d96cc73234a9e5e8b3ee0b872ae5b8ecccc678"
+  },
+  "expected_artifacts": {
+    "allocations.csv": "a5f920e5d01cd2d7b78dda84a997fd900fe3c7337359b2a9d325372fcf9d56de",
+    "comparison_row.json": "7fd6a2d4a032b0527be26f8c93326cc0fa38018dea0e8dbe18d8e48906c69dbb",
+    "schedule.csv": "3e0a041a33c176c984b62b498ba35f21650af6a35def66412df212ba9b8e7d65"
+  },
+  "purpose": "reproduce_frozen_scenario",
+  "schema_version": 1,
+  "source_manifest_sha256": "7d3cdee93f643f0109428c1f22a873c5be3bf75faa426f598461344a8dc4776a",
+  "source_sha256": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "spec": {
+    "admission": null,
+    "aging_alpha": 0.0,
+    "log_aging_tau_seconds": 604800,
+    "max_backfill_scan": 128,
+    "policy": "log_aging",
+    "routing": {
+      "donor_cap_fraction": 0.25,
+      "donor_caps": [],
+      "donor_reserve_fraction": 0.0,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "flexible_fraction": 0.5,
+      "max_routed_duration_seconds": 6480000,
+      "min_wait_seconds": 0.0,
+      "mode": "pull",
+      "pull_scan_limit": 256,
+      "seed": 20261030,
+      "speedup": 1.0
+    }
+  },
+  "verifier_sha256": "545b9f616e34d10ba7014b58ef25c3d85258edfab24b865b5eb8d27060d75638",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "python": "3.12.14"
+  }
+}

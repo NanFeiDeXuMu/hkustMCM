@@ -1,0 +1,91 @@
+{
+  "selected_configuration": "d75_t0h",
+  "rule": "D028",
+  "development_seeds": [
+    20261017,
+    20261018,
+    20261019
+  ],
+  "scores": [
+    {
+      "configuration": "d30_t0h",
+      "eligible": true,
+      "mean_a10_gain_hours": 30.932332916648363,
+      "worst_donor_mean_delta_hours": 0.0
+    },
+    {
+      "configuration": "d30_t1h",
+      "eligible": true,
+      "mean_a10_gain_hours": 29.45798477402495,
+      "worst_donor_mean_delta_hours": 0.0
+    },
+    {
+      "configuration": "d45_t0h",
+      "eligible": true,
+      "mean_a10_gain_hours": 41.00479218086658,
+      "worst_donor_mean_delta_hours": 7.295028252778911e-05
+    },
+    {
+      "configuration": "d45_t1h",
+      "eligible": true,
+      "mean_a10_gain_hours": 39.60979811579848,
+      "worst_donor_mean_delta_hours": 5.122318802351444e-05
+    },
+    {
+      "configuration": "d60_t0h",
+      "eligible": true,
+      "mean_a10_gain_hours": 49.13744451050832,
+      "worst_donor_mean_delta_hours": 0.06699076993459203
+    },
+    {
+      "configuration": "d60_t1h",
+      "eligible": true,
+      "mean_a10_gain_hours": 47.81165159095781,
+      "worst_donor_mean_delta_hours": 0.04192615192068065
+    },
+    {
+      "configuration": "d75_t0h",
+      "eligible": true,
+      "mean_a10_gain_hours": 55.77299334152726,
+      "worst_donor_mean_delta_hours": 0.3232370299689002
+    },
+    {
+      "configuration": "d75_t1h",
+      "eligible": true,
+      "mean_a10_gain_hours": 54.333436193283255,
+      "worst_donor_mean_delta_hours": 0.2459152648195269
+    },
+    {
+      "configuration": "d90_t0h",
+      "eligible": false,
+      "mean_a10_gain_hours": 58.29087925854038,
+      "worst_donor_mean_delta_hours": 0.4858201983790406
+    },
+    {
+      "configuration": "d90_t1h",
+      "eligible": false,
+      "mean_a10_gain_hours": 56.701875237963066,
+      "worst_donor_mean_delta_hours": 0.43236759023654703
+    },
+    {
+      "configuration": "unlimited_cap10",
+      "eligible": true,
+      "mean_a10_gain_hours": 38.3734628285055,
+      "worst_donor_mean_delta_hours": 0.09223306003204222
+    },
+    {
+      "configuration": "unlimited_cap15",
+      "eligible": false,
+      "mean_a10_gain_hours": 50.56236706517992,
+      "worst_donor_mean_delta_hours": 0.7684995523513336
+    },
+    {
+      "configuration": "unlimited_cap25",
+      "eligible": false,
+      "mean_a10_gain_hours": 60.17930781620465,
+      "worst_donor_mean_delta_hours": 1.314490092828197
+    }
+  ],
+  "validation_used_for_selection": false,
+  "locked_utc": "2026-10-20T01:01:30.781284+00:00"
+}

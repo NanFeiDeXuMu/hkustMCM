@@ -2,6 +2,20 @@
 
 本包是 HKUST MCM Senior Group Problem B 的代码、派生结果和核验证据补充材料。它不是最终比赛论文，也没有上传到比赛系统。实验已完成后的 ZIP 应在仓库外系统临时目录生成，大小严格小于 **50,000,000 字节**；论文统稿仍需补齐成员信息、人工核对 AI 声明并排版为 PDF。
 
+## v4追加材料（2026-10-20）
+
+用户重新开放的D028实验单独位于 `outputs/v4_validation/`，包含预登记协议、39次开发、30次新资格验证、2次速度压力、A10受损快照与新核验记录；报告为 `reports/B_v4_validation_zh.md` 和 `reports/B_v4_validation_en.md`。这些是追加证据，不覆盖下文v3历史交付。
+
+精简包继续排除全部完整schedule/allocations CSV。取得原始输入后可运行：
+
+```powershell
+.\.venv\Scripts\python.exe src\reproduce_v4_full.py
+```
+
+它在 `outputs/v4_reproduction/<时间>/` 重建Q2*基线并核对冻结哈希，再重建三个锁定方案的首个验证种子，核对各10个数值。按该目录 `reproduction_check.json` 的cases路径逐一运行 `tests/verify_schedules.py --scenario-dir <路径>`。它有单独三小时复现预算，不重新选型，不覆盖原输出；该入口不重建71次全网格，也不重建A10机制分析所需的原v3完整调度。已有复现试运行的full CSV同样排除，报告保留。
+
+`tests/verify_v4_outputs.py` 适用于原完整工作目录，核对全部历史哈希、选择、通过率、指标和新完整调度，不能把精简包中缺失的大文件标为通过。当前实验轮与独立复现试运行的核验数分开报告。
+
 ## 包含与排除
 
 - 包含 `src/`、`tests/`、`requirements.txt`、`README.md`、`AGENTS.md`、`CURRENT_STATUS.md`、`DECISIONS.md`、本说明和三份 `TASK*.md` 任务书。

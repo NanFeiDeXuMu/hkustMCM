@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "tests": 187,
+  "command": "python -m unittest discover -s tests -p test_*.py",
+  "recorded_utc": "2026-10-20T02:22:38.436564+00:00",
+  "evidence": "Observed terminal completion: Ran 187 tests in 4.620s, OK",
+  "new_test_sha256": {
+    "tests/test_source_protection.py": "f2206ff9c6e7c03acdd70844d12983d66642a4a669cedd79e86597d071dd4667",
+    "tests/test_source_harm_analysis.py": "09050d84fd825c7da19246e8805769846af599df5982c52cdf6dfaede272143c"
+  }
+}

@@ -1,0 +1,3 @@
+seed,speedup,cutoff_days,jobs,all_match_q2_start,additional_wait_job_hours,total_extra_wait_job_hours,share_of_total_extra_wait
+20261033,1.0,75.0,1909,True,859100.0877777779,1475401.721388889,0.5822821509039943
+20261033,0.8,75.0,1909,True,686760.1491666667,1783063.952847222,0.38515732880474546

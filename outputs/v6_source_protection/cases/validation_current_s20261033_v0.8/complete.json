@@ -1,0 +1,23 @@
+{
+  "request_sha256": "ebfbad58e5faa79afbb10a28f2566c831ed9862a94ea112943f8c29e46b47fb6",
+  "artifacts": {
+    "a10_harm_groups.csv": "83d051f7102e598a60d3a1061cd1e2bad6c960a5d3dba0ad55dee52a61fa637e",
+    "allocations.csv": "990c6e7d9d6060c57d0a0399d8badfa1b2c9dbac99e5b71e96dbe135fe3e7b23",
+    "audit_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audit_stdout.txt": "d3b79138d56f742b48a3572449b2ca7e312eb1dc7935248b79f93f23f7c774b2",
+    "borrowing_peaks.csv": "5ee652aca12666ae37c54939c3d83c98e39177d45b8ab2cb7a014b27f2729de8",
+    "comparison_row.json": "fed2dd00a9469c4d29973fb464993c9c76bea59e9f1dd3fb0a2d77155b63aabf",
+    "frontier_metrics.json": "7d21882c2c9b75648f572ebd8f7bec4471262ebd9e6f206d43416f2af872f6ac",
+    "independent_validation.json": "50bef6988955038cb4161691830a7af8314cb3b5241254a0fe9c32e082b24f04",
+    "metrics.json": "479bb8710e1068bb0ad30f61bbf4706051f70ff1eee9bbbf3ab95987fec13801",
+    "metrics_by_assigned_model.csv": "60e8e8415dd4302377c4f9d6a2bfe79fc3a4f77bdb470775c13aa590bffa1152",
+    "metrics_by_job_group.csv": "acb60ddbb3bf36e50797969c94d4bea226c30d539aec8453eca97a7eb0044bb0",
+    "metrics_by_requested_model.csv": "5485c88b6c24e4200b55531290e92664e0931adcc02cdec3bda5e73d4185d166",
+    "metrics_idle_while_queued_by_model.csv": "832804afc86e483a75caf23cb1688fd1ca18be18c1b15aab1566ffcbec579ee7",
+    "native_harm_by_donor.csv": "125cc44290bcd38597126e7145f7ff157be6ed678d604571fe063808c49bb725",
+    "request.json": "b2008e64f23d242fee1257d0f506968ce0007048f020762aa97f422813abe78d",
+    "scenario.json": "56a5259de551da937d48f4c11cb25d4790bd9a7621966f2782fef6515bde757e",
+    "schedule.csv": "0fae5bcf3acafdafeddaa804f4ad9abff1dbcc6c3035dd1f38dc5639f3e1e711"
+  },
+  "completed_utc": "2026-10-20T02:29:11.494769+00:00"
+}

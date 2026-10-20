@@ -1,0 +1,11 @@
+{
+  "rule": "D032",
+  "registered_utc": "2026-10-20T01:46:59.154816+00:00",
+  "cases": [
+    "reference_d75_s20261030_v1",
+    "runtime75_h30_s20261030_v0.8",
+    "runtime75_h30_s20261031_v0.8"
+  ],
+  "scope": "Engineering reproduction only; no new scientific experiment",
+  "historical_files": 2308
+}

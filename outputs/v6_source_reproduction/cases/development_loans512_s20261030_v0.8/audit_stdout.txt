@@ -1,0 +1,1 @@
+{"passed": true, "failure_count": 0, "report": "C:\\Users\\nanfe\\hkustMCM\\outputs\\v6_source_reproduction\\staging\\development_loans512_s20261030_v0.8-6a582c886417406c885b22b36353c087\\independent_validation.json"}

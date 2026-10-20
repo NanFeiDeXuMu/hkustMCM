@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": 18622,
+  "failure_count": 0,
+  "failures": [],
+  "cases": [
+    {
+      "case": "validation_loans512_s20261033_v1",
+      "loan_jobs": 12427,
+      "allocation_interval_checks": 12607
+    },
+    {
+      "case": "validation_loans512_s20261033_v0.8",
+      "loan_jobs": 6012,
+      "allocation_interval_checks": 6015
+    }
+  ],
+  "scope": "Early check of the two saved protected validation schedules; repeated by final verify_v6_outputs.py"
+}

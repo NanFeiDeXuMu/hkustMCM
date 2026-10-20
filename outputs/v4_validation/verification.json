@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "comparisons": 67743,
+  "failure_count": 0,
+  "failures": [],
+  "historical_files_unchanged": 1272,
+  "development_runs": 39,
+  "validation_runs": 30,
+  "speed_stress_runs": 2,
+  "selected_configuration": "d75_t0h",
+  "full_schedule_audits": [
+    {
+      "path": "outputs/v4_validation/validation/d60_t0h_s20261020",
+      "comparisons": 5970234,
+      "passed": true,
+      "audit_sha256": "ea49806f6597b812597faefb3f23bf9c7cbec990c38e97ae4fc48305f7add996"
+    },
+    {
+      "path": "outputs/v4_validation/validation/d75_t0h_s20261020",
+      "comparisons": 5938736,
+      "passed": true,
+      "audit_sha256": "01877e4bf314bd564177fbf12bc0872318b7c2f42b5b1eec7e22c8e5ab0e53e7"
+    },
+    {
+      "path": "outputs/v4_validation/validation/unlimited_cap25_s20261020",
+      "comparisons": 5733028,
+      "passed": true,
+      "audit_sha256": "cc5e26b1e2dd4dd71d4ade5d17e862cb58f05b1bae47552261d98872421e64e7"
+    }
+  ],
+  "full_schedule_comparisons": 17641998,
+  "metrics_only_not_independently_audited": 68,
+  "snapshot_audit_scope": "All category arithmetic and 6 examples per existing policy with exact Decimal occupancy; not all snapshots independently replayed",
+  "verifier_sha256": "0a5f49abe3df40d109e5978c9ebb07ceb8c073f526f6d7a987cebc070a6688a0"
+}

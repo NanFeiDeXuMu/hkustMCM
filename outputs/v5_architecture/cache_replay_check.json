@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "protocol_and_case_receipts_unchanged": true,
+  "files_checked": 21,
+  "new_simulation_messages": "",
+  "scope": "Replay all 18 completed cases via verified receipts; no simulation rerun"
+}

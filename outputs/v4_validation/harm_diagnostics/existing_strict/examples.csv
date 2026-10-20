@@ -1,0 +1,7 @@
+job_name,baseline_start_seconds,new_start_seconds,wait_increase_hours,assigned_model,job_gpus,job_workers,original_duration_days,job_available_worker_slots,head_job_name,head_workers,head_job_gpus,head_available_worker_slots,free_gpus,category
+121506,3369308.0,3489070.0,33.26722222222222,A10,1,1,0.8982986111111111,0,323284,1,1,0,0,not_placeable_on_realized_timeline
+139738,3351876.0,3453993.0,28.365833333333335,A10,1,1,0.4611689814814815,0,412113,1,1,0,0,not_placeable_on_realized_timeline
+127150,3361599.0,3459372.0,27.159166666666668,A10,1,1,0.5253240740740741,0,73641,1,1,0,0,not_placeable_on_realized_timeline
+132879,3143727.0,3220757.0,21.397222222222222,A10,1,1,0.42667824074074073,1,417748,3,3,1,1,feasible_behind_infeasible_head
+77598,3345559.0,3420697.0,20.871666666666666,A10,1,1,0.24298611111111112,1,420295,3,3,1,1,feasible_behind_infeasible_head
+128053,3413816.0,3488896.0,20.855555555555554,A10,1,1,0.7497916666666666,5,420555,9,9,5,5,feasible_behind_infeasible_head

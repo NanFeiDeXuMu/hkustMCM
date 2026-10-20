@@ -1,3 +1,5 @@
+> **Superseded.** The final submitted paper is `reports/paper/paper.tex` / `paper.pdf`. This Markdown file is an earlier, longer draft kept for reference.
+
 # Balancing Response Time and Extreme Delays in a Heterogeneous GPU Cluster
 
 **2026 MCM Senior Group — Problem B: Scheduling a GPU Cluster**

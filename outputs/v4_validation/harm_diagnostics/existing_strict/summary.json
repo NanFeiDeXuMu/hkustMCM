@@ -1,0 +1,23 @@
+{
+  "source_jobs": 111284,
+  "harmed_jobs": 30375,
+  "category_counts": {
+    "not_placeable_on_realized_timeline": 29926,
+    "feasible_behind_infeasible_head": 449
+  },
+  "category_fractions_of_harmed": {
+    "not_placeable_on_realized_timeline": 0.9852181069958847,
+    "feasible_behind_infeasible_head": 0.014781893004115226
+  },
+  "interpretation": "Snapshots after events at baseline start times on the realized changed timeline; no causal attribution of full delay",
+  "cpu_slot_tolerance": 1e-09,
+  "time_unit": "seconds; delta in hours",
+  "queue_key": "log(original_duration_seconds)+submit_time/604800",
+  "input_sha256": {
+    "outputs/question2/q2_star/schedule.csv": "e29516a6b9f098ae5ec5ab0ef41358a7a72a4de0ae26d605583f771d2928362a",
+    "outputs/question3/v3/v3_ah_d60/schedule.csv": "e3268d6fb4e8ce9efa2d511a66720e40ecbaf113fed3f6aeee59f3eb9e5f776b",
+    "outputs/question3/v3/v3_ah_d60/allocations.csv": "bd0c9e45b0c7c1cb9eb06407c139902b6b150edb52b3033a4e792ee11102dbf9",
+    "2026_MCM_Senior_GPU_Scheduling/2026_MCM_Senior_GPU_Scheduling/node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "code_sha256": "96e47a207d8f878de00babbc2960ff6c57f562f7567434b09965fc03fe7b178e"
+}

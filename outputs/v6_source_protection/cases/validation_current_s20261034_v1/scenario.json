@@ -1,0 +1,127 @@
+{
+  "name": "validation_current_s20261034_v1",
+  "experiment_version": "v6_source_protection",
+  "policy": "log_aging",
+  "log_aging_tau_seconds": 604800.0,
+  "aging_alpha": 0.0,
+  "max_backfill_scan": 128,
+  "routing": {
+    "flexible_fraction": 0.5,
+    "speedup": 1.0,
+    "donor_cap_fraction": 0.25,
+    "seed": 20261034,
+    "donors": [
+      "A100-SXM4-80GB",
+      "H800"
+    ],
+    "mode": "pull",
+    "donor_caps": [],
+    "min_wait_seconds": 0.0,
+    "pull_scan_limit": 256,
+    "max_routed_duration_seconds": 6480000,
+    "donor_reserve_fraction": 0.0
+  },
+  "admission": {
+    "limits_seconds": [
+      [
+        "A100-SXM4-80GB",
+        6480000.0
+      ],
+      [
+        "H800",
+        2592000.0
+      ]
+    ]
+  },
+  "source_protection": null,
+  "source_sha256": {
+    "job_info_clean.csv": "735bc06c3986b1d0c5932236f8685b7204463829118fc6a1d37030e253ed38e1",
+    "node_info_df.csv": "1aba161961a5a4a1a61aa581383c5e5abe3400b59f8597ba8c4eef7597bc9d18"
+  },
+  "code_sha256": {
+    "analyze_routing_frontier.py": "f393ab8856a534ecfbce61491acf1b2333aa7727b197cdf9a90a26909b82d5ee",
+    "analyze_source_protection.py": "6578b08d4f4ca90222305834717214d687bcc8f84c8e92b3a12e45cf14084dd9",
+    "evaluate_scheduling.py": "97aecd11542294408caeeaa0be9cf96496c1bc45f7d7c1ed6d456e81f4e6fb4a",
+    "experiment_store.py": "7d651f8665bafee94aa1fc15b0c472017c961aa38b84817be423112c9c1bd72a",
+    "experimental_scheduler.py": "0d2b7556fa7574e653b4dc9a7839b9eed685f432b4f4ade1549aaeabc61830cd",
+    "reproduce_case.py": "7c746ea564bc478c25f1a92740c146dc36df1085fc9d237b08d92954eb582e10",
+    "routing_admission.py": "9732af7166aa8d995d5a45f435cc17a379577683b04733cda84fc08a2abb1f1b",
+    "run_v6_source_protection.py": "d5097262cb4fff14f9da91084abcf99340156cad042d1edea601c4d2953fee44",
+    "scheduler.py": "714e94bdc388abd63a9274e67c394157eb6e06bfb5a6ffba0a8a0320acb10966",
+    "simulation_contract.py": "05434df889815cc3006c82ba65d96cc73234a9e5e8b3ee0b872ae5b8ecccc678",
+    "source_guard_engine.py": "6c34640b931fd2716d80f980c42ff7457d6ce27ea4ed7e6d32ae3271352116e2",
+    "source_protection.py": "41c3e5af6391f25687efbcc743822862ddfaa5ba7a3970889faaf9cddee81a11"
+  },
+  "baseline_schedule_sha256": "e29516a6b9f098ae5ec5ab0ef41358a7a72a4de0ae26d605583f771d2928362a",
+  "schedule_storage": "metrics_only",
+  "diagnostics": {
+    "event_count": 392164,
+    "placement_checks": 464298,
+    "reservations_computed": 0,
+    "backfilled_jobs": 0,
+    "routing_candidates": 318950,
+    "migrated_jobs": 47332,
+    "pull_candidates_checked": 319104,
+    "eligibility_wakeups": 0,
+    "max_backfill_scan": 128,
+    "policy": "log_aging",
+    "aging_alpha": null,
+    "routing": {
+      "flexible_fraction": 0.5,
+      "speedup": 1.0,
+      "donor_cap_fraction": 0.25,
+      "seed": 20261034,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "mode": "pull",
+      "donor_caps": [],
+      "min_wait_seconds": 0.0,
+      "pull_scan_limit": 256,
+      "max_routed_duration_seconds": 6480000,
+      "donor_reserve_fraction": 0.0
+    },
+    "log_aging_tau_seconds": 604800,
+    "admission": {
+      "limits_seconds": [
+        [
+          "A100-SXM4-80GB",
+          6480000.0
+        ],
+        [
+          "H800",
+          2592000.0
+        ]
+      ]
+    },
+    "runtime_admission_rejections": 271108,
+    "source_protection": null,
+    "source_loan_jobs": 0,
+    "shadow_start_obligations": 0,
+    "jobs_scheduled": 224112,
+    "allocation_rows": 316776,
+    "simulated_until": 18230624.0,
+    "elapsed_seconds": 17.227825699956156,
+    "peak_borrowed_gpus": {
+      "A10": 0,
+      "A100-SXM4-80GB": 864,
+      "A800-SXM4-80GB": 0,
+      "GPU-series-1": 0,
+      "GPU-series-2": 0,
+      "H800": 306
+    },
+    "peak_borrowed_cpus": {
+      "A10": 0.0,
+      "A100-SXM4-80GB": 13823.0,
+      "A800-SXM4-80GB": 0.0,
+      "GPU-series-1": 0.0,
+      "GPU-series-2": 0.0,
+      "H800": 3800.0
+    },
+    "routing_rule": "native dispatch first; eligible waiting A10 prefix; immediate donor start; repeated pull",
+    "source_control_rule": null,
+    "tie_breaking": "submission time then string job_name; node_name string order",
+    "backfill_rule": "first lookahead FCFS successors; finish by protected head reservation"
+  }
+}

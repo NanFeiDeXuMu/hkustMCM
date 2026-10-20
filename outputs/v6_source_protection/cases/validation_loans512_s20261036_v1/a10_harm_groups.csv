@@ -1,0 +1,8 @@
+grouping,group,jobs,harmed_jobs,harmed_fraction,positive_wait_job_hours,positive_wait_gpu_hours,max_wait_increase_hours,net_wait_job_hours_saved,completion_harmed_jobs,completion_harmed_fraction,positive_completion_job_hours,max_completion_increase_hours
+all,A10,111284,0,0.0,0.0,0.0,0.0,4565583.0216666665,0,0.0,0.0,0.0
+original_duration,le1h,87953,0,0.0,0.0,0.0,0.0,2589.636388888889,0,0.0,0.0,0.0
+original_duration,1h_1d,11405,0,0.0,0.0,0.0,0.0,148331.82555555555,0,0.0,0.0,0.0
+original_duration,1d_7d,3226,0,0.0,0.0,0.0,0.0,700658.4972222223,0,0.0,0.0,0.0
+original_duration,gt7d,8700,0,0.0,0.0,0.0,0.0,3714003.0625,0,0.0,0.0,0.0
+realized_migration,stayed,64233,0,0.0,0.0,0.0,0.0,1820541.0047222222,0,0.0,0.0,0.0
+realized_migration,migrated,47051,0,0.0,0.0,0.0,0.0,2745042.0169444443,0,0.0,0.0,0.0

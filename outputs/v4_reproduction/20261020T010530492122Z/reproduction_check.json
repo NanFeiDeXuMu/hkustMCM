@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "configuration": "d60_t0h",
+      "path": "outputs/v4_reproduction/20261020T010530492122Z/reproduction/d60_t0h_s20261020",
+      "scalar_comparisons": 10,
+      "passed": true
+    },
+    {
+      "configuration": "unlimited_cap25",
+      "path": "outputs/v4_reproduction/20261020T010530492122Z/reproduction/unlimited_cap25_s20261020",
+      "scalar_comparisons": 10,
+      "passed": true
+    },
+    {
+      "configuration": "d75_t0h",
+      "path": "outputs/v4_reproduction/20261020T010530492122Z/reproduction/d75_t0h_s20261020",
+      "scalar_comparisons": 10,
+      "passed": true
+    }
+  ],
+  "baseline_matches_frozen_hash": true,
+  "scope": "Three locked first-validation-seed cases only; no reselection",
+  "next_step": "Run tests/verify_schedules.py --scenario-dir for each case path"
+}

@@ -1,0 +1,41 @@
+{
+  "full": false,
+  "name": "current",
+  "phase": "validation",
+  "protocol_sha256": "810216ca1a3aff7bf8118ebb4c610be70f012e7e6a925d1304b586d835aedf34",
+  "source_protection": null,
+  "spec": {
+    "admission": {
+      "limits_seconds": [
+        [
+          "A100-SXM4-80GB",
+          6480000.0
+        ],
+        [
+          "H800",
+          2592000.0
+        ]
+      ]
+    },
+    "aging_alpha": 0.0,
+    "log_aging_tau_seconds": 604800.0,
+    "max_backfill_scan": 128,
+    "policy": "log_aging",
+    "routing": {
+      "donor_cap_fraction": 0.25,
+      "donor_caps": [],
+      "donor_reserve_fraction": 0.0,
+      "donors": [
+        "A100-SXM4-80GB",
+        "H800"
+      ],
+      "flexible_fraction": 0.5,
+      "max_routed_duration_seconds": 6480000,
+      "min_wait_seconds": 0.0,
+      "mode": "pull",
+      "pull_scan_limit": 256,
+      "seed": 20261041,
+      "speedup": 1.0
+    }
+  }
+}

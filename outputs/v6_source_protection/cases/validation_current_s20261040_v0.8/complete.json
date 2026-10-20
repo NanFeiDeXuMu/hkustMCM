@@ -1,0 +1,18 @@
+{
+  "request_sha256": "1895b455195f4152a148e4f307fb101bd0c2259738c2d0c47d1b8a50a5afc1fb",
+  "artifacts": {
+    "a10_harm_groups.csv": "0a3be738f2d634469a84a8ad5aba3e9c02b163979c372fdf3a5eb09c081262f2",
+    "borrowing_peaks.csv": "44e0d2667c5c099e912d2f04a6e67553afd7bbbc634d6455418d5f6623195b51",
+    "comparison_row.json": "7ed183b9bc06d836b1a99f6ac605a298196b7c4c3ee72c83f3757154a845c344",
+    "frontier_metrics.json": "ebd98333b3da1572f12e37b4ee25400ee7cef2f5c9a3f113fa8cf3a38d596b8b",
+    "metrics.json": "58b686a36722e338fa5f67144ae7c12b8c39113c2c298608f949722c54075a52",
+    "metrics_by_assigned_model.csv": "753fe9619333cf7540e4c2f89d3159b482cb715832ec06127a15eee25d59ccd8",
+    "metrics_by_job_group.csv": "26fc8052bb1f75e3efb9cc8d947ecfba6140c6cb88cafc7c729347ff3dba6c2c",
+    "metrics_by_requested_model.csv": "4b345f7d56d11e99516f40852083222fa225d32e4c299e3f647186f11d0929b4",
+    "metrics_idle_while_queued_by_model.csv": "241f5531535636044413d41f8f20bd447584c4c104d16dc5983be3d41d9b74b4",
+    "native_harm_by_donor.csv": "ceec30abadbcf72ed864757a61318f93cebf1e69c39f9d481946c31449341c26",
+    "request.json": "a8f2b0e82206ec7ff4e6a6e5f5c5436509ed7f89744859073653b0561e4b53ba",
+    "scenario.json": "709aab9e3604aeec05c7b4579e75796999f67a24504aaf55d599f45677367b8e"
+  },
+  "completed_utc": "2026-10-20T02:31:51.453129+00:00"
+}

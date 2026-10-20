@@ -1,0 +1,15 @@
+{
+  "script_sha256": "60520e0d8cbac6dc079bb8ad97a30bc51652b5672df4bea499e335cbf0da7490",
+  "files": {
+    "outputs\\v6_source_protection\\protocol.json": "810216ca1a3aff7bf8118ebb4c610be70f012e7e6a925d1304b586d835aedf34",
+    "outputs\\v6_source_protection\\validation.csv": "c47ca6f8e7c3ec13b1a7bba6640b162540c53f0a1ae6df799f8ec41c2bb2eced",
+    "outputs\\v6_source_protection\\validation_summary.csv": "bcec44ae93531d1d53b4b25d7c087e2189682f29d1516b63c029e53dd848714e",
+    "outputs\\v6_source_protection\\validation_group_summary.csv": "f993b25d14a353ad295458518a87bf8dfa3a6cbddbe919340ba000f6288069d7",
+    "outputs\\v6_source_protection\\verification.json": "061f9b03987627077dd3ecca6e72f08fe0a4b186be32fdf042a1669ae2d7e681",
+    "outputs\\v6_source_protection\\long_job_tradeoff_first_seed.csv": "e2d23cf58549d164f5933e82829aa1120dbd516279f3b02c1cf70dd6feb70076",
+    "reports\\B_v6_source_protection_zh.md": "f9187fcf30211476442b0d70003deffdd52c5d3070ff8a6891ae3fef79ad95d7",
+    "reports\\B_v6_source_protection_en.md": "3fbf53b35ad423544e85032d14123fd3db032a5b52cb2f054f99d1a3863be765",
+    "outputs\\v6_source_protection\\source_protection_comparison.png": "a8e1eb2c97d4e7d885de21cd124f58fc0bf9b07e6c46238a1bc9375d39836eb3",
+    "outputs\\v6_source_protection\\source_protection_comparison.svg": "85b901428877e00e9c65b6ed18b7ed0f99474a61362db7bf40469e26e79f7361"
+  }
+}

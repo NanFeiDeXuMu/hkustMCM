@@ -2,6 +2,27 @@
 
 当前项目覆盖 **B 题三个问题**：工作负载分析、逐节点调度与放置、跨型号分流的情景实验。原始题面与数据保持不变。
 
+## 最终提交物
+
+- 论文：[reports/paper/paper.pdf](reports/paper/paper.pdf)（源文件 [paper.tex](reports/paper/paper.tex)）
+- 代码补充包：运行 `python src/build_code_zip.py` 生成 `submission/code_supplement.zip`；包内英文说明见 [SUPPLEMENT_README.md](reports/paper/SUPPLEMENT_README.md)
+- 论文图：`python src/plot_paper_figures.py` → `outputs/paper_figures/`
+
+## 2026-10-20重新开放的v4实验
+
+用户按D028重新开放实验：13个分流配置×3个开发资格种子，固定候选后以10个新种子验证两历史推荐与新候选，另做2个速度压力情景及已有调度的A10内部受损诊断。调度核心与Q2*=T7d不变，历史输出全部保留。
+
+当前新增结果见[中文v4报告](reports/B_v4_validation_zh.md)、[英文v4报告](reports/B_v4_validation_en.md)、[验证汇总](outputs/v4_validation/validation_summary.csv)及[独立核验](outputs/v4_validation/verification.json)。新资格集合验证仍使用同一条工作负载，不能称跨trace泛化验证；论文统稿须保留这一限制。旧主稿 `reports/paper_draft_en.md` 尚未自动吸收v4结果。
+
+```powershell
+.\.venv\Scripts\python.exe src\run_v4_validation.py --phase all --workers 2
+.\.venv\Scripts\python.exe src\analyze_v4_harm.py
+.\.venv\Scripts\python.exe tests\verify_v4_outputs.py --audit-schedules
+.\.venv\Scripts\python.exe src\report_v4_validation.py
+```
+
+原v4 runner受协议中的三小时预算约束；已有结果可按哈希复用。未来或从精简补充包复现三个锁定验证安排，用 `python src/reproduce_v4_full.py`，它在独立新目录重建Q2*与三个首验证种子完整安排，核对冻结基线哈希和关键数值；随后按输出的case路径运行 `tests/verify_schedules.py --scenario-dir <路径>`。原完整目录的v4综合核验还依赖全部历史输出和v3完整CSV，不应直接用于精简包。
+
 ## 阅读顺序
 
 1. `CURRENT_STATUS.md`：交付内容、已验证结果和下一步。
@@ -98,6 +119,119 @@ v2前源码快照保存在 `outputs/v2_reference/source/`。v2回归按原CSV检
 
 独立核验只读原始输入和保存的安排，不导入调度实现。它逐节点重建半开区间事件，以 Decimal 检查任意时刻 CPU/GPU 容量、全部 worker 数、型号/时长、迁移资格和双资源借用上限。它证明输出满足这些约束，**不证明算法最优**。所有场景的总核验结果在 `outputs/scheduling_validation.json`。
 
+## 调度与实验公共接口 D032
+
+调度算法与工程流程现在有三个独立入口，历史实现及实验脚本保持可复现。
+
+| 层次 | 入口 | 责任 |
+|---|---|---|
+| 场景与策略 | `src/simulation_contract.py` | `SimulationSpec`声明队列、分流和目标池时长限制，校验组合并调用已验证的调度后端 |
+| 结果存储 | `src/experiment_store.py` | 输入与代码指纹、单写者锁、缓存完整性、失败现场保留和完成后的原子发布，不依赖调度代码 |
+| 运行与复现 | `src/reproduce_case.py` | 读取历史场景，显式传入原数据与配对基线，执行仿真、指标比较和独立审计 |
+
+```mermaid
+flowchart LR
+    A[场景声明与输入哈希] --> B[统一调度接口]
+    B --> C[历史核心或分池准入后端]
+    C --> D[配对指标与独立审计]
+    D --> E[完整结果发布]
+    F[存储层与来源校验] --> A
+    F --> E
+```
+
+新的公共接口不依赖旧实验入口中的工具函数，也不把`tests/`作为运行时Python模块导入。独立Decimal验证器仍单独运行，以保持与调度实现的独立性。新场景的参数只能通过`SimulationSpec`进入；已有D030/031算法结果继续成立，本次工程复现不增加独立科学样本。
+
+复现单个已保存场景，默认生成完整安排、节点分配、指标、独立审计、复现比较和来源收据：
+
+```powershell
+.\.venv\Scripts\python.exe src\reproduce_case.py --scenario outputs/v5_architecture/cases/runtime75_h30_s20261030_v0.8/scenario.json
+# 路径可显式覆盖，使用相同数据与基线内容时不依赖贡献者本地路径
+.\.venv\Scripts\python.exe src\reproduce_case.py --scenario outputs/v5_architecture/cases/runtime75_h30_s20261031_v0.8/scenario.json --output outputs/my_reproduction --data-dir 2026_MCM_Senior_GPU_Scheduling/2026_MCM_Senior_GPU_Scheduling --baseline outputs/question2/q2_star/schedule.csv
+```
+
+默认输出在`outputs/common_runtime_reproduction/cases/<原场景目录名>/`。来源有完整CSV时逐字节比较；来源仅有指标时比较已有标量指标，并对新建完整安排另行审计。复现需要原始CSV、配对基线、场景清单及完整参考或指标参考；来源实现哈希不符会拒绝执行，不能把不匹配的实现当作原版本。
+
+复用时检查参数、输入、代码、基线和全部文件哈希。失败/中断的结果留在`staging/`，重新执行同一命令会新建临时目录；已完成且核验通过的场景直接复用。每个场景的操作系统文件锁会随进程退出自动释放；并发写同一场景会明确失败。最终目录只在仿真、比较与独立审计全通过后一次性发布，未完成结果不会出现在`cases/`中。已发布结果损坏或来源改变时，请使用新输出目录，不覆盖旧证据。
+
+算法侧仍保留原生队列优先、逐节点GPU/CPU可行性与分池运行时长门槛；本次公共层没有改变排队或分流语义。A10内部公平性、工作量预算与动态反馈仍需独立实验。项目尚保留冻结历史核心与实验后端两个实现，公共接口不等于整个事件内核已经统一重写。
+
+工程验收：171项单元测试通过；三个既有场景分别重现66项原指标，其中两个场景的四份完整CSV逐字节一致，另一原仅指标场景补建完整安排并独立审计。三份共17,820,389项Decimal检查通过；三案例再次运行全命中缓存，54份结果文件不变。历史来源与发布收据的验收可通过下列命令重查：
+
+```powershell
+.\.venv\Scripts\python.exe tests\verify_architecture_runtime.py
+```
+
+## 分流架构扩展 D030
+
+新入口 `src/experimental_scheduler.py` 为分流准入提供显式接口，`src/routing_admission.py` 只判断目标池预计运行时长是否合格。调用方通过 `admission=` 注入策略；不传策略时要求所有启动时间、完成时间、型号和节点分配与旧核心完全一致。`src/scheduler.py` 保持冻结。
+
+```mermaid
+flowchart LR
+    A[提交与完成事件] --> B[原生队列调度]
+    B --> C[有界候选扫描]
+    C --> D[按目标池判断运行时长]
+    D --> E[CPU GPU借用上限与节点放置]
+    E --> F[启动与资源归还]
+    F --> A
+```
+
+准入条件为 `original_duration / speedup <= donor_limit_seconds`，仍同时保留原始75天上限。A100与H800可以采用不同门槛；被所有目标池拒绝的作业留在原池，并不占据分流候选前缀。策略只使用已经到达的作业信息和声明的速度假设，不能读取未来提交。原生队列优先、双资源上限和非抢占规则继续由事件引擎执行。准入条件不是未来原生作业零损失保证。
+
+`src/run_v5_architecture.py` 使用显式 `ExperimentContext` 传递输入、基线和输出路径，避免修改导入模块全局路径。协议只登记一次，来源代码/数据/配置不符时拒绝复用；完整结果用文件哈希收据检查。中断的部分目录保留并拒绝覆盖，恢复时可指定新输出目录完整重跑。独立文件仍复用原有指标和Decimal验证器。
+
+```powershell
+.\.venv\Scripts\python.exe src\run_v5_architecture.py --phase all
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p 'test_*.py'
+.\.venv\Scripts\python.exe tests\verify_v5_outputs.py
+# 独立复现到新目录，重新登记一小时计算预算；不覆盖旧证据
+.\.venv\Scripts\python.exe src\run_v5_architecture.py --output outputs/v5_architecture_reproduction --phase all
+```
+
+本轮固定比较旧D75、双池迁移后75天上限、A100为75天且H800为30天上限，使用三个新资格种子及两种速度，共18次消融。它没有自动选型流程。原始目录的一小时预算到期后，`--phase all` 不会重启回归；独立复现请使用尚不存在的新输出目录。新目录需要原数据、13份历史完整安排、Q2*和v4 D75首种子完整安排，不是仅凭精简补充包即可直接运行。
+
+这是一次有意限定范围的架构扩展：历史事件循环另存实验版本，队列和放置仍复用冻结实现。两个入口之间的语义一致性通过15份完整回归检查，不能将其描述为整个调度器已经彻底解耦。更广泛的队列、资源池与事件内核重构需要另行回归验证。
+
+## A10内部等待保护 D033
+
+`source_protection.py`维护只接收已到达作业的Q2*影子队列和带到期时间的节点空位；`source_guard_engine.py`把源池启动与影子预约绑定。尚未提前启动的作业保留Q2*原启动机会，已经迁出或提前启动的影子占用允许安全回填。借用作业必须在每个节点的预约结束前完成。实现明确限定当前A10每节点1 GPU，仍检查CPU、小数/零请求及多worker同启。
+
+保护针对相对Q2*的逐作业等待，不是保证每个作业优于旧分流方案，也不保证速度小于1的迁出作业完成时间不受损。执行时长须按已知声明值运行；实际超时会破坏空位到期保证。该机制不读取预计算基线启动时刻，基线文件仅用于事后评价。
+
+固定开发、锁定选择与验证由以下入口复现，新实验目录有独立两小时预算：
+
+```powershell
+.\.venv\Scripts\python.exe src/run_v6_source_protection.py --output outputs/v6_source_protection_reproduction --phase all
+.\.venv\Scripts\python.exe tests/verify_v6_outputs.py --output outputs/v6_source_protection_reproduction
+```
+
+单案例复现使用`src/reproduce_source_case.py --scenario <v6场景的scenario.json> --output <新的复现目录>`，显式恢复`source_protection`。旧`SimulationSpec`及`reproduce_case.py`保留冻结契约，不支持这个字段，不能用旧入口复现受保护场景。新适配器仍复用公共存储、精确CSV/指标比较与独立Decimal审计；完整核验通过后才发布结果。
+
+在Python中显式启用已登记的保护配置（`jobs`、`nodes`按前文方法读取，ID保留字符串）：
+
+```python
+from scheduler import RoutingConfig
+from routing_admission import RuntimeAdmission
+from source_protection import SourceProtection
+from source_guard_engine import run_simulation
+
+schedule, allocations, diagnostics = run_simulation(
+    jobs, nodes, policy="log_aging", log_aging_tau_seconds=7*86400,
+    routing=RoutingConfig(mode="pull", donors=("A100-SXM4-80GB", "H800"),
+        seed=20261033, flexible_fraction=.5, speedup=1.,
+        donor_cap_fraction=.25, max_routed_duration_seconds=75*86400),
+    admission=RuntimeAdmission((("A100-SXM4-80GB", 75*86400.), ("H800", 30*86400.))),
+    source_protection=SourceProtection(loan_scan=512),
+)
+```
+
+传入`source_protection=None`关闭保护，保持v5实验引擎的安排语义。A10控制以`source_control_rule`为准；诊断中的旧`backfill_rule`描述原FCFS回填，旧`placement_checks`计数也未覆盖新增影子与空位查找，不用于跨引擎复杂度比较。
+
+协议、开发选择、验证结果及验收位于`outputs/v6_source_protection/`。输入包括原始两个CSV、Q2*、原13份参考和v5分池75/30天首开发种子的两种速度完整安排。新引擎关闭保护时须精确复现全部16份参考；历史代码与结果不覆盖。独立验收还会核对每个实际空位借用是否处在基线可回收区间内，metrics_only案例不计作完整资源审计。
+
+本轮完成36次开发和40次验证，锁定loans512。十个未用资格种子、两速度的20次候选验证均实现相对Q2*的A10零正等待损失，同时通过donor门槛。等速/慢速总体平均等待从3.598098/6.834822升至10.495106/14.839447小时，平均最终完工延至247.106285天；慢速仍有18.6977%的A10作业更晚完成，均来自迁出组。因此它作为公平性优先可选模式保留，不能表述为无代价的整体升级。
+
+187项单元测试、16份历史完整回归及四份新完整调度的独立审计均通过。详见[中文报告](reports/B_v6_source_protection_zh.md)、[英文报告](reports/B_v6_source_protection_en.md)和[验收结果](outputs/v6_source_protection/verification.json)。查看已有结果只需运行`python tests/verify_v6_outputs.py`；再次完整重放请使用新输出目录。实验源代码由协议哈希绑定，修改科学实现需另建协议，不覆盖本轮记录。
+
 ## 交付目录
 
 | 路径 | 内容 |
@@ -153,6 +287,6 @@ v2前源码快照保存在 `outputs/v2_reference/source/`。v2回归按原CSV检
 11. SJF 的平均等待优势不等于对所有作业或所有公平性指标都最好。完整论文需说明主要目标及最长等待、长作业尾部和最后完工时间的代价。
 12. 新增滞留积分固定 donor 集合为 A100/A800/H800/GPU-series-2，是当前调度时间线上忽略兼容、CPU 和装箱的潜力诊断，不能直接解释为可兑现收益。匿名型号兼容性是假设，另列仅已命名型号的建议。
 13. v2的C1保护时长组均值，不保证个体不受损。对数aging的T控制时长比与提交间隔的权衡；已同时在队列中的作业不会仅因时钟流逝交换优先级。所有参数仍在同一trace上选择。
-14. donor预留GPU/CPU只在迁入启动后检查，后来原生作业可使用余量；时长上限按原始时长过滤，速度敏感性不改变这个资格集合。两项机制仍不保证未来原生作业零损失。
+14. donor预留GPU/CPU只在迁入启动后检查，后来原生作业可使用余量；v1–v4时长上限按原始时长过滤，速度敏感性不改变这个资格集合。v5另加按目标池迁移后时长的准入限制。这些机制仍不保证未来原生作业零损失。
 
 `AGENTS.md` 约定后续协作方式。原始数据属于比赛资料；论文需遵守题面引用、AI披露和提交要求。

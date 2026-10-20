@@ -1,0 +1,3 @@
+donor_model,native_jobs,native_wait_increased_jobs,native_wait_increased_fraction,native_wait_mean_delta_hours,native_wait_p95_delta_hours,donor_native_job_hours_added,native_max_wait_increase_hours,compensation_gpu_hours
+A100-SXM4-80GB,80877,0,0.0,0.0,0.0,0.0,0.0,0.0
+H800,4716,309,0.06552162849872774,0.09187947648666478,0.1773611111111111,484.31083333333333,15.564166666666667,58128.88
